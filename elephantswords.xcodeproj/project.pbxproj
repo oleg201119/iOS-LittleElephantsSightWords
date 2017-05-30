@@ -1,0 +1,922 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93EE9A1A78A813CB27076D6B /* libPods-elephantswords.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */; };
+		F838E8B81EAAFD7200451488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8B71EAAFD7200451488 /* main.m */; };
+		F838E8BB1EAAFD7200451488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8BA1EAAFD7200451488 /* AppDelegate.m */; };
+		F838E8BE1EAAFD7200451488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8BD1EAAFD7200451488 /* ViewController.m */; };
+		F838E8C11EAAFD7200451488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F838E8BF1EAAFD7200451488 /* Main.storyboard */; };
+		F838E8C41EAAFD7200451488 /* elephantswords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F838E8C21EAAFD7200451488 /* elephantswords.xcdatamodeld */; };
+		F838E8C61EAAFD7200451488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F838E8C51EAAFD7200451488 /* Assets.xcassets */; };
+		F838E8C91EAAFD7200451488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F838E8C71EAAFD7200451488 /* LaunchScreen.storyboard */; };
+		F838E8D41EAAFD7200451488 /* elephantswordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8D31EAAFD7200451488 /* elephantswordsTests.m */; };
+		F838E8DF1EAAFD7200451488 /* elephantswordsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8DE1EAAFD7200451488 /* elephantswordsUITests.m */; };
+		F838E8F21EAB01BB00451488 /* TEWGenericFunctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8F11EAB01BB00451488 /* TEWGenericFunctionManager.m */; };
+		F838E8F51EAB01E600451488 /* TEWAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8F41EAB01E600451488 /* TEWAppManager.m */; };
+		F838E8F81EAB023300451488 /* TEWNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8F71EAB023300451488 /* TEWNetworkRequestManager.m */; };
+		F838E8FB1EAB024F00451488 /* TEWErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8FA1EAB024F00451488 /* TEWErrorManager.m */; };
+		F838E8FE1EAB026C00451488 /* TEWUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8FD1EAB026C00451488 /* TEWUrlManager.m */; };
+		F838E9031EAC0E5100451488 /* TEWUserInfoDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */; };
+		F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F854AF121EBA478500526BE3 /* TEWSplashVC.m */; };
+		F854AF161EBA712600526BE3 /* TEWProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = F854AF151EBA712600526BE3 /* TEWProfile.m */; };
+		F857FCAF1EDC26DE00BB1EC1 /* TEWWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F857FCAE1EDC26DE00BB1EC1 /* TEWWordManager.m */; };
+		F857FCB11EDC5B9F00BB1EC1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = F857FCB01EDC5B9F00BB1EC1 /* words.json */; };
+		F8ABB26E1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */; };
+		F8AFBC4A1EAFDFCC00A449D8 /* TEWSettingWizardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AFBC491EAFDFCC00A449D8 /* TEWSettingWizardVC.m */; };
+		F8B78B6E1EB19B4E00CA59E2 /* TEWSettingsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B78B6D1EB19B4E00CA59E2 /* TEWSettingsDataModel.m */; };
+		F8B78B711EB19ED000CA59E2 /* TEWSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B78B701EB19ED000CA59E2 /* TEWSettingsManager.m */; };
+		F8BBBB641EB6605A00B90BAE /* TEWSettingAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB631EB6605A00B90BAE /* TEWSettingAboutVC.m */; };
+		F8BBBB671EB670AB00B90BAE /* TEWSettingNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB661EB670AB00B90BAE /* TEWSettingNewsVC.m */; };
+		F8BBBB6A1EB676EF00B90BAE /* TEWSettingProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB691EB676EF00B90BAE /* TEWSettingProfileVC.m */; };
+		F8BBBB6D1EB67ECA00B90BAE /* TEWProfileMenuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB6C1EB67ECA00B90BAE /* TEWProfileMenuTVC.m */; };
+		F8BBBB6F1EB68E3800B90BAE /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BBBB6E1EB68E3800B90BAE /* Play.storyboard */; };
+		F8BBBB761EB68EF500B90BAE /* TEWLearnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */; };
+		F8BBBB791EB6938200B90BAE /* TEWScoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */; };
+		F8C9687C1ECA076300885801 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9687B1ECA076300885801 /* UIColor+HexString.m */; };
+		F8C97BC81EB43BEA00372CBA /* TEWRoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BC71EB43BEA00372CBA /* TEWRoundVC.m */; };
+		F8C97BCB1EB43C6100372CBA /* TEWRoundSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BCA1EB43C6100372CBA /* TEWRoundSelectVC.m */; };
+		F8C97BCF1EB457BF00372CBA /* TEWSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BCE1EB457BF00372CBA /* TEWSettingVC.m */; };
+		F8C97BD31EB4684400372CBA /* TEWSettingMenuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BD21EB4684400372CBA /* TEWSettingMenuTVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F838E8D01EAAFD7200451488 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F838E8AB1EAAFD7200451488 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F838E8B21EAAFD7200451488;
+			remoteInfo = elephantswords;
+		};
+		F838E8DB1EAAFD7200451488 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F838E8AB1EAAFD7200451488 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F838E8B21EAAFD7200451488;
+			remoteInfo = elephantswords;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A3F7174C18957F6B9918A05 /* Pods-elephantswords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elephantswords.release.xcconfig"; path = "Pods/Target Support Files/Pods-elephantswords/Pods-elephantswords.release.xcconfig"; sourceTree = "<group>"; };
+		6E4476ED0543CB690195C418 /* Pods_elephantswordsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elephantswordsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-elephantswords.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9768DD154E5D9B2A8EA1617A /* Pods-elephantswords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elephantswords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elephantswords/Pods-elephantswords.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1FA120A9DA5B98AADDFC01 /* Pods_elephantswordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elephantswordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F838E8B31EAAFD7200451488 /* elephantswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elephantswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F838E8B71EAAFD7200451488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F838E8B91EAAFD7200451488 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F838E8BA1EAAFD7200451488 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F838E8BC1EAAFD7200451488 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F838E8BD1EAAFD7200451488 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F838E8C01EAAFD7200451488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F838E8C31EAAFD7200451488 /* elephantswords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = elephantswords.xcdatamodel; sourceTree = "<group>"; };
+		F838E8C51EAAFD7200451488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F838E8C81EAAFD7200451488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F838E8CA1EAAFD7200451488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F838E8CF1EAAFD7200451488 /* elephantswordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elephantswordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F838E8D31EAAFD7200451488 /* elephantswordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = elephantswordsTests.m; sourceTree = "<group>"; };
+		F838E8D51EAAFD7200451488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F838E8DA1EAAFD7200451488 /* elephantswordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elephantswordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F838E8DE1EAAFD7200451488 /* elephantswordsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = elephantswordsUITests.m; sourceTree = "<group>"; };
+		F838E8E01EAAFD7200451488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F838E8EF1EAB015D00451488 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Global.h; path = Model/Utils/Global.h; sourceTree = "<group>"; };
+		F838E8F01EAB01BB00451488 /* TEWGenericFunctionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWGenericFunctionManager.h; path = Model/Utils/TEWGenericFunctionManager.h; sourceTree = "<group>"; };
+		F838E8F11EAB01BB00451488 /* TEWGenericFunctionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWGenericFunctionManager.m; path = Model/Utils/TEWGenericFunctionManager.m; sourceTree = "<group>"; };
+		F838E8F31EAB01E600451488 /* TEWAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWAppManager.h; path = Model/Utils/TEWAppManager.h; sourceTree = "<group>"; };
+		F838E8F41EAB01E600451488 /* TEWAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWAppManager.m; path = Model/Utils/TEWAppManager.m; sourceTree = "<group>"; };
+		F838E8F61EAB023300451488 /* TEWNetworkRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWNetworkRequestManager.h; path = Model/Utils/TEWNetworkRequestManager.h; sourceTree = "<group>"; };
+		F838E8F71EAB023300451488 /* TEWNetworkRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWNetworkRequestManager.m; path = Model/Utils/TEWNetworkRequestManager.m; sourceTree = "<group>"; };
+		F838E8F91EAB024F00451488 /* TEWErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWErrorManager.h; path = Model/Utils/TEWErrorManager.h; sourceTree = "<group>"; };
+		F838E8FA1EAB024F00451488 /* TEWErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWErrorManager.m; path = Model/Utils/TEWErrorManager.m; sourceTree = "<group>"; };
+		F838E8FC1EAB026C00451488 /* TEWUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWUrlManager.h; path = Model/Utils/TEWUrlManager.h; sourceTree = "<group>"; };
+		F838E8FD1EAB026C00451488 /* TEWUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWUrlManager.m; path = Model/Utils/TEWUrlManager.m; sourceTree = "<group>"; };
+		F838E9011EAC0E5100451488 /* TEWUserInfoDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWUserInfoDataModel.h; path = Model/User/DataModel/TEWUserInfoDataModel.h; sourceTree = "<group>"; };
+		F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWUserInfoDataModel.m; path = Model/User/DataModel/TEWUserInfoDataModel.m; sourceTree = "<group>"; };
+		F854AF111EBA478500526BE3 /* TEWSplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSplashVC.h; path = Controller/Splash/TEWSplashVC.h; sourceTree = "<group>"; };
+		F854AF121EBA478500526BE3 /* TEWSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSplashVC.m; path = Controller/Splash/TEWSplashVC.m; sourceTree = "<group>"; };
+		F854AF141EBA712600526BE3 /* TEWProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWProfile.h; path = Model/Setting/DataModel/TEWProfile.h; sourceTree = "<group>"; };
+		F854AF151EBA712600526BE3 /* TEWProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWProfile.m; path = Model/Setting/DataModel/TEWProfile.m; sourceTree = "<group>"; };
+		F857FCAD1EDC26DE00BB1EC1 /* TEWWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWWordManager.h; path = Model/Word/TEWWordManager.h; sourceTree = "<group>"; };
+		F857FCAE1EDC26DE00BB1EC1 /* TEWWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWWordManager.m; path = Model/Word/TEWWordManager.m; sourceTree = "<group>"; };
+		F857FCB01EDC5B9F00BB1EC1 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		F8ABB26C1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+Multiplier.h"; path = "Model/Utils/NSLayoutConstraint+Multiplier.h"; sourceTree = "<group>"; };
+		F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+Multiplier.m"; path = "Model/Utils/NSLayoutConstraint+Multiplier.m"; sourceTree = "<group>"; };
+		F8AFBC481EAFDFCC00A449D8 /* TEWSettingWizardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingWizardVC.h; path = Controller/SettingWizard/TEWSettingWizardVC.h; sourceTree = "<group>"; };
+		F8AFBC491EAFDFCC00A449D8 /* TEWSettingWizardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingWizardVC.m; path = Controller/SettingWizard/TEWSettingWizardVC.m; sourceTree = "<group>"; };
+		F8B78B6A1EB196AE00CA59E2 /* SettingsConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingsConstant.h; path = Model/Setting/SettingsConstant.h; sourceTree = "<group>"; };
+		F8B78B6C1EB19B4E00CA59E2 /* TEWSettingsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingsDataModel.h; path = Model/Setting/DataModel/TEWSettingsDataModel.h; sourceTree = "<group>"; };
+		F8B78B6D1EB19B4E00CA59E2 /* TEWSettingsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingsDataModel.m; path = Model/Setting/DataModel/TEWSettingsDataModel.m; sourceTree = "<group>"; };
+		F8B78B6F1EB19ED000CA59E2 /* TEWSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingsManager.h; path = Model/Setting/TEWSettingsManager.h; sourceTree = "<group>"; };
+		F8B78B701EB19ED000CA59E2 /* TEWSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingsManager.m; path = Model/Setting/TEWSettingsManager.m; sourceTree = "<group>"; };
+		F8BBBB621EB6605A00B90BAE /* TEWSettingAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingAboutVC.h; path = Controller/SettingScreen/TEWSettingAboutVC.h; sourceTree = "<group>"; };
+		F8BBBB631EB6605A00B90BAE /* TEWSettingAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingAboutVC.m; path = Controller/SettingScreen/TEWSettingAboutVC.m; sourceTree = "<group>"; };
+		F8BBBB651EB670AB00B90BAE /* TEWSettingNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingNewsVC.h; path = Controller/SettingScreen/TEWSettingNewsVC.h; sourceTree = "<group>"; };
+		F8BBBB661EB670AB00B90BAE /* TEWSettingNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingNewsVC.m; path = Controller/SettingScreen/TEWSettingNewsVC.m; sourceTree = "<group>"; };
+		F8BBBB681EB676EF00B90BAE /* TEWSettingProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingProfileVC.h; path = Controller/SettingScreen/TEWSettingProfileVC.h; sourceTree = "<group>"; };
+		F8BBBB691EB676EF00B90BAE /* TEWSettingProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingProfileVC.m; path = Controller/SettingScreen/TEWSettingProfileVC.m; sourceTree = "<group>"; };
+		F8BBBB6B1EB67ECA00B90BAE /* TEWProfileMenuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWProfileMenuTVC.h; path = Controller/SettingScreen/TableViewCell/TEWProfileMenuTVC.h; sourceTree = "<group>"; };
+		F8BBBB6C1EB67ECA00B90BAE /* TEWProfileMenuTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWProfileMenuTVC.m; path = Controller/SettingScreen/TableViewCell/TEWProfileMenuTVC.m; sourceTree = "<group>"; };
+		F8BBBB6E1EB68E3800B90BAE /* Play.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
+		F8BBBB741EB68EF500B90BAE /* TEWLearnVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWLearnVC.h; path = Controller/Play/TEWLearnVC.h; sourceTree = "<group>"; };
+		F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWLearnVC.m; path = Controller/Play/TEWLearnVC.m; sourceTree = "<group>"; };
+		F8BBBB771EB6938200B90BAE /* TEWScoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWScoreVC.h; path = Controller/Play/TEWScoreVC.h; sourceTree = "<group>"; };
+		F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWScoreVC.m; path = Controller/Play/TEWScoreVC.m; sourceTree = "<group>"; };
+		F8C9687A1ECA076300885801 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../../../../../../Downloads/4751825-808c27b1731da4cdff13d27130e78b3fb30e45df/UIColor+HexString.h"; sourceTree = "<group>"; };
+		F8C9687B1ECA076300885801 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../../../../../../Downloads/4751825-808c27b1731da4cdff13d27130e78b3fb30e45df/UIColor+HexString.m"; sourceTree = "<group>"; };
+		F8C97BC61EB43BEA00372CBA /* TEWRoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundVC.h; path = Controller/MenuScreen/TEWRoundVC.h; sourceTree = "<group>"; };
+		F8C97BC71EB43BEA00372CBA /* TEWRoundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWRoundVC.m; path = Controller/MenuScreen/TEWRoundVC.m; sourceTree = "<group>"; };
+		F8C97BC91EB43C4500372CBA /* TEWRoundSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundSelectVC.h; path = Controller/MenuScreen/TEWRoundSelectVC.h; sourceTree = "<group>"; };
+		F8C97BCA1EB43C6100372CBA /* TEWRoundSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWRoundSelectVC.m; path = Controller/MenuScreen/TEWRoundSelectVC.m; sourceTree = "<group>"; };
+		F8C97BCD1EB457BF00372CBA /* TEWSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingVC.h; path = Controller/SettingScreen/TEWSettingVC.h; sourceTree = "<group>"; };
+		F8C97BCE1EB457BF00372CBA /* TEWSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingVC.m; path = Controller/SettingScreen/TEWSettingVC.m; sourceTree = "<group>"; };
+		F8C97BD11EB4684400372CBA /* TEWSettingMenuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingMenuTVC.h; path = Controller/SettingScreen/TableViewCell/TEWSettingMenuTVC.h; sourceTree = "<group>"; };
+		F8C97BD21EB4684400372CBA /* TEWSettingMenuTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingMenuTVC.m; path = Controller/SettingScreen/TableViewCell/TEWSettingMenuTVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F838E8B01EAAFD7200451488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EE9A1A78A813CB27076D6B /* libPods-elephantswords.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F838E8CC1EAAFD7200451488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F838E8D71EAAFD7200451488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B58707A06DAF1F34EBC2D8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E4476ED0543CB690195C418 /* Pods_elephantswordsTests.framework */,
+				AE1FA120A9DA5B98AADDFC01 /* Pods_elephantswordsUITests.framework */,
+				75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FF9AED4C5A473714D56A7DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9768DD154E5D9B2A8EA1617A /* Pods-elephantswords.debug.xcconfig */,
+				4A3F7174C18957F6B9918A05 /* Pods-elephantswords.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F838E8AA1EAAFD7200451488 = {
+			isa = PBXGroup;
+			children = (
+				F838E8B51EAAFD7200451488 /* elephantswords */,
+				F838E8D21EAAFD7200451488 /* elephantswordsTests */,
+				F838E8DD1EAAFD7200451488 /* elephantswordsUITests */,
+				F838E8B41EAAFD7200451488 /* Products */,
+				3FF9AED4C5A473714D56A7DE /* Pods */,
+				0B58707A06DAF1F34EBC2D8C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F838E8B41EAAFD7200451488 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F838E8B31EAAFD7200451488 /* elephantswords.app */,
+				F838E8CF1EAAFD7200451488 /* elephantswordsTests.xctest */,
+				F838E8DA1EAAFD7200451488 /* elephantswordsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F838E8B51EAAFD7200451488 /* elephantswords */ = {
+			isa = PBXGroup;
+			children = (
+				F838E9051EAC0EC800451488 /* View */,
+				F838E9041EAC0EC000451488 /* Controller */,
+				F838E8ED1EAB011D00451488 /* Model */,
+				F838E8EC1EAB002100451488 /* AppDelegate */,
+				F838E8BC1EAAFD7200451488 /* ViewController.h */,
+				F838E8BD1EAAFD7200451488 /* ViewController.m */,
+				F838E8CA1EAAFD7200451488 /* Info.plist */,
+				F838E8C21EAAFD7200451488 /* elephantswords.xcdatamodeld */,
+				F838E8B61EAAFD7200451488 /* Supporting Files */,
+			);
+			path = elephantswords;
+			sourceTree = "<group>";
+		};
+		F838E8B61EAAFD7200451488 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F838E8B71EAAFD7200451488 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F838E8D21EAAFD7200451488 /* elephantswordsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F838E8D31EAAFD7200451488 /* elephantswordsTests.m */,
+				F838E8D51EAAFD7200451488 /* Info.plist */,
+			);
+			path = elephantswordsTests;
+			sourceTree = "<group>";
+		};
+		F838E8DD1EAAFD7200451488 /* elephantswordsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F838E8DE1EAAFD7200451488 /* elephantswordsUITests.m */,
+				F838E8E01EAAFD7200451488 /* Info.plist */,
+			);
+			path = elephantswordsUITests;
+			sourceTree = "<group>";
+		};
+		F838E8EC1EAB002100451488 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F838E8B91EAAFD7200451488 /* AppDelegate.h */,
+				F838E8BA1EAAFD7200451488 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F838E8ED1EAB011D00451488 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F857FCAC1EDC269F00BB1EC1 /* Word */,
+				F8B78B681EB194AA00CA59E2 /* Setting */,
+				F838E8FF1EAC0DEC00451488 /* User */,
+				F838E8EE1EAB012800451488 /* Utils */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F838E8EE1EAB012800451488 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F8C9687A1ECA076300885801 /* UIColor+HexString.h */,
+				F8C9687B1ECA076300885801 /* UIColor+HexString.m */,
+				F838E8EF1EAB015D00451488 /* Global.h */,
+				F838E8F01EAB01BB00451488 /* TEWGenericFunctionManager.h */,
+				F838E8F11EAB01BB00451488 /* TEWGenericFunctionManager.m */,
+				F838E8F31EAB01E600451488 /* TEWAppManager.h */,
+				F838E8F41EAB01E600451488 /* TEWAppManager.m */,
+				F838E8F61EAB023300451488 /* TEWNetworkRequestManager.h */,
+				F838E8F71EAB023300451488 /* TEWNetworkRequestManager.m */,
+				F838E8F91EAB024F00451488 /* TEWErrorManager.h */,
+				F838E8FA1EAB024F00451488 /* TEWErrorManager.m */,
+				F838E8FC1EAB026C00451488 /* TEWUrlManager.h */,
+				F838E8FD1EAB026C00451488 /* TEWUrlManager.m */,
+				F8ABB26C1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.h */,
+				F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		F838E8FF1EAC0DEC00451488 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F838E9001EAC0E0500451488 /* DataModel */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		F838E9001EAC0E0500451488 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F838E9011EAC0E5100451488 /* TEWUserInfoDataModel.h */,
+				F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		F838E9041EAC0EC000451488 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F854AF101EBA473F00526BE3 /* Splash */,
+				F8BBBB731EB68EA300B90BAE /* Play */,
+				F8C97BCC1EB4578200372CBA /* SettingScreen */,
+				F8CA6E321EB2E2F500A94D3E /* MenuScreen */,
+				F8AFBC441EAFDF5C00A449D8 /* SettingWizard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F838E9051EAC0EC800451488 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F838E8BF1EAAFD7200451488 /* Main.storyboard */,
+				F8BBBB6E1EB68E3800B90BAE /* Play.storyboard */,
+				F838E8C71EAAFD7200451488 /* LaunchScreen.storyboard */,
+				F838E8C51EAAFD7200451488 /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F854AF101EBA473F00526BE3 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F854AF111EBA478500526BE3 /* TEWSplashVC.h */,
+				F854AF121EBA478500526BE3 /* TEWSplashVC.m */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		F857FCAC1EDC269F00BB1EC1 /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				F857FCB01EDC5B9F00BB1EC1 /* words.json */,
+				F857FCAD1EDC26DE00BB1EC1 /* TEWWordManager.h */,
+				F857FCAE1EDC26DE00BB1EC1 /* TEWWordManager.m */,
+			);
+			name = Word;
+			sourceTree = "<group>";
+		};
+		F8AFBC441EAFDF5C00A449D8 /* SettingWizard */ = {
+			isa = PBXGroup;
+			children = (
+				F8AFBC481EAFDFCC00A449D8 /* TEWSettingWizardVC.h */,
+				F8AFBC491EAFDFCC00A449D8 /* TEWSettingWizardVC.m */,
+			);
+			name = SettingWizard;
+			sourceTree = "<group>";
+		};
+		F8B78B681EB194AA00CA59E2 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F8B78B6B1EB19B0A00CA59E2 /* DataModel */,
+				F8B78B6A1EB196AE00CA59E2 /* SettingsConstant.h */,
+				F8B78B6F1EB19ED000CA59E2 /* TEWSettingsManager.h */,
+				F8B78B701EB19ED000CA59E2 /* TEWSettingsManager.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		F8B78B6B1EB19B0A00CA59E2 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8B78B6C1EB19B4E00CA59E2 /* TEWSettingsDataModel.h */,
+				F8B78B6D1EB19B4E00CA59E2 /* TEWSettingsDataModel.m */,
+				F854AF141EBA712600526BE3 /* TEWProfile.h */,
+				F854AF151EBA712600526BE3 /* TEWProfile.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		F8BBBB731EB68EA300B90BAE /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				F8BBBB741EB68EF500B90BAE /* TEWLearnVC.h */,
+				F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */,
+				F8BBBB771EB6938200B90BAE /* TEWScoreVC.h */,
+				F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */,
+			);
+			name = Play;
+			sourceTree = "<group>";
+		};
+		F8C97BCC1EB4578200372CBA /* SettingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F8C97BD01EB4680800372CBA /* TableViewCell */,
+				F8C97BCD1EB457BF00372CBA /* TEWSettingVC.h */,
+				F8C97BCE1EB457BF00372CBA /* TEWSettingVC.m */,
+				F8BBBB621EB6605A00B90BAE /* TEWSettingAboutVC.h */,
+				F8BBBB631EB6605A00B90BAE /* TEWSettingAboutVC.m */,
+				F8BBBB651EB670AB00B90BAE /* TEWSettingNewsVC.h */,
+				F8BBBB661EB670AB00B90BAE /* TEWSettingNewsVC.m */,
+				F8BBBB681EB676EF00B90BAE /* TEWSettingProfileVC.h */,
+				F8BBBB691EB676EF00B90BAE /* TEWSettingProfileVC.m */,
+			);
+			name = SettingScreen;
+			sourceTree = "<group>";
+		};
+		F8C97BD01EB4680800372CBA /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F8C97BD11EB4684400372CBA /* TEWSettingMenuTVC.h */,
+				F8C97BD21EB4684400372CBA /* TEWSettingMenuTVC.m */,
+				F8BBBB6B1EB67ECA00B90BAE /* TEWProfileMenuTVC.h */,
+				F8BBBB6C1EB67ECA00B90BAE /* TEWProfileMenuTVC.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F8CA6E321EB2E2F500A94D3E /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F8C97BC91EB43C4500372CBA /* TEWRoundSelectVC.h */,
+				F8C97BCA1EB43C6100372CBA /* TEWRoundSelectVC.m */,
+				F8C97BC61EB43BEA00372CBA /* TEWRoundVC.h */,
+				F8C97BC71EB43BEA00372CBA /* TEWRoundVC.m */,
+			);
+			name = MenuScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F838E8B21EAAFD7200451488 /* elephantswords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F838E8E31EAAFD7200451488 /* Build configuration list for PBXNativeTarget "elephantswords" */;
+			buildPhases = (
+				04060815AB6F1369B223E203 /* [CP] Check Pods Manifest.lock */,
+				F838E8AF1EAAFD7200451488 /* Sources */,
+				F838E8B01EAAFD7200451488 /* Frameworks */,
+				F838E8B11EAAFD7200451488 /* Resources */,
+				916A46EFD08777CF83B64449 /* [CP] Embed Pods Frameworks */,
+				A4D06473B5F2708AB521DF2E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = elephantswords;
+			productName = elephantswords;
+			productReference = F838E8B31EAAFD7200451488 /* elephantswords.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F838E8CE1EAAFD7200451488 /* elephantswordsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F838E8E61EAAFD7200451488 /* Build configuration list for PBXNativeTarget "elephantswordsTests" */;
+			buildPhases = (
+				F838E8CB1EAAFD7200451488 /* Sources */,
+				F838E8CC1EAAFD7200451488 /* Frameworks */,
+				F838E8CD1EAAFD7200451488 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F838E8D11EAAFD7200451488 /* PBXTargetDependency */,
+			);
+			name = elephantswordsTests;
+			productName = elephantswordsTests;
+			productReference = F838E8CF1EAAFD7200451488 /* elephantswordsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F838E8D91EAAFD7200451488 /* elephantswordsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F838E8E91EAAFD7200451488 /* Build configuration list for PBXNativeTarget "elephantswordsUITests" */;
+			buildPhases = (
+				F838E8D61EAAFD7200451488 /* Sources */,
+				F838E8D71EAAFD7200451488 /* Frameworks */,
+				F838E8D81EAAFD7200451488 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F838E8DC1EAAFD7200451488 /* PBXTargetDependency */,
+			);
+			name = elephantswordsUITests;
+			productName = elephantswordsUITests;
+			productReference = F838E8DA1EAAFD7200451488 /* elephantswordsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F838E8AB1EAAFD7200451488 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = gavin;
+				TargetAttributes = {
+					F838E8B21EAAFD7200451488 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 74W2BTNY9Q;
+						ProvisioningStyle = Automatic;
+					};
+					F838E8CE1EAAFD7200451488 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F838E8B21EAAFD7200451488;
+					};
+					F838E8D91EAAFD7200451488 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F838E8B21EAAFD7200451488;
+					};
+				};
+			};
+			buildConfigurationList = F838E8AE1EAAFD7200451488 /* Build configuration list for PBXProject "elephantswords" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F838E8AA1EAAFD7200451488;
+			productRefGroup = F838E8B41EAAFD7200451488 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F838E8B21EAAFD7200451488 /* elephantswords */,
+				F838E8CE1EAAFD7200451488 /* elephantswordsTests */,
+				F838E8D91EAAFD7200451488 /* elephantswordsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F838E8B11EAAFD7200451488 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BBBB6F1EB68E3800B90BAE /* Play.storyboard in Resources */,
+				F838E8C91EAAFD7200451488 /* LaunchScreen.storyboard in Resources */,
+				F838E8C61EAAFD7200451488 /* Assets.xcassets in Resources */,
+				F838E8C11EAAFD7200451488 /* Main.storyboard in Resources */,
+				F857FCB11EDC5B9F00BB1EC1 /* words.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F838E8CD1EAAFD7200451488 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F838E8D81EAAFD7200451488 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04060815AB6F1369B223E203 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		916A46EFD08777CF83B64449 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elephantswords/Pods-elephantswords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D06473B5F2708AB521DF2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elephantswords/Pods-elephantswords-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F838E8AF1EAAFD7200451488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8ABB26E1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m in Sources */,
+				F8BBBB671EB670AB00B90BAE /* TEWSettingNewsVC.m in Sources */,
+				F8C97BCF1EB457BF00372CBA /* TEWSettingVC.m in Sources */,
+				F8B78B711EB19ED000CA59E2 /* TEWSettingsManager.m in Sources */,
+				F8C97BCB1EB43C6100372CBA /* TEWRoundSelectVC.m in Sources */,
+				F838E8BE1EAAFD7200451488 /* ViewController.m in Sources */,
+				F8B78B6E1EB19B4E00CA59E2 /* TEWSettingsDataModel.m in Sources */,
+				F8BBBB6D1EB67ECA00B90BAE /* TEWProfileMenuTVC.m in Sources */,
+				F854AF161EBA712600526BE3 /* TEWProfile.m in Sources */,
+				F838E9031EAC0E5100451488 /* TEWUserInfoDataModel.m in Sources */,
+				F8AFBC4A1EAFDFCC00A449D8 /* TEWSettingWizardVC.m in Sources */,
+				F8BBBB791EB6938200B90BAE /* TEWScoreVC.m in Sources */,
+				F838E8FE1EAB026C00451488 /* TEWUrlManager.m in Sources */,
+				F8C9687C1ECA076300885801 /* UIColor+HexString.m in Sources */,
+				F8C97BC81EB43BEA00372CBA /* TEWRoundVC.m in Sources */,
+				F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */,
+				F838E8FB1EAB024F00451488 /* TEWErrorManager.m in Sources */,
+				F838E8F21EAB01BB00451488 /* TEWGenericFunctionManager.m in Sources */,
+				F857FCAF1EDC26DE00BB1EC1 /* TEWWordManager.m in Sources */,
+				F8BBBB6A1EB676EF00B90BAE /* TEWSettingProfileVC.m in Sources */,
+				F838E8F51EAB01E600451488 /* TEWAppManager.m in Sources */,
+				F838E8BB1EAAFD7200451488 /* AppDelegate.m in Sources */,
+				F8BBBB761EB68EF500B90BAE /* TEWLearnVC.m in Sources */,
+				F8C97BD31EB4684400372CBA /* TEWSettingMenuTVC.m in Sources */,
+				F838E8C41EAAFD7200451488 /* elephantswords.xcdatamodeld in Sources */,
+				F838E8F81EAB023300451488 /* TEWNetworkRequestManager.m in Sources */,
+				F8BBBB641EB6605A00B90BAE /* TEWSettingAboutVC.m in Sources */,
+				F838E8B81EAAFD7200451488 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F838E8CB1EAAFD7200451488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F838E8D41EAAFD7200451488 /* elephantswordsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F838E8D61EAAFD7200451488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F838E8DF1EAAFD7200451488 /* elephantswordsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F838E8D11EAAFD7200451488 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F838E8B21EAAFD7200451488 /* elephantswords */;
+			targetProxy = F838E8D01EAAFD7200451488 /* PBXContainerItemProxy */;
+		};
+		F838E8DC1EAAFD7200451488 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F838E8B21EAAFD7200451488 /* elephantswords */;
+			targetProxy = F838E8DB1EAAFD7200451488 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F838E8BF1EAAFD7200451488 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F838E8C01EAAFD7200451488 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F838E8C71EAAFD7200451488 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F838E8C81EAAFD7200451488 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F838E8E11EAAFD7200451488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F838E8E21EAAFD7200451488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F838E8E41EAAFD7200451488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9768DD154E5D9B2A8EA1617A /* Pods-elephantswords.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: AoGe He (G5X48325TH)";
+				DEVELOPMENT_TEAM = 74W2BTNY9Q;
+				INFOPLIST_FILE = elephantswords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswords;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F838E8E51EAAFD7200451488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A3F7174C18957F6B9918A05 /* Pods-elephantswords.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = 74W2BTNY9Q;
+				INFOPLIST_FILE = elephantswords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswords;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		F838E8E71EAAFD7200451488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = elephantswordsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswordsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elephantswords.app/elephantswords";
+			};
+			name = Debug;
+		};
+		F838E8E81EAAFD7200451488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = elephantswordsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswordsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elephantswords.app/elephantswords";
+			};
+			name = Release;
+		};
+		F838E8EA1EAAFD7200451488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = elephantswordsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswordsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = elephantswords;
+			};
+			name = Debug;
+		};
+		F838E8EB1EAAFD7200451488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = elephantswordsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswordsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = elephantswords;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F838E8AE1EAAFD7200451488 /* Build configuration list for PBXProject "elephantswords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F838E8E11EAAFD7200451488 /* Debug */,
+				F838E8E21EAAFD7200451488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F838E8E31EAAFD7200451488 /* Build configuration list for PBXNativeTarget "elephantswords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F838E8E41EAAFD7200451488 /* Debug */,
+				F838E8E51EAAFD7200451488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F838E8E61EAAFD7200451488 /* Build configuration list for PBXNativeTarget "elephantswordsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F838E8E71EAAFD7200451488 /* Debug */,
+				F838E8E81EAAFD7200451488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F838E8E91EAAFD7200451488 /* Build configuration list for PBXNativeTarget "elephantswordsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F838E8EA1EAAFD7200451488 /* Debug */,
+				F838E8EB1EAAFD7200451488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F838E8C21EAAFD7200451488 /* elephantswords.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F838E8C31EAAFD7200451488 /* elephantswords.xcdatamodel */,
+			);
+			currentVersion = F838E8C31EAAFD7200451488 /* elephantswords.xcdatamodel */;
+			path = elephantswords.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F838E8AB1EAAFD7200451488 /* Project object */;
+}
