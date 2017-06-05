@@ -17,6 +17,17 @@
 
 #define TEW_BASEURL                                             @"https://api.backendless.com/v1"
 
+// APP ID
+#define TEW_APP_ID                                              @"353372460"
+
+// ROUND
+#define TEW_ROUND_NONE                                          -1
+#define TEW_ROUND_0                                             0
+#define TEW_ROUND_1                                             1
+#define TEW_ROUND_2                                             2
+#define TEW_ROUND_3                                             3
+#define TEW_ROUND_4                                             4
+
 // UICOLOR
 #define TEWUICOLOR_THEMECOLOR_GREEN                             [UIColor colorWithHexString:@"#73BE28"]
 #define TEWUICOLOR_THEMECOLOR_YELLOW                            [UIColor colorWithHexString:@"#EEFA98"]

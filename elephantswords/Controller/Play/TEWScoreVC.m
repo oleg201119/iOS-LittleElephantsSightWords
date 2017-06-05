@@ -7,7 +7,7 @@
 //
 
 #import "TEWScoreVC.h"
-#import "SettingsConstant.h"
+#import "TEWSettingsConstant.h"
 
 #define TEWSCORE_TITLE_AMAZING              @"Amazing!"
 #define TEWSCORE_TITLE_FANTASTIC            @"Fantastic!"
@@ -52,7 +52,12 @@
     
     // Set animal
     [self initAnimalWithScore:3.5 Animal: ANIMAL_2];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeLeft] forKey:@"orientation"];
 }
 
 - (void)didReceiveMemoryWarning {

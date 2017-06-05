@@ -12,6 +12,6 @@ target 'elephantswords' do
   pod 'MBProgressHUD'
   pod 'UIView+Shake'
   pod 'DLRadioButton’, ‘~> 1.4’
-  
+  pod 'TOMSMorphingLabel', '~> 0.5'
 
 end

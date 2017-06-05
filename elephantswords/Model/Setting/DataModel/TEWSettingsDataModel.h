@@ -7,28 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-#import "TEWProfile.h"
 
 @interface TEWSettingsDataModel : NSObject
 
-@property (strong, nonatomic) NSString *szUserName;
-@property (atomic) int nAnimalCode;
-@property (atomic) int nRegionCode;
-@property (atomic) int nTypefaceCode;
-@property (atomic) int nColorCode;
-@property (atomic) BOOL fSoundEnable;
+@property (strong, nonatomic) NSString *name;
+@property (atomic) int avatar;
+@property (atomic) int region;
+@property (atomic) int style;
+@property (atomic) int color;
+@property (atomic) BOOL sound;
 
-- (instancetype) init;
-
-- (void) setUserName: (NSString*)userName;
-- (void) setAnimalCode: (int)animalCode;
-- (void) setRegionCode: (int)regionCode;
-- (void) setTypefaceCode: (int)typeFaceCode;
-- (void) setColorCode: (int)colorCode;
-- (void) setSoundEnable: (BOOL)soundEnable;
-
-- (void) save: (NSManagedObjectContext *)moc;
-- (void) load: (TEWProfile *)profile;
+- (void) reset;
 
 @end

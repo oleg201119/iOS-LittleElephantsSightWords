@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UBG-rl-mh2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UBG-rl-mh2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -879,10 +879,23 @@ playback</string>
                         <outlet property="bottomViewForBackNext" destination="TeI-iG-mPv" id="b3z-kN-xR1"/>
                         <outlet property="bottomViewForCancelSave" destination="YJS-Ml-VBi" id="dsf-z1-jNh"/>
                         <outlet property="bottomViewForNext" destination="Eon-1w-MWl" id="OA8-f2-ILF"/>
+                        <outlet property="colorAltButton" destination="SS4-2T-5jg" id="IoW-Di-QYu"/>
+                        <outlet property="colorBlackButton" destination="l4J-E0-wwq" id="o95-id-SsD"/>
+                        <outlet property="colorBlueButton" destination="FOW-By-lVs" id="zNB-u1-aw2"/>
+                        <outlet property="colorGreenButton" destination="F3G-GH-KqN" id="zgE-Xn-qKh"/>
+                        <outlet property="colorRedButton" destination="BG1-T4-w0D" id="1Z9-vR-Rne"/>
                         <outlet property="navBackButton" destination="Mc3-bl-KCJ" id="BOa-96-Xu7"/>
                         <outlet property="pageControl" destination="92n-k1-XJ1" id="VBN-JD-bjF"/>
+                        <outlet property="regionAUButton" destination="Ize-Sn-0gE" id="fKQ-XJ-eXO"/>
+                        <outlet property="regionCAButton" destination="NjN-fb-cdt" id="8ex-nt-4HH"/>
+                        <outlet property="regionUKButton" destination="t2X-U4-rWl" id="SEE-hT-KoY"/>
+                        <outlet property="regionUSButton" destination="mhg-w4-Fni" id="oJa-rR-GCa"/>
                         <outlet property="scrollView" destination="hOD-1O-8g0" id="IDn-h0-1bc"/>
                         <outlet property="soundSwitch" destination="hwP-Ii-7Wd" id="Vp9-WA-7t0"/>
+                        <outlet property="styleDislexButton" destination="Zcs-yj-I95" id="U4z-8D-Yh5"/>
+                        <outlet property="styleJoinButton" destination="tpr-Aw-WGK" id="qRI-DI-J9y"/>
+                        <outlet property="styleStdButton" destination="wNh-Ux-2IC" id="f3q-YB-j5L"/>
+                        <outlet property="styleUnJoinButton" destination="jLL-va-rDq" id="htt-t8-84a"/>
                         <outlet property="userNameText" destination="ppY-4k-131" id="v6N-Bp-yZ1"/>
                         <outlet property="wizardContainer1" destination="UW4-CS-OVH" id="F4Z-ei-WGo"/>
                         <outlet property="wizardContainer2" destination="PCf-dz-GJm" id="L1M-fk-hWT"/>
@@ -939,6 +952,9 @@ playback</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzE-Fq-f6Y" userLabel="Button - Round0 button">
                                                 <rect key="frame" x="-0.5" y="-0.5" width="107.5" height="107.5"/>
                                                 <connections>
+                                                    <action selector="onTouchDown:" destination="cQL-F2-YUQ" eventType="touchDown" id="KQj-g8-g9t"/>
+                                                    <action selector="onTouchDragEnter:" destination="cQL-F2-YUQ" eventType="touchDragEnter" id="5uD-V5-XPd"/>
+                                                    <action selector="onTouchDragExit:" destination="cQL-F2-YUQ" eventType="touchDragExit" id="Dmz-hm-g0c"/>
                                                     <action selector="onTouchRoundButton:" destination="cQL-F2-YUQ" eventType="touchUpInside" id="02I-Ax-ylh"/>
                                                 </connections>
                                             </button>
@@ -986,6 +1002,9 @@ playback</string>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-Jv-uS2" userLabel="Button - Round1 button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="107.5" height="107.5"/>
                                                                 <connections>
+                                                                    <action selector="onTouchDown:" destination="cQL-F2-YUQ" eventType="touchDown" id="cBG-xN-UW4"/>
+                                                                    <action selector="onTouchDragEnter:" destination="cQL-F2-YUQ" eventType="touchDragEnter" id="ChW-0o-beN"/>
+                                                                    <action selector="onTouchDragExit:" destination="cQL-F2-YUQ" eventType="touchDragExit" id="gsh-Gm-qy6"/>
                                                                     <action selector="onTouchRoundButton:" destination="cQL-F2-YUQ" eventType="touchUpInside" id="sC0-k9-jIi"/>
                                                                 </connections>
                                                             </button>
@@ -1032,6 +1051,9 @@ playback</string>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-MX-ZI5" userLabel="Button - Round2 button">
                                                                 <rect key="frame" x="-0.5" y="0.0" width="107.5" height="107.5"/>
                                                                 <connections>
+                                                                    <action selector="onTouchDown:" destination="cQL-F2-YUQ" eventType="touchDown" id="VXX-bb-6Dv"/>
+                                                                    <action selector="onTouchDragEnter:" destination="cQL-F2-YUQ" eventType="touchDragEnter" id="rsU-jv-aCj"/>
+                                                                    <action selector="onTouchDragExit:" destination="cQL-F2-YUQ" eventType="touchDragExit" id="NL7-ww-jOC"/>
                                                                     <action selector="onTouchRoundButton:" destination="cQL-F2-YUQ" eventType="touchUpInside" id="yXh-Mp-qdh"/>
                                                                 </connections>
                                                             </button>
@@ -1077,6 +1099,9 @@ playback</string>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSg-u1-0HI" userLabel="Button - Round3 button">
                                                                 <rect key="frame" x="0.0" y="-0.5" width="107.5" height="107.5"/>
                                                                 <connections>
+                                                                    <action selector="onTouchDown:" destination="cQL-F2-YUQ" eventType="touchDown" id="hFE-p2-1mg"/>
+                                                                    <action selector="onTouchDragEnter:" destination="cQL-F2-YUQ" eventType="touchDragEnter" id="EE6-vX-Vbz"/>
+                                                                    <action selector="onTouchDragExit:" destination="cQL-F2-YUQ" eventType="touchDragExit" id="w53-EF-iii"/>
                                                                     <action selector="onTouchRoundButton:" destination="cQL-F2-YUQ" eventType="touchUpInside" id="rTS-Kw-Nrr"/>
                                                                 </connections>
                                                             </button>
@@ -1122,6 +1147,9 @@ playback</string>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-Gr-ynF" userLabel="Button - Round4 button">
                                                                 <rect key="frame" x="-0.5" y="-10" width="107.5" height="107.5"/>
                                                                 <connections>
+                                                                    <action selector="onTouchDown:" destination="cQL-F2-YUQ" eventType="touchDown" id="QJf-TV-yOt"/>
+                                                                    <action selector="onTouchDragEnter:" destination="cQL-F2-YUQ" eventType="touchDragEnter" id="cqF-vc-255"/>
+                                                                    <action selector="onTouchDragExit:" destination="cQL-F2-YUQ" eventType="touchDragExit" id="WDm-0C-TNm"/>
                                                                     <action selector="onTouchRoundButton:" destination="cQL-F2-YUQ" eventType="touchUpInside" id="7GO-b1-Hm9"/>
                                                                 </connections>
                                                             </button>
@@ -1511,7 +1539,7 @@ Elephant App!</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ia-88-pcz" id="0K2-to-q7m">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arr-wW-0Ms" userLabel="View - Container">
@@ -1842,7 +1870,7 @@ Elephant App!</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x3Q-5x-auT" id="LKM-C7-Cis">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylW-kG-Uvv" userLabel="Label - Edit Profile">

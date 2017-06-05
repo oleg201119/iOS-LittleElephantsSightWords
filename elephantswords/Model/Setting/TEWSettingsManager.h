@@ -16,4 +16,6 @@
 + (instancetype) sharedInstance;
 - (void) initializeManager;
 
+- (void) setWithActiveProfile;
+
 @end

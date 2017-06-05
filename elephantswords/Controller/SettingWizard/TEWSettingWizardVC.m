@@ -7,13 +7,15 @@
 //
 
 #import "TEWSettingWizardVC.h"
-#import "SettingsConstant.h"
+#import "TEWSettingsConstant.h"
 #import "TEWGenericFunctionManager.h"
 #import "TEWSettingsManager.h"
-#import "UIColor+HexString.h"
+#import "TEWProfileManager.h"
 
 #import "Global.h"
 #import "AppDelegate.h"
+
+#import "UIColor+HexString.h"
 #import <UIView+Shake.h>
 
 #define FOTTER_FOR_NEXT                     0
@@ -25,11 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *navBackButton;
 @property (weak, nonatomic) IBOutlet UITextField *userNameText;
     
-@property (atomic) int nAnimalCode;
-@property (atomic) int nRegionCode;
-@property (atomic) int nTypefaceCode;
-@property (atomic) int nColorCode;
-
 // Scroll page
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
@@ -48,9 +45,27 @@
 @property (weak, nonatomic) IBOutlet UIView *animalContainer2;
 @property (weak, nonatomic) IBOutlet UIView *animalContainer3;
 
+// Wizard 2
+@property (weak, nonatomic) IBOutlet DLRadioButton *regionUKButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *regionUSButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *regionAUButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *regionCAButton;
+
+// Wizard 3
+@property (weak, nonatomic) IBOutlet DLRadioButton *styleStdButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *styleUnJoinButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *styleJoinButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *styleDislexButton;
+
 // Wizard 4
 @property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
-    
+
+@property (weak, nonatomic) IBOutlet DLRadioButton *colorBlackButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *colorBlueButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *colorGreenButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *colorRedButton;
+@property (weak, nonatomic) IBOutlet DLRadioButton *colorAltButton;
+
 // Container
 @property (weak, nonatomic) IBOutlet UIView *wizardContainer1;
 @property (weak, nonatomic) IBOutlet UIView *wizardContainer2;
@@ -104,10 +119,10 @@
     self.animalImageView1.layer.masksToBounds = YES;
     self.animalImageView1.clipsToBounds = YES;
     self.animalImageView1.layer.borderWidth = 2;
-    self.animalImageView1.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+//    self.animalImageView1.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     self.animalContainer1.backgroundColor = [UIColor clearColor];
-    self.animalContainer1.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+//    self.animalContainer1.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.animalContainer1.layer.shadowOffset = CGSizeMake(0,0);
     self.animalContainer1.layer.shadowOpacity = 1.0;
     self.animalContainer1.layer.shadowRadius = 3;
@@ -116,10 +131,10 @@
     self.animalImageView2.layer.masksToBounds = YES;
     self.animalImageView2.clipsToBounds = YES;
     self.animalImageView2.layer.borderWidth = 2;
-    self.animalImageView2.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+//    self.animalImageView2.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     self.animalContainer2.backgroundColor = [UIColor clearColor];
-    self.animalContainer2.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+//    self.animalContainer2.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.animalContainer2.layer.shadowOffset = CGSizeMake(0,0);
     self.animalContainer2.layer.shadowOpacity = 1.0;
     self.animalContainer2.layer.shadowRadius = 3;
@@ -128,10 +143,10 @@
     self.animalImageView3.layer.masksToBounds = YES;
     self.animalImageView3.clipsToBounds = YES;
     self.animalImageView3.layer.borderWidth = 2;
-    self.animalImageView3.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+//    self.animalImageView3.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     self.animalContainer3.backgroundColor = [UIColor clearColor];
-    self.animalContainer3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+//    self.animalContainer3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.animalContainer3.layer.shadowOffset = CGSizeMake(0,0);
     self.animalContainer3.layer.shadowOpacity = 1.0;
     self.animalContainer3.layer.shadowRadius = 3;
@@ -146,24 +161,10 @@
         self.navBackButton.hidden = YES;
     }
     
-    if (self.fWizardMode == YES) {
-        self.nAnimalCode = ANIMAL_NONE;
-        self.nRegionCode = REGION_NONE;
-        self.nTypefaceCode = STYLE_NONE;
-        self.nColorCode = COLOR_NONE;
-        
-        [self scrollToPage:self.nCurrentPage withAnimation:false];
-    }
-    else {
-        [self scrollToPage:self.nCurrentPage withAnimation:false];
-    }
-    
     self.wizardContainer1.layer.cornerRadius = 10.0f;
     self.wizardContainer2.layer.cornerRadius = 10.0f;
     self.wizardContainer3.layer.cornerRadius = 10.0f;
     self.wizardContainer4.layer.cornerRadius = 10.0f;
-        
-    [self changeSelectedAnimal:1];
     
     self.userNameText.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.userNameText.layer.shadowOffset = CGSizeMake(0,0);
@@ -172,6 +173,36 @@
     self.userNameText.layer.borderWidth = 2;
     self.userNameText.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
+    // Init settings manager
+    TEWSettingsManager * settingManager = [TEWSettingsManager sharedInstance];
+
+    if (self.fWizardMode == YES) {
+        [settingManager.modelSettingInfo reset];
+    }
+    else {
+        [settingManager setWithActiveProfile];
+    }
+    
+    // Set name
+    self.userNameText.text = settingManager.modelSettingInfo.name;
+    
+    // Set avatar
+    [self changeSelectedAnimal:settingManager.modelSettingInfo.avatar];
+    
+    // Set region
+    [self changeSelectedRegion:settingManager.modelSettingInfo.region];
+
+    // Set style
+    [self changeSelectedStyle:settingManager.modelSettingInfo.style];
+    
+    // Set color
+    [self changeSelectedColor:settingManager.modelSettingInfo.color];
+    
+    // Set sound
+    [self.soundSwitch setOn:settingManager.modelSettingInfo.sound animated:NO];
+    
+    // Go to page
+    [self scrollToPage:self.nCurrentPage withAnimation:false];
 }
 
 #pragma mark - Biz logic
@@ -179,31 +210,31 @@
 - (BOOL) checkMandatoryFields {
     
     if (self.nCurrentPage == SETTING_WIZARD_ACCOUNT) {
-        NSString *szUserName = self.userNameText.text;
-        if (szUserName.length == 0) {
+        
+        if (self.userNameText.text.length == 0) {
             [TEWGenericFunctionManager showAlertWithMessage:@"Please enter your name"];
             return NO;
         }
         
-        if (self.nAnimalCode == ANIMAL_NONE) {
+        if ([TEWSettingsManager sharedInstance].modelSettingInfo.avatar == ANIMAL_NONE) {
             [TEWGenericFunctionManager showAlertWithMessage:@"Please select a persona"];
             return NO;
         }
     }
     else if (self.nCurrentPage == SETTING_WIZARD_REGION) {
-        if (self.nRegionCode == REGION_NONE) {
+        if ([TEWSettingsManager sharedInstance].modelSettingInfo.region == REGION_NONE) {
             [TEWGenericFunctionManager showAlertWithMessage:@"Please select a region"];
             return NO;
         }
     }
     else if (self.nCurrentPage == SETTING_WIZARD_STYLE) {
-        if (self.nTypefaceCode == STYLE_NONE) {
+        if ([TEWSettingsManager sharedInstance].modelSettingInfo.style == STYLE_NONE) {
             [TEWGenericFunctionManager showAlertWithMessage:@"Please select a typeface"];
             return NO;
         }
     }
     else if (self.nCurrentPage == SETTING_WIZARD_COLOR) {
-        if (self.nColorCode == COLOR_NONE) {
+        if ([TEWSettingsManager sharedInstance].modelSettingInfo.color == COLOR_NONE) {
             [TEWGenericFunctionManager showAlertWithMessage:@"Please select a color"];
             return NO;
         }
@@ -222,22 +253,83 @@
     self.animalContainer3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     if (animalId == 1) {
-        self.nAnimalCode = ANIMAL_1;
-        
+        [TEWSettingsManager sharedInstance].modelSettingInfo.avatar = ANIMAL_1;
         self.animalImageView1.layer.borderColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
         self.animalContainer1.layer.shadowColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
     }
     else if (animalId == 2) {
-        self.nAnimalCode = ANIMAL_2;
-        
+        [TEWSettingsManager sharedInstance].modelSettingInfo.avatar = ANIMAL_2;
         self.animalImageView2.layer.borderColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
         self.animalContainer2.layer.shadowColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
     }
     else if (animalId == 3) {
-        self.nAnimalCode = ANIMAL_3;
-        
+        [TEWSettingsManager sharedInstance].modelSettingInfo.avatar = ANIMAL_3;
         self.animalImageView3.layer.borderColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
         self.animalContainer3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
+    }
+}
+
+- (void) changeSelectedRegion: (int) regionId {
+    self.regionUKButton.selected = NO;
+    self.regionUSButton.selected = NO;
+    self.regionAUButton.selected = NO;
+    self.regionCAButton.selected = NO;
+    
+    if (regionId == REGION_UK) {
+        self.regionUKButton.selected = YES;
+    }
+    else if (regionId == REGION_US) {
+        self.regionUSButton.selected = YES;
+    }
+    else if (regionId == REGION_AU) {
+        self.regionAUButton.selected = YES;
+    }
+    else if (regionId == REGION_CA) {
+        self.regionCAButton.selected = YES;
+    }
+}
+
+- (void) changeSelectedStyle: (int)styleId {
+    self.styleStdButton.selected = NO;
+    self.styleUnJoinButton.selected = NO;
+    self.styleJoinButton.selected = NO;
+    self.styleDislexButton.selected = NO;
+    
+    if (styleId == STYLE_STANDARD) {
+        self.styleStdButton.selected = YES;
+    }
+    else if (styleId == STYLE_UNJOINED) {
+        self.styleUnJoinButton.selected = YES;
+    }
+    else if (styleId == STYLE_JOINED) {
+        self.styleJoinButton.selected = YES;
+    }
+    else if (styleId == STYLE_DISLEXIE) {
+        self.styleDislexButton.selected = YES;
+    }
+}
+
+- (void) changeSelectedColor: (int)colorId {
+    self.colorBlackButton.selected = NO;
+    self.colorBlueButton.selected = NO;
+    self.colorGreenButton.selected = NO;
+    self.colorRedButton.selected = NO;
+    self.colorAltButton.selected = NO;
+    
+    if (colorId == COLOR_BLACK) {
+        self.colorBlackButton.selected = YES;
+    }
+    else if (colorId == COLOR_BLUE) {
+        self.colorBlueButton.selected = YES;
+    }
+    else if (colorId == COLOR_GREEN) {
+        self.colorGreenButton.selected = YES;
+    }
+    else if (colorId == COLOR_RED) {
+        self.colorRedButton.selected = YES;
+    }
+    else if (colorId == COLOR_ALTERNATE ) {
+        self.colorAltButton.selected = YES;
     }
 }
 
@@ -278,10 +370,18 @@
     if (self.fWizardMode == YES && self.nCurrentPage == SETTING_WIZARD_COLOR) {
         
         // Save profile
-        AppDelegate * delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
         TEWSettingsManager * settingsManager = [TEWSettingsManager sharedInstance];
+        BOOL active = NO;
         
-        [settingsManager.modelSettingInfo save:delegate.persistentContainer.viewContext];
+        if (profileManager.activeProfile == nil) {
+            active = YES;
+        }
+        
+        [profileManager createNewProfileWithName:settingsManager.modelSettingInfo.name WithAvatar:settingsManager.modelSettingInfo.avatar WithRegion:settingsManager.modelSettingInfo.region WithStyle:settingsManager.modelSettingInfo.style WithColor:settingsManager.modelSettingInfo.color WithSound:settingsManager.modelSettingInfo.sound WithActive:active];
+
+        // Reload profiles
+        [profileManager loadProfiles];
         
         // Go to round selection screen
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -349,27 +449,23 @@
 - (IBAction)onTouchNextButton:(id)sender {
     NSLog(@"onTouchNextButton");
     
-    TEWSettingsManager * settingsManager = [TEWSettingsManager sharedInstance];
-    
     if ([self checkMandatoryFields] == YES) {
         if (self.nCurrentPage == SETTING_WIZARD_ACCOUNT) {
-            [settingsManager.modelSettingInfo setUserName:self.userNameText.text];
-            [settingsManager.modelSettingInfo setAnimalCode:self.nAnimalCode];
+            [TEWSettingsManager sharedInstance].modelSettingInfo.name = self.userNameText.text;
         }
         else if (self.nCurrentPage == SETTING_WIZARD_REGION) {
-            [settingsManager.modelSettingInfo setRegionCode:self.nRegionCode];
+            //
         }
         else if (self.nCurrentPage == SETTING_WIZARD_STYLE) {
-            [settingsManager.modelSettingInfo setTypefaceCode:self.nTypefaceCode];
+            //
         }
         else if (self.nCurrentPage == SETTING_WIZARD_COLOR) {
-            [settingsManager.modelSettingInfo setColorCode:self.nColorCode];
             
             if ([self.soundSwitch isOn]) {
-                [settingsManager.modelSettingInfo setFSoundEnable:YES];
+                [TEWSettingsManager sharedInstance].modelSettingInfo.sound = YES;
             }
             else {
-                [settingsManager.modelSettingInfo setFSoundEnable:NO];
+                [TEWSettingsManager sharedInstance].modelSettingInfo.sound = NO;
             }
         }
         
@@ -386,7 +482,37 @@
 - (IBAction)onTouchSaveButton:(id)sender {
     NSLog(@"onTouchSaveButton");
     
-    [self.navigationController popViewControllerAnimated:YES];
+    if ([self checkMandatoryFields] == YES) {
+        if (self.nCurrentPage == SETTING_WIZARD_ACCOUNT) {
+            [TEWSettingsManager sharedInstance].modelSettingInfo.name = self.userNameText.text;
+        }
+        else if (self.nCurrentPage == SETTING_WIZARD_REGION) {
+            //
+        }
+        else if (self.nCurrentPage == SETTING_WIZARD_STYLE) {
+            //
+        }
+        else if (self.nCurrentPage == SETTING_WIZARD_COLOR) {
+            
+            if ([self.soundSwitch isOn]) {
+                [TEWSettingsManager sharedInstance].modelSettingInfo.sound = YES;
+            }
+            else {
+                [TEWSettingsManager sharedInstance].modelSettingInfo.sound = NO;
+            }
+        }
+        
+        // Save profile
+        TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
+        TEWSettingsManager * settingsManager = [TEWSettingsManager sharedInstance];
+        
+        [profileManager updateActiveProfileWithName:settingsManager.modelSettingInfo.name WithAvatar:settingsManager.modelSettingInfo.avatar WithRegion:settingsManager.modelSettingInfo.region WithStyle:settingsManager.modelSettingInfo.style WithColor:settingsManager.modelSettingInfo.color WithSound:settingsManager.modelSettingInfo.sound];
+        
+        // Reload profiles
+        [profileManager loadProfiles];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - Wizard 1 Animal button action
@@ -402,17 +528,19 @@
 - (IBAction)onSelectRegionButton:(UIControl *)sender {
     NSLog(@"onSelectRegionButton %ld", (long)sender.tag);    
     
+    TEWSettingsManager * settingManager = [TEWSettingsManager sharedInstance];
+    
     if (sender.tag == 1) {
-        self.nRegionCode = REGION_UK;
+        settingManager.modelSettingInfo.region = REGION_UK;
     }
     else if (sender.tag == 2) {
-        self.nRegionCode = REGION_US;
+        settingManager.modelSettingInfo.region = REGION_US;
     }
     else if (sender.tag == 3) {
-        self.nRegionCode = REGION_AU;
+        settingManager.modelSettingInfo.region = REGION_AU;
     }
     else if (sender.tag == 4) {
-        self.nRegionCode = REGION_CA;
+        settingManager.modelSettingInfo.region = REGION_CA;
     }
 }
 
@@ -421,17 +549,19 @@
 - (IBAction)onSelectStyleButton:(UIControl *)sender {
     NSLog(@"onSelectStyleButton %ld", (long)sender.tag);
     
+    TEWSettingsManager * settingManager = [TEWSettingsManager sharedInstance];
+    
     if (sender.tag == 1) {
-        self.nTypefaceCode = STYLE_STANDARD;
+        settingManager.modelSettingInfo.style = STYLE_STANDARD;
     }
     else if (sender.tag == 2) {
-        self.nTypefaceCode = STYLE_UNJOINED;
+        settingManager.modelSettingInfo.style = STYLE_UNJOINED;
     }
     else if (sender.tag == 3) {
-        self.nTypefaceCode = STYLE_JOINED;
+        settingManager.modelSettingInfo.style = STYLE_JOINED;
     }
     else if (sender.tag == 4) {
-        self.nTypefaceCode = STYLE_DISLEXIE;
+        settingManager.modelSettingInfo.style = STYLE_DISLEXIE;
     }
 }
 
@@ -439,20 +569,22 @@
 - (IBAction)onSelectColorButton:(UIControl *)sender {
     NSLog(@"onSelectColorButton %ld", (long)sender.tag);
     
+    TEWSettingsManager * settingManager = [TEWSettingsManager sharedInstance];
+    
     if (sender.tag == 1) {
-        self.nColorCode = COLOR_BLACK;
+        settingManager.modelSettingInfo.color = COLOR_BLACK;
     }
     else if (sender.tag == 2) {
-        self.nColorCode = COLOR_BLUE;
+        settingManager.modelSettingInfo.color = COLOR_BLUE;
     }
     else if (sender.tag == 3) {
-        self.nColorCode = COLOR_GREEN;
+        settingManager.modelSettingInfo.color = COLOR_GREEN;
     }
     else if (sender.tag == 4) {
-        self.nColorCode = COLOR_RED;
+        settingManager.modelSettingInfo.color = COLOR_RED;
     }
     else if (sender.tag == 5) {
-        self.nColorCode = COLOR_ALTERNATE;
+        settingManager.modelSettingInfo.color = COLOR_ALTERNATE;
     }
 }
 

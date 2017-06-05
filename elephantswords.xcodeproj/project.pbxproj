@@ -24,10 +24,39 @@
 		F838E8FE1EAB026C00451488 /* TEWUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8FD1EAB026C00451488 /* TEWUrlManager.m */; };
 		F838E9031EAC0E5100451488 /* TEWUserInfoDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */; };
 		F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F854AF121EBA478500526BE3 /* TEWSplashVC.m */; };
-		F854AF161EBA712600526BE3 /* TEWProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = F854AF151EBA712600526BE3 /* TEWProfile.m */; };
 		F857FCAF1EDC26DE00BB1EC1 /* TEWWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F857FCAE1EDC26DE00BB1EC1 /* TEWWordManager.m */; };
 		F857FCB11EDC5B9F00BB1EC1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = F857FCB01EDC5B9F00BB1EC1 /* words.json */; };
+		F89ED32B1EE1BFC100BA41E6 /* TEWRotationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89ED32A1EE1BFC100BA41E6 /* TEWRotationManager.m */; };
+		F89ED32D1EE1D0EF00BA41E6 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89ED32C1EE1D0EF00BA41E6 /* ScoreView.xib */; };
+		F89ED3331EE1D37400BA41E6 /* TEWScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = F89ED3321EE1D37400BA41E6 /* TEWScoreView.m */; };
+		F89ED3351EE249CD00BA41E6 /* WordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89ED3341EE249CD00BA41E6 /* WordView.xib */; };
+		F89ED3381EE24B9700BA41E6 /* TEWWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = F89ED3371EE24B9700BA41E6 /* TEWWordView.m */; };
+		F8A031A71EE0692300A8064B /* TEWRoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A031A61EE0692300A8064B /* TEWRoundManager.m */; };
 		F8ABB26E1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */; };
+		F8AC66321EDE6B6A00962C5B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AC66311EDE6B6A00962C5B /* AVFoundation.framework */; };
+		F8AC66481EDE8CBC00962C5B /* Marlene_Marker 01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66341EDE8CBC00962C5B /* Marlene_Marker 01.mp3 */; };
+		F8AC66491EDE8CBC00962C5B /* Marlene_Marker 02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66351EDE8CBC00962C5B /* Marlene_Marker 02.mp3 */; };
+		F8AC664A1EDE8CBC00962C5B /* Marlene_Marker 03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66361EDE8CBC00962C5B /* Marlene_Marker 03.mp3 */; };
+		F8AC664B1EDE8CBC00962C5B /* Marlene_Marker 04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66371EDE8CBC00962C5B /* Marlene_Marker 04.mp3 */; };
+		F8AC664C1EDE8CBC00962C5B /* Marlene_Marker 05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66381EDE8CBC00962C5B /* Marlene_Marker 05.mp3 */; };
+		F8AC664D1EDE8CBC00962C5B /* Marlene_Marker 06.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66391EDE8CBC00962C5B /* Marlene_Marker 06.mp3 */; };
+		F8AC664E1EDE8CBC00962C5B /* Marlene_Marker 07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC663A1EDE8CBC00962C5B /* Marlene_Marker 07.mp3 */; };
+		F8AC664F1EDE8CBC00962C5B /* Marlene_Marker 08.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC663B1EDE8CBC00962C5B /* Marlene_Marker 08.mp3 */; };
+		F8AC66501EDE8CBC00962C5B /* Marlene_Marker 09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC663C1EDE8CBC00962C5B /* Marlene_Marker 09.mp3 */; };
+		F8AC66511EDE8CBC00962C5B /* Marlene_Marker 10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC663D1EDE8CBC00962C5B /* Marlene_Marker 10.mp3 */; };
+		F8AC66521EDE8CBC00962C5B /* Marlene_Marker 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC663E1EDE8CBC00962C5B /* Marlene_Marker 11.mp3 */; };
+		F8AC66531EDE8CBC00962C5B /* Marlene_Marker 12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC663F1EDE8CBC00962C5B /* Marlene_Marker 12.mp3 */; };
+		F8AC66541EDE8CBC00962C5B /* Marlene_Marker 13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66401EDE8CBC00962C5B /* Marlene_Marker 13.mp3 */; };
+		F8AC66551EDE8CBC00962C5B /* Marlene_Marker 14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66411EDE8CBC00962C5B /* Marlene_Marker 14.mp3 */; };
+		F8AC66561EDE8CBC00962C5B /* Marlene_Marker 15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66421EDE8CBC00962C5B /* Marlene_Marker 15.mp3 */; };
+		F8AC66571EDE8CBC00962C5B /* Marlene_Marker 16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66431EDE8CBC00962C5B /* Marlene_Marker 16.mp3 */; };
+		F8AC66581EDE8CBC00962C5B /* Marlene_Marker 17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66441EDE8CBC00962C5B /* Marlene_Marker 17.mp3 */; };
+		F8AC66591EDE8CBC00962C5B /* Marlene_Marker 18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66451EDE8CBC00962C5B /* Marlene_Marker 18.mp3 */; };
+		F8AC665A1EDE8CBC00962C5B /* Marlene_Marker 19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66461EDE8CBC00962C5B /* Marlene_Marker 19.mp3 */; };
+		F8AC665B1EDE8CBC00962C5B /* Marlene_Marker 20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66471EDE8CBC00962C5B /* Marlene_Marker 20.mp3 */; };
+		F8AC665F1EDEA43E00962C5B /* TEWFocusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC665E1EDEA43E00962C5B /* TEWFocusManager.m */; };
+		F8AC66631EDEB66A00962C5B /* TEWProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC66621EDEB66A00962C5B /* TEWProfileManager.m */; };
+		F8AC66671EDF365000962C5B /* TEWProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AC66661EDF365000962C5B /* TEWProfileDataModel.m */; };
 		F8AFBC4A1EAFDFCC00A449D8 /* TEWSettingWizardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AFBC491EAFDFCC00A449D8 /* TEWSettingWizardVC.m */; };
 		F8B78B6E1EB19B4E00CA59E2 /* TEWSettingsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B78B6D1EB19B4E00CA59E2 /* TEWSettingsDataModel.m */; };
 		F8B78B711EB19ED000CA59E2 /* TEWSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B78B701EB19ED000CA59E2 /* TEWSettingsManager.m */; };
@@ -100,16 +129,51 @@
 		F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWUserInfoDataModel.m; path = Model/User/DataModel/TEWUserInfoDataModel.m; sourceTree = "<group>"; };
 		F854AF111EBA478500526BE3 /* TEWSplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSplashVC.h; path = Controller/Splash/TEWSplashVC.h; sourceTree = "<group>"; };
 		F854AF121EBA478500526BE3 /* TEWSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSplashVC.m; path = Controller/Splash/TEWSplashVC.m; sourceTree = "<group>"; };
-		F854AF141EBA712600526BE3 /* TEWProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWProfile.h; path = Model/Setting/DataModel/TEWProfile.h; sourceTree = "<group>"; };
-		F854AF151EBA712600526BE3 /* TEWProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWProfile.m; path = Model/Setting/DataModel/TEWProfile.m; sourceTree = "<group>"; };
 		F857FCAD1EDC26DE00BB1EC1 /* TEWWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWWordManager.h; path = Model/Word/TEWWordManager.h; sourceTree = "<group>"; };
 		F857FCAE1EDC26DE00BB1EC1 /* TEWWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWWordManager.m; path = Model/Word/TEWWordManager.m; sourceTree = "<group>"; };
 		F857FCB01EDC5B9F00BB1EC1 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		F89ED3291EE1BFC100BA41E6 /* TEWRotationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRotationManager.h; path = Model/Rotate/TEWRotationManager.h; sourceTree = "<group>"; };
+		F89ED32A1EE1BFC100BA41E6 /* TEWRotationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWRotationManager.m; path = Model/Rotate/TEWRotationManager.m; sourceTree = "<group>"; };
+		F89ED32C1EE1D0EF00BA41E6 /* ScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
+		F89ED3311EE1D37400BA41E6 /* TEWScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWScoreView.h; path = View/Play/TEWScoreView.h; sourceTree = "<group>"; };
+		F89ED3321EE1D37400BA41E6 /* TEWScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWScoreView.m; path = View/Play/TEWScoreView.m; sourceTree = "<group>"; };
+		F89ED3341EE249CD00BA41E6 /* WordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordView.xib; sourceTree = "<group>"; };
+		F89ED3361EE24B9700BA41E6 /* TEWWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWWordView.h; path = View/Play/TEWWordView.h; sourceTree = "<group>"; };
+		F89ED3371EE24B9700BA41E6 /* TEWWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWWordView.m; path = View/Play/TEWWordView.m; sourceTree = "<group>"; };
+		F8A031A51EE0692300A8064B /* TEWRoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundManager.h; path = Model/Round/TEWRoundManager.h; sourceTree = "<group>"; };
+		F8A031A61EE0692300A8064B /* TEWRoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWRoundManager.m; path = Model/Round/TEWRoundManager.m; sourceTree = "<group>"; };
 		F8ABB26C1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+Multiplier.h"; path = "Model/Utils/NSLayoutConstraint+Multiplier.h"; sourceTree = "<group>"; };
 		F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+Multiplier.m"; path = "Model/Utils/NSLayoutConstraint+Multiplier.m"; sourceTree = "<group>"; };
+		F8AC66311EDE6B6A00962C5B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F8AC66341EDE8CBC00962C5B /* Marlene_Marker 01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 01.mp3"; path = "Model/Sound/Marlene_Marker 01.mp3"; sourceTree = "<group>"; };
+		F8AC66351EDE8CBC00962C5B /* Marlene_Marker 02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 02.mp3"; path = "Model/Sound/Marlene_Marker 02.mp3"; sourceTree = "<group>"; };
+		F8AC66361EDE8CBC00962C5B /* Marlene_Marker 03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 03.mp3"; path = "Model/Sound/Marlene_Marker 03.mp3"; sourceTree = "<group>"; };
+		F8AC66371EDE8CBC00962C5B /* Marlene_Marker 04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 04.mp3"; path = "Model/Sound/Marlene_Marker 04.mp3"; sourceTree = "<group>"; };
+		F8AC66381EDE8CBC00962C5B /* Marlene_Marker 05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 05.mp3"; path = "Model/Sound/Marlene_Marker 05.mp3"; sourceTree = "<group>"; };
+		F8AC66391EDE8CBC00962C5B /* Marlene_Marker 06.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 06.mp3"; path = "Model/Sound/Marlene_Marker 06.mp3"; sourceTree = "<group>"; };
+		F8AC663A1EDE8CBC00962C5B /* Marlene_Marker 07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 07.mp3"; path = "Model/Sound/Marlene_Marker 07.mp3"; sourceTree = "<group>"; };
+		F8AC663B1EDE8CBC00962C5B /* Marlene_Marker 08.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 08.mp3"; path = "Model/Sound/Marlene_Marker 08.mp3"; sourceTree = "<group>"; };
+		F8AC663C1EDE8CBC00962C5B /* Marlene_Marker 09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 09.mp3"; path = "Model/Sound/Marlene_Marker 09.mp3"; sourceTree = "<group>"; };
+		F8AC663D1EDE8CBC00962C5B /* Marlene_Marker 10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 10.mp3"; path = "Model/Sound/Marlene_Marker 10.mp3"; sourceTree = "<group>"; };
+		F8AC663E1EDE8CBC00962C5B /* Marlene_Marker 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 11.mp3"; path = "Model/Sound/Marlene_Marker 11.mp3"; sourceTree = "<group>"; };
+		F8AC663F1EDE8CBC00962C5B /* Marlene_Marker 12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 12.mp3"; path = "Model/Sound/Marlene_Marker 12.mp3"; sourceTree = "<group>"; };
+		F8AC66401EDE8CBC00962C5B /* Marlene_Marker 13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 13.mp3"; path = "Model/Sound/Marlene_Marker 13.mp3"; sourceTree = "<group>"; };
+		F8AC66411EDE8CBC00962C5B /* Marlene_Marker 14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 14.mp3"; path = "Model/Sound/Marlene_Marker 14.mp3"; sourceTree = "<group>"; };
+		F8AC66421EDE8CBC00962C5B /* Marlene_Marker 15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 15.mp3"; path = "Model/Sound/Marlene_Marker 15.mp3"; sourceTree = "<group>"; };
+		F8AC66431EDE8CBC00962C5B /* Marlene_Marker 16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 16.mp3"; path = "Model/Sound/Marlene_Marker 16.mp3"; sourceTree = "<group>"; };
+		F8AC66441EDE8CBC00962C5B /* Marlene_Marker 17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 17.mp3"; path = "Model/Sound/Marlene_Marker 17.mp3"; sourceTree = "<group>"; };
+		F8AC66451EDE8CBC00962C5B /* Marlene_Marker 18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 18.mp3"; path = "Model/Sound/Marlene_Marker 18.mp3"; sourceTree = "<group>"; };
+		F8AC66461EDE8CBC00962C5B /* Marlene_Marker 19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 19.mp3"; path = "Model/Sound/Marlene_Marker 19.mp3"; sourceTree = "<group>"; };
+		F8AC66471EDE8CBC00962C5B /* Marlene_Marker 20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marlene_Marker 20.mp3"; path = "Model/Sound/Marlene_Marker 20.mp3"; sourceTree = "<group>"; };
+		F8AC665D1EDEA43E00962C5B /* TEWFocusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWFocusManager.h; path = Model/Focus/TEWFocusManager.h; sourceTree = "<group>"; };
+		F8AC665E1EDEA43E00962C5B /* TEWFocusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWFocusManager.m; path = Model/Focus/TEWFocusManager.m; sourceTree = "<group>"; };
+		F8AC66611EDEB66A00962C5B /* TEWProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWProfileManager.h; path = Model/Profile/TEWProfileManager.h; sourceTree = "<group>"; };
+		F8AC66621EDEB66A00962C5B /* TEWProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWProfileManager.m; path = Model/Profile/TEWProfileManager.m; sourceTree = "<group>"; };
+		F8AC66651EDF365000962C5B /* TEWProfileDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWProfileDataModel.h; path = Model/Profile/DataModel/TEWProfileDataModel.h; sourceTree = "<group>"; };
+		F8AC66661EDF365000962C5B /* TEWProfileDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWProfileDataModel.m; path = Model/Profile/DataModel/TEWProfileDataModel.m; sourceTree = "<group>"; };
 		F8AFBC481EAFDFCC00A449D8 /* TEWSettingWizardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingWizardVC.h; path = Controller/SettingWizard/TEWSettingWizardVC.h; sourceTree = "<group>"; };
 		F8AFBC491EAFDFCC00A449D8 /* TEWSettingWizardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingWizardVC.m; path = Controller/SettingWizard/TEWSettingWizardVC.m; sourceTree = "<group>"; };
-		F8B78B6A1EB196AE00CA59E2 /* SettingsConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingsConstant.h; path = Model/Setting/SettingsConstant.h; sourceTree = "<group>"; };
+		F8B78B6A1EB196AE00CA59E2 /* TEWSettingsConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TEWSettingsConstant.h; path = Model/Setting/TEWSettingsConstant.h; sourceTree = "<group>"; };
 		F8B78B6C1EB19B4E00CA59E2 /* TEWSettingsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingsDataModel.h; path = Model/Setting/DataModel/TEWSettingsDataModel.h; sourceTree = "<group>"; };
 		F8B78B6D1EB19B4E00CA59E2 /* TEWSettingsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSettingsDataModel.m; path = Model/Setting/DataModel/TEWSettingsDataModel.m; sourceTree = "<group>"; };
 		F8B78B6F1EB19ED000CA59E2 /* TEWSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSettingsManager.h; path = Model/Setting/TEWSettingsManager.h; sourceTree = "<group>"; };
@@ -144,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AC66321EDE6B6A00962C5B /* AVFoundation.framework in Frameworks */,
 				93EE9A1A78A813CB27076D6B /* libPods-elephantswords.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +233,7 @@
 		0B58707A06DAF1F34EBC2D8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8AC66311EDE6B6A00962C5B /* AVFoundation.framework */,
 				6E4476ED0543CB690195C418 /* Pods_elephantswordsTests.framework */,
 				AE1FA120A9DA5B98AADDFC01 /* Pods_elephantswordsUITests.framework */,
 				75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */,
@@ -260,6 +326,11 @@
 		F838E8ED1EAB011D00451488 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F89ED3281EE1BE5400BA41E6 /* Rotate */,
+				F8A031A11EE068B400A8064B /* Round */,
+				F8AC66601EDEB64100962C5B /* Profile */,
+				F8AC665C1EDEA40600962C5B /* Focus */,
+				F8AC66331EDE8CA300962C5B /* Sound */,
 				F857FCAC1EDC269F00BB1EC1 /* Word */,
 				F8B78B681EB194AA00CA59E2 /* Setting */,
 				F838E8FF1EAC0DEC00451488 /* User */,
@@ -325,6 +396,8 @@
 				F838E8BF1EAAFD7200451488 /* Main.storyboard */,
 				F8BBBB6E1EB68E3800B90BAE /* Play.storyboard */,
 				F838E8C71EAAFD7200451488 /* LaunchScreen.storyboard */,
+				F89ED32C1EE1D0EF00BA41E6 /* ScoreView.xib */,
+				F89ED3341EE249CD00BA41E6 /* WordView.xib */,
 				F838E8C51EAAFD7200451488 /* Assets.xcassets */,
 			);
 			name = View;
@@ -349,6 +422,79 @@
 			name = Word;
 			sourceTree = "<group>";
 		};
+		F89ED3281EE1BE5400BA41E6 /* Rotate */ = {
+			isa = PBXGroup;
+			children = (
+				F89ED3291EE1BFC100BA41E6 /* TEWRotationManager.h */,
+				F89ED32A1EE1BFC100BA41E6 /* TEWRotationManager.m */,
+			);
+			name = Rotate;
+			sourceTree = "<group>";
+		};
+		F8A031A11EE068B400A8064B /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				F8A031A51EE0692300A8064B /* TEWRoundManager.h */,
+				F8A031A61EE0692300A8064B /* TEWRoundManager.m */,
+			);
+			name = Round;
+			sourceTree = "<group>";
+		};
+		F8AC66331EDE8CA300962C5B /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				F8AC66341EDE8CBC00962C5B /* Marlene_Marker 01.mp3 */,
+				F8AC66351EDE8CBC00962C5B /* Marlene_Marker 02.mp3 */,
+				F8AC66361EDE8CBC00962C5B /* Marlene_Marker 03.mp3 */,
+				F8AC66371EDE8CBC00962C5B /* Marlene_Marker 04.mp3 */,
+				F8AC66381EDE8CBC00962C5B /* Marlene_Marker 05.mp3 */,
+				F8AC66391EDE8CBC00962C5B /* Marlene_Marker 06.mp3 */,
+				F8AC663A1EDE8CBC00962C5B /* Marlene_Marker 07.mp3 */,
+				F8AC663B1EDE8CBC00962C5B /* Marlene_Marker 08.mp3 */,
+				F8AC663C1EDE8CBC00962C5B /* Marlene_Marker 09.mp3 */,
+				F8AC663D1EDE8CBC00962C5B /* Marlene_Marker 10.mp3 */,
+				F8AC663E1EDE8CBC00962C5B /* Marlene_Marker 11.mp3 */,
+				F8AC663F1EDE8CBC00962C5B /* Marlene_Marker 12.mp3 */,
+				F8AC66401EDE8CBC00962C5B /* Marlene_Marker 13.mp3 */,
+				F8AC66411EDE8CBC00962C5B /* Marlene_Marker 14.mp3 */,
+				F8AC66421EDE8CBC00962C5B /* Marlene_Marker 15.mp3 */,
+				F8AC66431EDE8CBC00962C5B /* Marlene_Marker 16.mp3 */,
+				F8AC66441EDE8CBC00962C5B /* Marlene_Marker 17.mp3 */,
+				F8AC66451EDE8CBC00962C5B /* Marlene_Marker 18.mp3 */,
+				F8AC66461EDE8CBC00962C5B /* Marlene_Marker 19.mp3 */,
+				F8AC66471EDE8CBC00962C5B /* Marlene_Marker 20.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		F8AC665C1EDEA40600962C5B /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				F8AC665D1EDEA43E00962C5B /* TEWFocusManager.h */,
+				F8AC665E1EDEA43E00962C5B /* TEWFocusManager.m */,
+			);
+			name = Focus;
+			sourceTree = "<group>";
+		};
+		F8AC66601EDEB64100962C5B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F8AC66641EDF362900962C5B /* DataModel */,
+				F8AC66611EDEB66A00962C5B /* TEWProfileManager.h */,
+				F8AC66621EDEB66A00962C5B /* TEWProfileManager.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		F8AC66641EDF362900962C5B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8AC66651EDF365000962C5B /* TEWProfileDataModel.h */,
+				F8AC66661EDF365000962C5B /* TEWProfileDataModel.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 		F8AFBC441EAFDF5C00A449D8 /* SettingWizard */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,7 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B78B6B1EB19B0A00CA59E2 /* DataModel */,
-				F8B78B6A1EB196AE00CA59E2 /* SettingsConstant.h */,
+				F8B78B6A1EB196AE00CA59E2 /* TEWSettingsConstant.h */,
 				F8B78B6F1EB19ED000CA59E2 /* TEWSettingsManager.h */,
 				F8B78B701EB19ED000CA59E2 /* TEWSettingsManager.m */,
 			);
@@ -374,8 +520,6 @@
 			children = (
 				F8B78B6C1EB19B4E00CA59E2 /* TEWSettingsDataModel.h */,
 				F8B78B6D1EB19B4E00CA59E2 /* TEWSettingsDataModel.m */,
-				F854AF141EBA712600526BE3 /* TEWProfile.h */,
-				F854AF151EBA712600526BE3 /* TEWProfile.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -387,6 +531,10 @@
 				F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */,
 				F8BBBB771EB6938200B90BAE /* TEWScoreVC.h */,
 				F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */,
+				F89ED3311EE1D37400BA41E6 /* TEWScoreView.h */,
+				F89ED3321EE1D37400BA41E6 /* TEWScoreView.m */,
+				F89ED3361EE24B9700BA41E6 /* TEWWordView.h */,
+				F89ED3371EE24B9700BA41E6 /* TEWWordView.m */,
 			);
 			name = Play;
 			sourceTree = "<group>";
@@ -539,10 +687,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AC66491EDE8CBC00962C5B /* Marlene_Marker 02.mp3 in Resources */,
 				F8BBBB6F1EB68E3800B90BAE /* Play.storyboard in Resources */,
 				F838E8C91EAAFD7200451488 /* LaunchScreen.storyboard in Resources */,
+				F8AC66591EDE8CBC00962C5B /* Marlene_Marker 18.mp3 in Resources */,
+				F8AC66571EDE8CBC00962C5B /* Marlene_Marker 16.mp3 in Resources */,
+				F8AC66511EDE8CBC00962C5B /* Marlene_Marker 10.mp3 in Resources */,
+				F8AC664E1EDE8CBC00962C5B /* Marlene_Marker 07.mp3 in Resources */,
+				F8AC664C1EDE8CBC00962C5B /* Marlene_Marker 05.mp3 in Resources */,
+				F8AC664F1EDE8CBC00962C5B /* Marlene_Marker 08.mp3 in Resources */,
+				F8AC664D1EDE8CBC00962C5B /* Marlene_Marker 06.mp3 in Resources */,
+				F8AC66501EDE8CBC00962C5B /* Marlene_Marker 09.mp3 in Resources */,
+				F89ED32D1EE1D0EF00BA41E6 /* ScoreView.xib in Resources */,
+				F8AC664B1EDE8CBC00962C5B /* Marlene_Marker 04.mp3 in Resources */,
+				F8AC66521EDE8CBC00962C5B /* Marlene_Marker 11.mp3 in Resources */,
+				F8AC665B1EDE8CBC00962C5B /* Marlene_Marker 20.mp3 in Resources */,
+				F8AC66581EDE8CBC00962C5B /* Marlene_Marker 17.mp3 in Resources */,
+				F8AC664A1EDE8CBC00962C5B /* Marlene_Marker 03.mp3 in Resources */,
+				F8AC66541EDE8CBC00962C5B /* Marlene_Marker 13.mp3 in Resources */,
 				F838E8C61EAAFD7200451488 /* Assets.xcassets in Resources */,
+				F8AC66481EDE8CBC00962C5B /* Marlene_Marker 01.mp3 in Resources */,
+				F8AC665A1EDE8CBC00962C5B /* Marlene_Marker 19.mp3 in Resources */,
+				F8AC66551EDE8CBC00962C5B /* Marlene_Marker 14.mp3 in Resources */,
+				F8AC66531EDE8CBC00962C5B /* Marlene_Marker 12.mp3 in Resources */,
+				F89ED3351EE249CD00BA41E6 /* WordView.xib in Resources */,
 				F838E8C11EAAFD7200451488 /* Main.storyboard in Resources */,
+				F8AC66561EDE8CBC00962C5B /* Marlene_Marker 15.mp3 in Resources */,
 				F857FCB11EDC5B9F00BB1EC1 /* words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,8 +793,11 @@
 				F8C97BCB1EB43C6100372CBA /* TEWRoundSelectVC.m in Sources */,
 				F838E8BE1EAAFD7200451488 /* ViewController.m in Sources */,
 				F8B78B6E1EB19B4E00CA59E2 /* TEWSettingsDataModel.m in Sources */,
+				F8AC665F1EDEA43E00962C5B /* TEWFocusManager.m in Sources */,
+				F8AC66631EDEB66A00962C5B /* TEWProfileManager.m in Sources */,
 				F8BBBB6D1EB67ECA00B90BAE /* TEWProfileMenuTVC.m in Sources */,
-				F854AF161EBA712600526BE3 /* TEWProfile.m in Sources */,
+				F89ED32B1EE1BFC100BA41E6 /* TEWRotationManager.m in Sources */,
+				F8A031A71EE0692300A8064B /* TEWRoundManager.m in Sources */,
 				F838E9031EAC0E5100451488 /* TEWUserInfoDataModel.m in Sources */,
 				F8AFBC4A1EAFDFCC00A449D8 /* TEWSettingWizardVC.m in Sources */,
 				F8BBBB791EB6938200B90BAE /* TEWScoreVC.m in Sources */,
@@ -634,16 +807,19 @@
 				F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */,
 				F838E8FB1EAB024F00451488 /* TEWErrorManager.m in Sources */,
 				F838E8F21EAB01BB00451488 /* TEWGenericFunctionManager.m in Sources */,
+				F89ED3381EE24B9700BA41E6 /* TEWWordView.m in Sources */,
 				F857FCAF1EDC26DE00BB1EC1 /* TEWWordManager.m in Sources */,
 				F8BBBB6A1EB676EF00B90BAE /* TEWSettingProfileVC.m in Sources */,
 				F838E8F51EAB01E600451488 /* TEWAppManager.m in Sources */,
 				F838E8BB1EAAFD7200451488 /* AppDelegate.m in Sources */,
 				F8BBBB761EB68EF500B90BAE /* TEWLearnVC.m in Sources */,
+				F89ED3331EE1D37400BA41E6 /* TEWScoreView.m in Sources */,
 				F8C97BD31EB4684400372CBA /* TEWSettingMenuTVC.m in Sources */,
 				F838E8C41EAAFD7200451488 /* elephantswords.xcdatamodeld in Sources */,
 				F838E8F81EAB023300451488 /* TEWNetworkRequestManager.m in Sources */,
 				F8BBBB641EB6605A00B90BAE /* TEWSettingAboutVC.m in Sources */,
 				F838E8B81EAAFD7200451488 /* main.m in Sources */,
+				F8AC66671EDF365000962C5B /* TEWProfileDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

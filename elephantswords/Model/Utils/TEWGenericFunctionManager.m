@@ -310,4 +310,12 @@
     return dict;
 }
 
+#pragma mark - UUID
+
++ (NSString *) getUUID {
+    NSString *newID = [[NSUUID UUID] UUIDString];
+    
+    return newID;
+}
+
 @end

@@ -38,7 +38,7 @@
 #define COLOR_ALTERNATE                                          5
 
 // Wizard4 sound enable
-#define SOUND_ENABLED                                            0
-#define SOUND_DISABLED                                           1
+#define SOUND_ENABLED                                            YES
+#define SOUND_DISABLED                                           NO
 
 #endif /* SettingsConstant_h */

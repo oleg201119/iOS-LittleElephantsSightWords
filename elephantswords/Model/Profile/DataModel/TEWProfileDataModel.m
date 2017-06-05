@@ -1,14 +1,14 @@
 //
-//  TEWProfile.m
+//  TEWProfileDataModel.m
 //  elephantswords
 //
-//  Created by star on 5/3/17.
+//  Created by star on 5/21/17.
 //  Copyright © 2017 gavin. All rights reserved.
 //
 
-#import "TEWProfile.h"
+#import "TEWProfileDataModel.h"
 
-@implementation TEWProfile
+@implementation TEWProfileDataModel
 
 @dynamic name;
 @dynamic avatar;
@@ -17,5 +17,6 @@
 @dynamic color;
 @dynamic sound;
 @dynamic active;
+@dynamic uuid;
 
 @end

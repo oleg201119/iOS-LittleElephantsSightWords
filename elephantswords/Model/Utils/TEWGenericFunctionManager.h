@@ -38,4 +38,8 @@
 + (NSString *) getJSONStringRepresentation: (id) object;
 + (id) getObjectFromJSONStringRepresentation: (NSString *) sz;
 
+#pragma mark -UUID
+
++ (NSString *) getUUID;
+
 @end

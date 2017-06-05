@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,6 +24,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKo-bg-jR7" userLabel="View - Main Container">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqj-Q4-BBR" userLabel="View - Text Container">
+                                        <rect key="frame" x="30" y="55" width="607" height="265"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbs-jq-XgI" userLabel="Scroll View - Main ScrollView">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="rMd-IA-0dH" id="sZN-ur-3Gj"/>
+                                        </connections>
+                                    </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-qD-1He" userLabel="View - Top button container">
                                         <rect key="frame" x="30" y="0.0" width="607" height="55"/>
                                         <subviews>
@@ -42,28 +53,12 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="yVz-Q5-wy4" firstAttribute="leading" secondItem="GO9-qD-1He" secondAttribute="leading" id="AK3-rh-DqQ"/>
                                             <constraint firstItem="stO-2d-i1X" firstAttribute="centerY" secondItem="GO9-qD-1He" secondAttribute="centerY" id="Ehf-EU-goQ"/>
                                             <constraint firstAttribute="trailing" secondItem="stO-2d-i1X" secondAttribute="trailing" id="V9F-nv-6y1"/>
                                             <constraint firstItem="yVz-Q5-wy4" firstAttribute="centerY" secondItem="GO9-qD-1He" secondAttribute="centerY" id="faU-yK-7rV"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqj-Q4-BBR" userLabel="View - Text Container">
-                                        <rect key="frame" x="30" y="55" width="607" height="265"/>
-                                        <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5f-rE-boq">
-                                                <rect key="frame" x="0.0" y="0.0" width="607" height="265"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </scrollView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="c5f-rE-boq" firstAttribute="top" secondItem="mqj-Q4-BBR" secondAttribute="top" id="2d9-6h-ZUH"/>
-                                            <constraint firstItem="c5f-rE-boq" firstAttribute="leading" secondItem="mqj-Q4-BBR" secondAttribute="leading" id="CBw-kF-QSc"/>
-                                            <constraint firstAttribute="bottom" secondItem="c5f-rE-boq" secondAttribute="bottom" id="xL6-ys-ev0"/>
-                                            <constraint firstAttribute="trailing" secondItem="c5f-rE-boq" secondAttribute="trailing" id="zKB-Ka-ah3"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaJ-9g-tal" userLabel="View - Bottom button container">
@@ -90,7 +85,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="QYB-Kl-BBs" firstAttribute="centerX" secondItem="PaJ-9g-tal" secondAttribute="centerX" id="Anc-JF-ZgO"/>
                                             <constraint firstItem="B67-LV-MIA" firstAttribute="centerY" secondItem="PaJ-9g-tal" secondAttribute="centerY" id="QnS-2E-ebS"/>
@@ -104,15 +99,19 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="GO9-qD-1He" firstAttribute="top" secondItem="NKo-bg-jR7" secondAttribute="top" id="0bS-As-OHS"/>
+                                    <constraint firstAttribute="bottom" secondItem="mbs-jq-XgI" secondAttribute="bottom" id="3hK-oF-Xps"/>
                                     <constraint firstAttribute="trailing" secondItem="GO9-qD-1He" secondAttribute="trailing" constant="30" id="Aag-2A-Bdp"/>
                                     <constraint firstAttribute="bottom" secondItem="mqj-Q4-BBR" secondAttribute="bottom" constant="55" id="BnN-kU-0qZ"/>
                                     <constraint firstItem="mqj-Q4-BBR" firstAttribute="leading" secondItem="NKo-bg-jR7" secondAttribute="leading" constant="30" id="E7Z-uO-n7D"/>
                                     <constraint firstItem="PaJ-9g-tal" firstAttribute="top" secondItem="mqj-Q4-BBR" secondAttribute="bottom" id="Koe-Id-IMn"/>
+                                    <constraint firstItem="mbs-jq-XgI" firstAttribute="leading" secondItem="NKo-bg-jR7" secondAttribute="leading" id="NvP-TC-Pf8"/>
                                     <constraint firstItem="mqj-Q4-BBR" firstAttribute="top" secondItem="NKo-bg-jR7" secondAttribute="top" constant="55" id="OOp-Xb-doK"/>
                                     <constraint firstItem="PaJ-9g-tal" firstAttribute="trailing" secondItem="GO9-qD-1He" secondAttribute="trailing" id="WO5-wU-ljR"/>
+                                    <constraint firstAttribute="trailing" secondItem="mbs-jq-XgI" secondAttribute="trailing" id="WoM-68-4eR"/>
                                     <constraint firstItem="PaJ-9g-tal" firstAttribute="leading" secondItem="GO9-qD-1He" secondAttribute="leading" id="cJD-W7-rH8"/>
                                     <constraint firstAttribute="trailing" secondItem="mqj-Q4-BBR" secondAttribute="trailing" constant="30" id="dge-Lb-92Z"/>
                                     <constraint firstItem="mqj-Q4-BBR" firstAttribute="top" secondItem="GO9-qD-1He" secondAttribute="bottom" id="fg7-LM-vpf"/>
+                                    <constraint firstItem="mbs-jq-XgI" firstAttribute="top" secondItem="NKo-bg-jR7" secondAttribute="top" id="ofH-xN-GXr"/>
                                     <constraint firstItem="GO9-qD-1He" firstAttribute="leading" secondItem="NKo-bg-jR7" secondAttribute="leading" constant="30" id="rUq-fX-Ok8"/>
                                     <constraint firstAttribute="bottom" secondItem="PaJ-9g-tal" secondAttribute="bottom" id="ubG-h5-m4C"/>
                                 </constraints>
@@ -127,9 +126,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomBarView" destination="PaJ-9g-tal" id="yeT-Ge-ALh"/>
                         <outlet property="focusButton" destination="stO-2d-i1X" id="4wz-h6-5K0"/>
-                        <outlet property="scrollView" destination="c5f-rE-boq" id="Fxn-U3-8UR"/>
+                        <outlet property="pageNumberText" destination="QYB-Kl-BBs" id="GbW-ro-Upf"/>
+                        <outlet property="scrollView" destination="mbs-jq-XgI" id="QMv-XE-maE"/>
                         <outlet property="textContainer" destination="mqj-Q4-BBR" id="bf9-E3-mR0"/>
+                        <outlet property="topBarView" destination="GO9-qD-1He" id="beR-Ln-Pm3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ff-QT-cfF" userLabel="First Responder" sceneMemberID="firstResponder"/>

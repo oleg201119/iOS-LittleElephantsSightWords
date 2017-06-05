@@ -7,6 +7,7 @@
 //
 
 #import "TEWSettingsManager.h"
+#import "TEWProfileManager.h"
 
 @implementation TEWSettingsManager
 
@@ -30,5 +31,15 @@
     self.modelSettingInfo = [[TEWSettingsDataModel alloc] init];
 }
 
+- (void) setWithActiveProfile {
+    TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
+    
+    self.modelSettingInfo.name = profileManager.activeProfile.name;
+    self.modelSettingInfo.avatar = profileManager.activeProfile.avatar;
+    self.modelSettingInfo.region = profileManager.activeProfile.region;
+    self.modelSettingInfo.style = profileManager.activeProfile.style;
+    self.modelSettingInfo.color = profileManager.activeProfile.color;
+    self.modelSettingInfo.sound = profileManager.activeProfile.sound;
+}
 
 @end
