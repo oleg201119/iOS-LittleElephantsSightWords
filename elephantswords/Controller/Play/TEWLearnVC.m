@@ -61,8 +61,6 @@
         UIImage *btnImage = [UIImage imageNamed:@"tag-gray"];
         [self.focusButton setImage:btnImage forState:UIControlStateNormal];
     }
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -98,15 +96,11 @@
         
         self.fInitialized = YES;
         self.nWordIndex = 1;
-
+        
         if (self.fFocusScreen) {
             // Focus screen
             TEWFocusManager * focusManager = [TEWFocusManager sharedInstance];
-            
-            [focusManager resetWordArray];
-            [focusManager loadWords];
-            
-            NSMutableArray * wordArray = focusManager.wordArray;
+            NSArray * wordArray = [focusManager getActiveFocusWordArray];
             
             int i = 0;
             
@@ -158,6 +152,11 @@
             [self.scrollView setContentSize:newContentSize];
             
             self.pageNumberText.text = [NSString stringWithFormat:@"%d", self.nWordIndex];
+            
+            if (i == 0) {
+                self.topBarView.hidden = YES;
+                self.bottomBarView.hidden = YES;
+            }
         }
         else {
             // Learn screen
@@ -217,7 +216,98 @@
             
             self.pageNumberText.text = [NSString stringWithFormat:@"%d", self.nWordIndex];
         }
+        
+        // Init score view
+        if (self.fFocusScreen) {
+            // Focus screen
+            self.scoreView.continueButton2.hidden = NO;
+            self.scoreView.finishedView.alpha = 1.0f;
+            self.scoreView.scoreView.alpha = 0.0f;
+        }
+        else {
+            // Learn screen
+            self.scoreView.continueButton2.hidden = YES;
+            self.scoreView.finishedView.alpha = 1.0f;
+            self.scoreView.scoreView.alpha = 0.0f;
+        }
     }
+}
+
+- (void) buildFocusScrollView {
+    
+    for(UIView *subview in [self.scrollView subviews]) {
+        if([subview isKindOfClass:[TEWWordView class]] || [subview isKindOfClass:[TEWScoreView class]]) {
+            [subview removeFromSuperview];
+        }
+    }
+    
+    CGFloat parentWidth = self.scrollView.frame.size.width;
+    CGFloat parentHeight = self.scrollView.frame.size.height;
+    
+    // Focus screen
+    TEWFocusManager * focusManager = [TEWFocusManager sharedInstance];
+    NSArray * wordArray = [focusManager getActiveFocusWordArray];
+    
+    int i = 0;
+    
+    for(i=0; i<wordArray.count; i++) {
+        int colorId = [TEWProfileManager sharedInstance].activeProfile.color;
+        
+        if ([TEWProfileManager sharedInstance].activeProfile.color == COLOR_ALTERNATE) {
+            colorId = i % 4 + COLOR_BLACK;
+        }
+        
+        UIColor * color = nil;
+        
+        if (colorId == COLOR_BLACK) {
+            color = TEWUICOLOR_WORDCOLOR_BLACK;
+        }
+        else if (colorId == COLOR_BLUE) {
+            color = TEWUICOLOR_WORDCOLOR_BLUE;
+        }
+        else if (colorId == COLOR_GREEN) {
+            color = TEWUICOLOR_WORDCOLOR_GREEN;
+        }
+        else if (colorId == COLOR_RED) {
+            color = TEWUICOLOR_WORDCOLOR_RED;
+        }
+        
+        
+        TEWWordView * wordView = [[TEWWordView alloc] initWithFrame:CGRectMake(i*parentWidth, 0, parentWidth, parentHeight)];
+        
+        wordView.textContainer.layer.cornerRadius = 10.0;
+        
+        wordView.textContainer.layer.shadowOffset = CGSizeMake(0, 1);
+        wordView.textContainer.layer.shadowOpacity = 0.5;
+        wordView.textContainer.layer.shadowRadius = 3;
+        
+        wordView.wordLabel.text = wordArray[i];
+        wordView.wordLabel.textColor = color;
+        
+        [self.scrollView addSubview:wordView];
+    }
+    
+    // Score view
+    self.scoreView = [[TEWScoreView alloc] initWithFrame:CGRectMake(i*parentWidth, 0, parentWidth, parentHeight)];
+    self.scoreView.delegate = self;
+    [self.scrollView addSubview:self.scoreView];
+    
+    // Resize scroll view
+    CGSize newContentSize=self.scrollView.frame.size;
+    newContentSize.width *=(wordArray.count + 1);
+    [self.scrollView setContentSize:newContentSize];
+    
+    self.pageNumberText.text = [NSString stringWithFormat:@"%d", self.nWordIndex];
+    
+    if (self.nWordIndex == wordArray.count + 1) {
+        self.topBarView.hidden = YES;
+        self.bottomBarView.hidden = YES;
+    }
+    
+    // Focus screen
+    self.scoreView.continueButton2.hidden = NO;
+    self.scoreView.finishedView.alpha = 1.0f;
+    self.scoreView.scoreView.alpha = 0.0f;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -256,10 +346,31 @@
     self.nWordIndex = self.scrollView.contentOffset.x / self.scrollView.frame.size.width + 1;
     self.pageNumberText.text = [NSString stringWithFormat:@"%d", self.nWordIndex];
     
-    NSArray * wordArray = [[TEWWordManager sharedInstance] getWordsWithRoundNo:[TEWRoundManager sharedInstance].roundNo];
+    NSArray * wordArray = nil;
+    
+    if (self.fFocusScreen) {
+        // Focus screen
+        wordArray = [[TEWFocusManager sharedInstance] getActiveFocusWordArray];
+    }
+    else {
+        // Learn screen
+        wordArray = [[TEWWordManager sharedInstance] getWordsWithRoundNo:[TEWRoundManager sharedInstance].roundNo];
+    }
     
     if (self.nWordIndex == wordArray.count) {
-        [self.scoreView beforeShowView];
+        
+        if (self.fFocusScreen) {
+            // Focus screen
+            self.scoreView.continueButton2.hidden = NO;
+            self.scoreView.finishedView.alpha = 1.0f;
+            self.scoreView.scoreView.alpha = 0.0f;
+        }
+        else {
+            // Learn screen
+            self.scoreView.continueButton2.hidden = YES;
+            self.scoreView.finishedView.alpha = 1.0f;
+            self.scoreView.scoreView.alpha = 0.0f;
+        }
     }
     else if (self.nWordIndex == (wordArray.count + 1)) {
         
@@ -267,29 +378,41 @@
         self.topBarView.hidden = YES;
         self.bottomBarView.hidden = YES;
         
-        [self.scoreView.completeLabel setAnimationDuration:0.5];
+        self.scrollView.scrollEnabled = NO;
         
-        [self.scoreView.completeLabel setText:@"Complete !" withCompletionBlock:^{
+        if (self.fFocusScreen) {
+            // Focus screen
+        }
+        else {
+            // Learn screen
+            unsigned long totalCount = wordArray.count;
+            unsigned long focusCount = [[TEWFocusManager sharedInstance] getActiveFocusWordArray].count;
             
-            [UIView animateWithDuration:1.0f animations:^{
+            float percent = (totalCount - focusCount) * 100.0f / totalCount;
+            int avatarId = [TEWProfileManager sharedInstance].activeProfile.avatar;
+            
+            [self.scoreView setScoreWithAvatar: avatarId WithScore: percent];
+            
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                 
-                [self.scoreView.scoreView setAlpha:0.0f];
-                [self.scoreView.completeLabel setAlpha:1.0f];
-                
-            } completion:^(BOOL finished) {
-                
-                //fade out
                 [UIView animateWithDuration:1.0f animations:^{
                     
-                    [self.scoreView.scoreView setAlpha:1.0f];
-                    [self.scoreView.completeLabel setAlpha:0.0f];
+                    [self.scoreView.scoreView setAlpha:0.0f];
+                    [self.scoreView.finishedView setAlpha:1.0f];
                     
-                    self.scrollView.scrollEnabled = NO;
+                } completion:^(BOOL finished) {
                     
-                } completion:nil];
-                
-            }];
-        }];
+                    [UIView animateWithDuration:1.0f animations:^{
+                        
+                        [self.scoreView.scoreView setAlpha:1.0f];
+                        [self.scoreView.finishedView setAlpha:0.0f];
+                        
+                    } completion:nil];
+                    
+                }];
+            });
+        }
     }
 }
 
@@ -324,17 +447,41 @@
     
     if (self.fFocusScreen) {
         // Focus screen
-        NSMutableArray * wordArray = focusManager.wordArray;
+        NSArray * wordArray = [focusManager getActiveFocusWordArray];
         
-        [focusManager removeWord:wordArray[self.nWordIndex-1]];
+        NSString * word = wordArray[self.nWordIndex-1];
+        
+        [focusManager removeWordFromActiveFocus:word];
         
         // Refresh screen
+        [self buildFocusScrollView];
+        
+        /*
+        for(UIView *subview in [self.scrollView subviews]) {
+            if([subview isKindOfClass:[TEWWordView class]]) {
+                TEWWordView * wordView = (TEWWordView*)subview;
+                
+                if ([wordView.wordLabel.text isEqualToString:word] == YES) {
+                    [subview removeFromSuperview];
+                    
+                    // Resize scroll view
+                    CGSize newContentSize=self.scrollView.frame.size;
+                    newContentSize.width *=(wordArray.count);
+                    [self.scrollView setContentSize:newContentSize];
+                    
+                    
+                    break;
+                }
+                
+            }
+        }
+         */
     }
     else {
         // Learn screen
         NSArray * wordArray = [[TEWWordManager sharedInstance] getWordsWithRoundNo:[TEWRoundManager sharedInstance].roundNo];
         
-        [focusManager addWord:wordArray[self.nWordIndex-1]];
+        [focusManager addWordToActiveFocus:wordArray[self.nWordIndex-1]];
     }
 }
 

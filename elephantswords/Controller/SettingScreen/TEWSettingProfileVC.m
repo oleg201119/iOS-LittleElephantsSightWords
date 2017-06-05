@@ -9,8 +9,9 @@
 #import "TEWSettingProfileVC.h"
 #import "TEWProfileMenuTVC.h"
 #import "TEWSettingWizardVC.h"
+#import "TEWProfileManager.h"
+#import "TEWSettingsConstant.h"
 
-#import "UIColor+HexString.h"
 #import "Global.h"
 #import "TEWGenericFunctionManager.h"
 
@@ -37,18 +38,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self initMenu];[self initScreen];
+    [self initMenu];
+    [self initScreen];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    //[self initScreen];
+    
+    [self setAvatar];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    //[self initScreen];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +69,24 @@
 
 #pragma mark - initialize
 
+- (void) setAvatar {
+    int avatarId = [TEWProfileManager sharedInstance].activeProfile.avatar;
+    
+    if (avatarId == ANIMAL_1) {
+        [self.avatarImageView setImage:[UIImage imageNamed:@"zebra-110"]];
+    }
+    else if (avatarId == ANIMAL_2) {
+        [self.avatarImageView setImage:[UIImage imageNamed:@"giraffe-110"]];
+    }
+    else if (avatarId == ANIMAL_3) {
+        [self.avatarImageView setImage:[UIImage imageNamed:@"elephant-110"]];
+    }
+}
+
 - (void)initScreen {
+    
+    [self setAvatar];
+    
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2;
     self.avatarImageView.layer.masksToBounds = YES;
     self.avatarImageView.clipsToBounds = YES;

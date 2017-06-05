@@ -20,7 +20,11 @@
 @interface TEWScoreView : UIView
 
 @property (strong, nonatomic) IBOutlet UIView *contentView;
-@property (weak, nonatomic) IBOutlet TOMSMorphingLabel *completeLabel;
+
+
+@property (weak, nonatomic) IBOutlet UIView *finishedView;
+@property (weak, nonatomic) IBOutlet UIButton *continueButton2;
+
 @property (weak, nonatomic) IBOutlet UIView *scoreView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *animalImage;
@@ -36,7 +40,6 @@
 // delegate
 @property (nonatomic, assign) id <TEWScoreViewDelegate> delegate;
 
-- (void)beforeShowView;
-- (void)afterShowView;
+- (void) setScoreWithAvatar: (int)avatarId WithScore: (float)percent;
 
 @end

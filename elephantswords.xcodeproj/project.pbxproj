@@ -67,6 +67,7 @@
 		F8BBBB6F1EB68E3800B90BAE /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BBBB6E1EB68E3800B90BAE /* Play.storyboard */; };
 		F8BBBB761EB68EF500B90BAE /* TEWLearnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */; };
 		F8BBBB791EB6938200B90BAE /* TEWScoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */; };
+		F8BDDBA91EE5293700DFE1FB /* TEWFocusWordDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDBA81EE5293700DFE1FB /* TEWFocusWordDataModel.m */; };
 		F8C9687C1ECA076300885801 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9687B1ECA076300885801 /* UIColor+HexString.m */; };
 		F8C97BC81EB43BEA00372CBA /* TEWRoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BC71EB43BEA00372CBA /* TEWRoundVC.m */; };
 		F8C97BCB1EB43C6100372CBA /* TEWRoundSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BCA1EB43C6100372CBA /* TEWRoundSelectVC.m */; };
@@ -191,6 +192,8 @@
 		F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWLearnVC.m; path = Controller/Play/TEWLearnVC.m; sourceTree = "<group>"; };
 		F8BBBB771EB6938200B90BAE /* TEWScoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWScoreVC.h; path = Controller/Play/TEWScoreVC.h; sourceTree = "<group>"; };
 		F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWScoreVC.m; path = Controller/Play/TEWScoreVC.m; sourceTree = "<group>"; };
+		F8BDDBA71EE5293700DFE1FB /* TEWFocusWordDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWFocusWordDataModel.h; path = Model/Focus/DataModel/TEWFocusWordDataModel.h; sourceTree = "<group>"; };
+		F8BDDBA81EE5293700DFE1FB /* TEWFocusWordDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWFocusWordDataModel.m; path = Model/Focus/DataModel/TEWFocusWordDataModel.m; sourceTree = "<group>"; };
 		F8C9687A1ECA076300885801 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../../../../../../Downloads/4751825-808c27b1731da4cdff13d27130e78b3fb30e45df/UIColor+HexString.h"; sourceTree = "<group>"; };
 		F8C9687B1ECA076300885801 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../../../../../../Downloads/4751825-808c27b1731da4cdff13d27130e78b3fb30e45df/UIColor+HexString.m"; sourceTree = "<group>"; };
 		F8C97BC61EB43BEA00372CBA /* TEWRoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundVC.h; path = Controller/MenuScreen/TEWRoundVC.h; sourceTree = "<group>"; };
@@ -470,6 +473,7 @@
 		F8AC665C1EDEA40600962C5B /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				F8BDDBA61EE528FD00DFE1FB /* DataModel */,
 				F8AC665D1EDEA43E00962C5B /* TEWFocusManager.h */,
 				F8AC665E1EDEA43E00962C5B /* TEWFocusManager.m */,
 			);
@@ -537,6 +541,15 @@
 				F89ED3371EE24B9700BA41E6 /* TEWWordView.m */,
 			);
 			name = Play;
+			sourceTree = "<group>";
+		};
+		F8BDDBA61EE528FD00DFE1FB /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8BDDBA71EE5293700DFE1FB /* TEWFocusWordDataModel.h */,
+				F8BDDBA81EE5293700DFE1FB /* TEWFocusWordDataModel.m */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 		F8C97BCC1EB4578200372CBA /* SettingScreen */ = {
@@ -804,6 +817,7 @@
 				F838E8FE1EAB026C00451488 /* TEWUrlManager.m in Sources */,
 				F8C9687C1ECA076300885801 /* UIColor+HexString.m in Sources */,
 				F8C97BC81EB43BEA00372CBA /* TEWRoundVC.m in Sources */,
+				F8BDDBA91EE5293700DFE1FB /* TEWFocusWordDataModel.m in Sources */,
 				F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */,
 				F838E8FB1EAB024F00451488 /* TEWErrorManager.m in Sources */,
 				F838E8F21EAB01BB00451488 /* TEWGenericFunctionManager.m in Sources */,

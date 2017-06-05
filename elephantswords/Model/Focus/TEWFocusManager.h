@@ -7,22 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TEWFocusWordDataModel.h"
 
 @interface TEWFocusManager : NSObject
 
-@property (strong, nonatomic) NSMutableArray *wordArray;
+@property (strong, nonatomic) NSMutableArray *focusArray;
+@property (strong, nonatomic) TEWFocusWordDataModel * activeFocusWord;
 
 + (instancetype) sharedInstance;
 - (void) initializeManager;
 
-- (void) resetWordArray;
-- (void) addWord: (NSString *) word;
-- (void) removeWord: (NSString *) word;
+- (void) loadFocusWords;
+- (void) removeFocusWord: (NSString *)uuid;
+- (void) switchActiveFocusWord: (NSString *)uuid;
+- (void)createEmptyFocusWord: (NSString *)uuid;
+- (void) addWordToActiveFocus: (NSString *)word;
+- (void) removeWordFromActiveFocus: (NSString *)word;
+- (NSArray*) getActiveFocusWordArray;
+- (void) resetActiveFocusWord;
 
-- (void) loadWords;
-
-- (void) saveFocusWordsWithUserId: (NSString *)userId withRoundNo: (int)roundNo;
-- (void) loadFocusWordsWithUserId: (NSString *)userId withRoundNo: (int)roundNo;
-- (void) removeFocusWordsWithUserId: (NSString *)userId withRoundNo: (int)roundNo;
 
 @end

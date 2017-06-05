@@ -10,6 +10,9 @@
 #import "TEWProfileManager.h"
 #import "TEWRoundManager.h"
 
+#import "TEWGenericFunctionManager.h"
+#import "AppDelegate.h"
+
 @implementation TEWFocusManager
 
 + (instancetype) sharedInstance{
@@ -29,80 +32,215 @@
 }
 
 - (void) initializeManager {
-    self.wordArray = [[NSMutableArray alloc]init];
+    self.focusArray = [[NSMutableArray alloc]init];
+    self.activeFocusWord = nil;
 }
 
-- (void) resetWordArray {
-    [self.wordArray removeAllObjects];
-}
-
-- (void) addWord: (NSString *) word {
+- (void) loadFocusWords {
+    // Clear array
+    [self.focusArray removeAllObjects];
     
-    // Add
-    for (int i=0; i<self.wordArray.count; i++) {
-        if ([self.wordArray[i] isEqualToString:word] == YES) {
+    // Load focus words from core data
+    AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
+    
+    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"Focus"];
+    
+    NSError * error = nil;
+    NSArray * results = [moc executeFetchRequest:request error:&error];
+    
+    if (!results) {
+        NSLog(@"Error fetching Profile objects: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
+    else {
+        for(int i=0; i < results.count; i++) {
+            TEWFocusWordDataModel * focusInfo = results[i];
+            
+            [self.focusArray addObject:focusInfo];
+        }
+    }
+}
+
+- (void) removeFocusWord: (NSString *)uuid {
+    AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
+    
+    BOOL changed = NO;
+    
+    for(int i=0; i < self.focusArray.count; i++) {
+        TEWFocusWordDataModel * focusInfo = self.focusArray[i];
+        
+        if ([focusInfo.uuid isEqualToString:uuid] == YES) {
+            [moc deleteObject:focusInfo];
+            changed = YES;
+            break;
+        }
+    }
+    
+    // Save
+    if (changed) {
+        NSError * error = nil;
+        
+        if ([moc save:&error] == NO) {
+            NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+        }
+        else {
+            NSLog(@"Success saving core data");
+        }
+    }
+}
+
+- (void) switchActiveFocusWord: (NSString *)uuid {
+    
+    BOOL changed = NO;
+    
+    for(int i=0; i < self.focusArray.count; i++) {
+        TEWFocusWordDataModel * focusInfo = self.focusArray[i];
+        
+        if ([focusInfo.uuid isEqualToString:uuid] == YES) {
+            self.activeFocusWord = focusInfo;
+            
+            changed = YES;
+            break;
+        }
+    }
+    
+    if (changed == NO) {
+        
+        self.activeFocusWord = nil;
+    }
+}
+
+- (void)createEmptyFocusWord: (NSString *)uuid {
+    
+    // Create empty slot
+    AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
+    
+    TEWFocusWordDataModel * focusInfo = [NSEntityDescription insertNewObjectForEntityForName:@"Focus" inManagedObjectContext:moc];
+    
+    focusInfo.uuid = uuid;
+    focusInfo.words = nil;
+    
+    // Save
+    NSError * error = nil;
+    
+    if ([moc save:&error] == NO) {
+        NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    else {
+        NSLog(@"Success saving core data");
+    }
+}
+
+- (void) addWordToActiveFocus: (NSString *)word {
+    
+    // Convert string to array
+    NSMutableArray *wordArray = [[self.activeFocusWord.words componentsSeparatedByString:@","] mutableCopy];
+    
+    if (wordArray == nil) {
+        wordArray = [[NSMutableArray alloc] init];
+    }
+    
+    for (int i=0; i<wordArray.count; i++) {
+        
+        NSString * item = [wordArray objectAtIndex:i];
+        
+        if ([item isEqualToString:word] == YES) {
             return;
         }
     }
     
-    [self.wordArray addObject:word];
+    // Add the word
+    [wordArray addObject:word];
+    
+    // Convert array to string
+    NSString * words = [wordArray componentsJoinedByString:@","];
+    
+    // Update
+    self.activeFocusWord.words = words;
     
     // Save
-    NSString * userId = [TEWProfileManager sharedInstance].activeProfile.uuid;
-    int roundNo = [TEWRoundManager sharedInstance].roundNo;
+    AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
     
-    [self saveFocusWordsWithUserId:userId withRoundNo:roundNo];
-}
-
-- (void) removeWord: (NSString *) word {
+    NSError * error = nil;
     
-    for (int i=0; i<[self.wordArray count]; i++) {
-        NSString * item = [self.wordArray objectAtIndex:i];
-        
-        if ([item isEqualToString:word]) {
-            [self.wordArray removeObject:item];
-            
-            // Save
-            NSString * userId = [TEWProfileManager sharedInstance].activeProfile.uuid;
-            int roundNo = [TEWRoundManager sharedInstance].roundNo;
-            
-            [self saveFocusWordsWithUserId:userId withRoundNo:roundNo];
-            
-            break;
-        }
+    if ([moc save:&error] == NO) {
+        NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    else {
+        NSLog(@"Success saving core data");
     }
 }
 
-- (void) loadWords {
-    NSString * userId = [TEWProfileManager sharedInstance].activeProfile.uuid;
-    int roundNo = [TEWRoundManager sharedInstance].roundNo;
+- (void) removeWordFromActiveFocus: (NSString *)word {
+    // Convert string to array
+    NSMutableArray *wordArray = [[self.activeFocusWord.words componentsSeparatedByString:@","] mutableCopy];
+
+    // Remove the word
+    for (int i=0; i<wordArray.count; i++) {
+        
+        NSString * item = [wordArray objectAtIndex:i];
+        
+        if ([item isEqualToString:word] == YES) {
+            [wordArray removeObject:item];
+            break;
+        }
+    }
     
-    [self loadFocusWordsWithUserId:userId withRoundNo:roundNo];
+    // Convert array to string
+    NSString * words = nil;
+    
+    if (wordArray.count > 0) {
+        words = [wordArray componentsJoinedByString:@","];;
+    }    
+    
+    // Update
+    self.activeFocusWord.words = words;
+    
+    // Save
+    AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
+    
+    NSError * error = nil;
+    
+    if ([moc save:&error] == NO) {
+        NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    else {
+        NSLog(@"Success saving core data");
+    }
+    
 }
 
-- (void) saveFocusWordsWithUserId: (NSString *)userId withRoundNo: (int)roundNo {
+- (NSArray*) getActiveFocusWordArray {
+    // Convert string to array
+    NSArray *wordArray = [self.activeFocusWord.words componentsSeparatedByString:@","];
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *  key = [userId stringByAppendingFormat:@"-%d", roundNo];
-
-    [userDefaults setObject:self.wordArray forKey:key];
-    [userDefaults synchronize];
+    if (wordArray == nil) {
+        wordArray = [[NSArray alloc] init];
+    }
+    
+    return wordArray;
 }
 
-- (void) loadFocusWordsWithUserId: (NSString *)userId withRoundNo: (int)roundNo {
+- (void) resetActiveFocusWord {
+    self.activeFocusWord.words = nil;
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *  key = [userId stringByAppendingFormat:@"-%d", roundNo];
-
-    self.wordArray = [[userDefaults arrayForKey:key] mutableCopy];
-}
-
-- (void) removeFocusWordsWithUserId: (NSString *)userId withRoundNo: (int)roundNo {
+    // Save
+    AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *  key = [userId stringByAppendingFormat:@"-%d", roundNo];
+    NSError * error = nil;
     
-    [userDefaults removeObjectForKey:key];
+    if ([moc save:&error] == NO) {
+        NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    else {
+        NSLog(@"Success saving core data");
+    }
 }
 
 @end

@@ -27,7 +27,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.    
+    // Do any additional setup after loading the view.
+    
+    // Load focus words
+    TEWFocusManager * focusManager = [TEWFocusManager sharedInstance];
+    TEWRoundManager * roundManager = [TEWRoundManager sharedInstance];
+    TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
+    
+    int roundNo = roundManager.roundNo;
+    NSString* userId = profileManager.activeProfile.uuid;
+    
+    NSString* focusId = [userId stringByAppendingFormat:@"-%d", roundNo];
+    
+    [focusManager loadFocusWords];
+    [focusManager switchActiveFocusWord:focusId];
+    
+    if (focusManager.activeFocusWord == nil) {
+        [focusManager createEmptyFocusWord: focusId];
+        [focusManager loadFocusWords];
+        [focusManager switchActiveFocusWord:focusId];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -99,11 +118,7 @@
 
 - (IBAction)onTouchResetButton:(id)sender {
     
-    // Clear focus words
-    NSString * userId = [TEWProfileManager sharedInstance].activeProfile.uuid;
-    int roundNo = [TEWRoundManager sharedInstance].roundNo;
-    
-    [[TEWFocusManager sharedInstance] removeFocusWordsWithUserId:userId withRoundNo:roundNo];
+    [[TEWFocusManager sharedInstance] resetActiveFocusWord];
     
     [TEWGenericFunctionManager showAlertWithMessage:@"Focus words were removed!"];
 }

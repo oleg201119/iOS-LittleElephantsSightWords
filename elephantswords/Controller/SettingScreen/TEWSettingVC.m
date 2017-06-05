@@ -12,6 +12,7 @@
 #import "TEWSettingNewsVC.h"
 #import "TEWSettingAboutVC.h"
 #import "TEWSettingWizardVC.h"
+#import "TEWProfileManager.h"
 
 #import <Social/Social.h>
 
@@ -163,6 +164,14 @@
     
     if (index == SETTING_MENU_SOUND) {
         cell.switchControlView.hidden = NO;
+        
+        if ([TEWProfileManager sharedInstance].activeProfile.sound == YES) {
+            [cell.switchControl setOn:YES];
+        }
+        else {
+            [cell.switchControl setOn:NO];
+        }
+                
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     else {
@@ -273,6 +282,23 @@
 
 - (IBAction)onTouchBackButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - switch control value changed
+
+- (IBAction)onSwitchValueChanged:(id)sender {
+    
+    TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
+    UISwitch *s = (UISwitch*)sender;
+    
+    if (s.isOn == YES) {
+        profileManager.activeProfile.sound = YES;
+    }
+    else {
+        profileManager.activeProfile.sound = NO;
+    }
+    
+    [profileManager saveProfiles];    
 }
 
 @end

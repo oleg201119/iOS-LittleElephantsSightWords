@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Focus" representedClassName="Focus" syncable="YES" codeGenerationType="class">
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="words" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
         <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="avatar" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -12,5 +16,6 @@
     </entity>
     <elements>
         <element name="Profile" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Focus" positionX="-63" positionY="45" width="128" height="75"/>
     </elements>
 </model>

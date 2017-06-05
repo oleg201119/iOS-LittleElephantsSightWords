@@ -1551,6 +1551,9 @@ Elephant App!</string>
                                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNW-25-i6E" userLabel="Switch - Switch Control">
                                                                             <rect key="frame" x="31" y="1" width="51" height="31"/>
                                                                             <color key="onTintColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <connections>
+                                                                                <action selector="onSwitchValueChanged:" destination="BV3-pB-CRL" eventType="valueChanged" id="8tQ-4O-hLY"/>
+                                                                            </connections>
                                                                         </switch>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

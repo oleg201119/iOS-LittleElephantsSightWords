@@ -12,8 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TEWScoreView">
             <connections>
                 <outlet property="animalImage" destination="Zvr-sf-CUS" id="qvT-9X-lLe"/>
-                <outlet property="completeLabel" destination="zRz-e0-RNk" id="3nH-aU-Itc"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="YaI-gl-Uts"/>
+                <outlet property="continueButton2" destination="OnI-Z3-cGj" id="bjK-4H-vDb"/>
+                <outlet property="finishedView" destination="xxN-k6-Amh" id="dPw-Nm-oO6"/>
                 <outlet property="scoreView" destination="Y4W-6L-yeM" id="BGo-5S-lAj"/>
                 <outlet property="starImage1" destination="suM-Qy-ms5" id="r7R-Du-Q2l"/>
                 <outlet property="starImage2" destination="wUG-cw-aPd" id="Hqf-Dr-HkK"/>
@@ -35,12 +36,30 @@
                             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRz-e0-RNk" userLabel="Label - Complete" customClass="TOMSMorphingLabel">
-                            <rect key="frame" x="211.5" y="158" width="244.5" height="58.5"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
-                            <color key="textColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxN-k6-Amh" userLabel="View - Finished container">
+                            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finished" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRz-e0-RNk" userLabel="Label - Finished" customClass="TOMSMorphingLabel">
+                                    <rect key="frame" x="211" y="158" width="244.5" height="58.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                    <color key="textColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnI-Z3-cGj" userLabel="Button - Continue Learning">
+                                    <rect key="frame" x="219" y="295" width="229" height="40"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" title="Continue Learning" backgroundImage="button-green"/>
+                                    <connections>
+                                        <action selector="onTouchContinueButton2:" destination="-1" eventType="touchUpInside" id="6Zd-TQ-aNs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="OnI-Z3-cGj" firstAttribute="centerX" secondItem="xxN-k6-Amh" secondAttribute="centerX" id="oK9-8k-gHv"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-6L-yeM" userLabel="View - Score container">
                             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             <subviews>
@@ -66,12 +85,12 @@
                                         <constraint firstAttribute="width" constant="37" id="hTR-dM-reN"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-O8-VJO" userLabel="Button - Continue Learning">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-O8-VJO" userLabel="Button - Continue Learning">
                                     <rect key="frame" x="418" y="295" width="229" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="eRT-DT-AZ3"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <state key="normal" title="Continue Learning" backgroundImage="button-green">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -120,11 +139,16 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Y4W-6L-yeM" firstAttribute="top" secondItem="kwS-Co-AZk" secondAttribute="top" id="8hf-73-lZ4"/>
-                        <constraint firstItem="zRz-e0-RNk" firstAttribute="centerY" secondItem="kwS-Co-AZk" secondAttribute="centerY" id="OdN-36-qxA"/>
+                        <constraint firstItem="OnI-Z3-cGj" firstAttribute="width" secondItem="L3E-O8-VJO" secondAttribute="width" id="CeP-PD-bDo"/>
+                        <constraint firstItem="OnI-Z3-cGj" firstAttribute="height" secondItem="L3E-O8-VJO" secondAttribute="height" id="DSO-3Y-HUq"/>
+                        <constraint firstAttribute="bottom" secondItem="xxN-k6-Amh" secondAttribute="bottom" id="ERs-G4-ygU"/>
+                        <constraint firstItem="xxN-k6-Amh" firstAttribute="top" secondItem="kwS-Co-AZk" secondAttribute="top" id="SoT-UP-qk1"/>
+                        <constraint firstItem="xxN-k6-Amh" firstAttribute="leading" secondItem="kwS-Co-AZk" secondAttribute="leading" id="Yc1-ob-KWC"/>
                         <constraint firstAttribute="bottom" secondItem="Y4W-6L-yeM" secondAttribute="bottom" id="gq1-FA-5gn"/>
+                        <constraint firstAttribute="trailing" secondItem="xxN-k6-Amh" secondAttribute="trailing" id="hqR-CX-x7n"/>
                         <constraint firstAttribute="trailing" secondItem="Y4W-6L-yeM" secondAttribute="trailing" id="kDc-eh-11a"/>
                         <constraint firstItem="Y4W-6L-yeM" firstAttribute="leading" secondItem="kwS-Co-AZk" secondAttribute="leading" id="p1h-6L-AEQ"/>
-                        <constraint firstItem="zRz-e0-RNk" firstAttribute="centerX" secondItem="kwS-Co-AZk" secondAttribute="centerX" id="t4r-Dc-oz0"/>
+                        <constraint firstItem="OnI-Z3-cGj" firstAttribute="bottom" secondItem="L3E-O8-VJO" secondAttribute="bottom" id="zNn-is-tCf"/>
                     </constraints>
                 </view>
             </subviews>
