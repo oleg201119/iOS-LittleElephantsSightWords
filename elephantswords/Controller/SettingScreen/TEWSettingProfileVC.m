@@ -40,12 +40,16 @@
     
     [self initMenu];
     [self initScreen];
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self setAvatar];
+    [self setName];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -83,9 +87,14 @@
     }
 }
 
+- (void) setName {
+    self.nameLabel.text = [TEWProfileManager sharedInstance].activeProfile.name;
+}
+
 - (void)initScreen {
     
     [self setAvatar];
+    [self setName];
     
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2;
     self.avatarImageView.layer.masksToBounds = YES;
@@ -98,8 +107,6 @@
     self.avatarContainerView.layer.shadowOffset = CGSizeMake(0,0);
     self.avatarContainerView.layer.shadowOpacity = 1.0;
     self.avatarContainerView.layer.shadowRadius = 3;
-    
-    self.nameLabel.text = @"Oleg Cherkasskiy";
 }
 
 - (void)initMenu {
@@ -134,13 +141,26 @@
             // Cancel action
         }]];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Profile 1" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            // Profile n action
-        }]];
+        TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Profile 2" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            // Profile n action
-        }]];
+        for(int i=0; i<profileManager.profileArray.count; i++) {
+            
+            TEWProfileDataModel * profileInfo = profileManager.profileArray[i];
+            TEWProfileDataModel * activeProfile = profileManager.activeProfile;
+            
+            if ([profileInfo.uuid isEqualToString:activeProfile.uuid] == YES) {
+                continue;
+            }
+            
+            [alertController addAction:[UIAlertAction actionWithTitle:profileInfo.name style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+                [profileManager switchActiveProfile:profileInfo.uuid];
+                [self.tableView reloadData];
+                
+                [self setAvatar];
+                [self setName];
+            }]];
+        }
         
         
         [alertController setModalPresentationStyle:UIModalPresentationPopover];

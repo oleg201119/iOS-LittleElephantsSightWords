@@ -114,7 +114,7 @@
     }
 }
 
-- (void) removeProfile: (NSString *)name {
+- (void) removeProfile: (NSString *)uuid {
     AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
     
@@ -123,7 +123,7 @@
     for(int i=0; i < self.profileArray.count; i++) {
         TEWProfileDataModel * profileInfo = self.profileArray[i];
         
-        if ([profileInfo.name isEqualToString:name] == YES) {
+        if ([profileInfo.uuid isEqualToString:uuid] == YES) {
             [moc deleteObject:profileInfo];
             changed = YES;
             break;
@@ -143,14 +143,14 @@
     }
 }
 
-- (void) switchActiveProfile: (NSString *)name {
+- (void) switchActiveProfile: (NSString *)uuid {
     AppDelegate * appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
     
     for(int i=0; i < self.profileArray.count; i++) {
         TEWProfileDataModel * profileInfo = self.profileArray[i];
         
-        if ([profileInfo.name isEqualToString:name] == YES) {
+        if ([profileInfo.uuid isEqualToString:uuid] == YES) {
             profileInfo.active = YES;
             
             self.activeProfile = profileInfo;

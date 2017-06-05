@@ -20,8 +20,8 @@
 - (void) createNewProfileWithName: (NSString *)name WithAvatar: (int)avatar WithRegion: (int)region WithStyle: (int)style WithColor: (int)color WithSound: (BOOL)sound WithActive: (BOOL)active;
 - (void) updateActiveProfileWithName: (NSString *)name WithAvatar: (int)avatar WithRegion: (int)region WithStyle: (int)style WithColor: (int)color WithSound: (BOOL)sound;
 - (void) loadProfiles;
-- (void) removeProfile: (NSString *)name;
-- (void) switchActiveProfile: (NSString *)name;
+- (void) removeProfile: (NSString *)uuid;
+- (void) switchActiveProfile: (NSString *)uuid;
 - (void) saveProfiles;
 
 @end

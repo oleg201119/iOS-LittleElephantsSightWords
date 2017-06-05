@@ -1865,15 +1865,23 @@ Elephant App!</string>
                                             <constraint firstItem="Nus-0W-b7b" firstAttribute="centerX" secondItem="g06-L2-rk4" secondAttribute="centerX" id="WhK-Pt-cQv"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCi-Hd-tm7" userLabel="View - Seperator">
+                                        <rect key="frame" x="0.0" y="250" width="375" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="bIx-bm-6t5"/>
+                                        </constraints>
+                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jzn-Lf-xhk" userLabel="Table View - Menu">
-                                        <rect key="frame" x="0.0" y="250" width="375" height="417"/>
+                                        <rect key="frame" x="0.0" y="251" width="375" height="416"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TVC_PROFILEMENU" id="x3Q-5x-auT" customClass="TEWProfileMenuTVC">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x3Q-5x-auT" id="LKM-C7-Cis">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylW-kG-Uvv" userLabel="Label - Edit Profile">
@@ -1912,9 +1920,12 @@ Elephant App!</string>
                                     <constraint firstItem="g06-L2-rk4" firstAttribute="leading" secondItem="V1o-G8-drs" secondAttribute="leading" id="S6c-NF-Qbj"/>
                                     <constraint firstItem="NOD-p7-yep" firstAttribute="leading" secondItem="V1o-G8-drs" secondAttribute="leading" id="g00-Sa-rtm"/>
                                     <constraint firstAttribute="bottom" secondItem="NOD-p7-yep" secondAttribute="bottom" id="jIL-2e-ksx"/>
+                                    <constraint firstItem="HCi-Hd-tm7" firstAttribute="trailing" secondItem="g06-L2-rk4" secondAttribute="trailing" id="kKs-je-j5z"/>
+                                    <constraint firstItem="Jzn-Lf-xhk" firstAttribute="top" secondItem="HCi-Hd-tm7" secondAttribute="bottom" id="lFr-4U-4if"/>
                                     <constraint firstAttribute="bottom" secondItem="Jzn-Lf-xhk" secondAttribute="bottom" id="mOO-ec-cC2"/>
-                                    <constraint firstItem="Jzn-Lf-xhk" firstAttribute="top" secondItem="g06-L2-rk4" secondAttribute="bottom" id="oFd-NA-eq8"/>
+                                    <constraint firstItem="HCi-Hd-tm7" firstAttribute="leading" secondItem="g06-L2-rk4" secondAttribute="leading" id="pqJ-ZB-SWw"/>
                                     <constraint firstAttribute="trailing" secondItem="Jzn-Lf-xhk" secondAttribute="trailing" id="rxW-Tr-L0s"/>
+                                    <constraint firstItem="HCi-Hd-tm7" firstAttribute="top" secondItem="g06-L2-rk4" secondAttribute="bottom" id="vUa-8I-X8t"/>
                                 </constraints>
                             </view>
                         </subviews>
