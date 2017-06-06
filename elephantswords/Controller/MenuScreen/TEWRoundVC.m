@@ -99,6 +99,8 @@
 - (IBAction)onTouchLearnButton:(id)sender {
     
     // Go to learn screen
+    [TEWRotationManager sharedInstance].animate = NO;
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Play" bundle:nil];
     TEWLearnVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_LEARN"];
     [vc initWithFocusOption:NO];
@@ -109,6 +111,8 @@
 - (IBAction)onTouchFocusButton:(id)sender {
     
     // Go to focus screen
+    [TEWRotationManager sharedInstance].animate = NO;
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Play" bundle:nil];
     TEWLearnVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_LEARN"];
     [vc initWithFocusOption:YES];
@@ -124,11 +128,17 @@
 }
 
 - (IBAction)onTouchBackButton:(id)sender {
+    
+    // Back
+    [TEWRotationManager sharedInstance].animate = YES;
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
     
 - (IBAction)onTouchSettingButton:(id)sender {
     // Go to setting screen
+    [TEWRotationManager sharedInstance].animate = YES;
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     TEWSettingVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_SETTING"];
     [self.navigationController pushViewController:vc animated:YES];

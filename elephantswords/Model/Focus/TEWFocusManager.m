@@ -72,7 +72,10 @@
         TEWFocusWordDataModel * focusInfo = self.focusArray[i];
         
         if ([focusInfo.uuid isEqualToString:uuid] == YES) {
+            
             [moc deleteObject:focusInfo];
+            [self.focusArray removeObject:focusInfo];
+            
             changed = YES;
             break;
         }

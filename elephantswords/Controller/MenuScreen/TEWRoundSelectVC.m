@@ -10,6 +10,7 @@
 #import "TEWRoundVC.h"
 #import "TEWSettingVC.h"
 #import "TEWRoundManager.h"
+#import "TEWRotationManager.h"
 
 #import "UIColor+HexString.h"
 #import "Global.h"
@@ -32,24 +33,27 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:NO];
-    [UIView setAnimationsEnabled:NO];
+    [super viewWillAppear:animated];
     
-    
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:NO];
-    
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
-    
-    [UIView setAnimationsEnabled:YES];
+    [super viewDidAppear:animated];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
     [self initScrollContent];
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,6 +135,8 @@
     view.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     // Go to the round screen
+    [TEWRotationManager sharedInstance].animate = YES;
+    
     [self performSegueWithIdentifier:@"SEGUE_FROM_ROUNDSELECT_TO_ROUND" sender:nil];
 }
 

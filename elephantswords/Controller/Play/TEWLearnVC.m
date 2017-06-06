@@ -419,6 +419,7 @@
 #pragma mark - ScoreView delegate
 
 - (void) onTouchContinueButton {
+    [TEWRotationManager sharedInstance].animate = NO;
     [self.navigationController popViewControllerAnimated:NO];
 }
 
@@ -454,28 +455,8 @@
         [focusManager removeWordFromActiveFocus:word];
         
         // Refresh screen
-        [self buildFocusScrollView];
+        [self buildFocusScrollView];        
         
-        /*
-        for(UIView *subview in [self.scrollView subviews]) {
-            if([subview isKindOfClass:[TEWWordView class]]) {
-                TEWWordView * wordView = (TEWWordView*)subview;
-                
-                if ([wordView.wordLabel.text isEqualToString:word] == YES) {
-                    [subview removeFromSuperview];
-                    
-                    // Resize scroll view
-                    CGSize newContentSize=self.scrollView.frame.size;
-                    newContentSize.width *=(wordArray.count);
-                    [self.scrollView setContentSize:newContentSize];
-                    
-                    
-                    break;
-                }
-                
-            }
-        }
-         */
     }
     else {
         // Learn screen

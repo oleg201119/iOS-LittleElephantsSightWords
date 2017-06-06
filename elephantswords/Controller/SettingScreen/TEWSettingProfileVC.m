@@ -10,6 +10,7 @@
 #import "TEWProfileMenuTVC.h"
 #import "TEWSettingWizardVC.h"
 #import "TEWProfileManager.h"
+#import "TEWFocusManager.h"
 #import "TEWSettingsConstant.h"
 
 #import "Global.h"
@@ -154,8 +155,7 @@
             [alertController addAction:[UIAlertAction actionWithTitle:profileInfo.name style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
                 [profileManager switchActiveProfile:profileInfo.uuid];
-                [self.tableView reloadData];
-                
+                                
                 [self setAvatar];
                 [self setName];
             }]];
@@ -173,8 +173,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (index == PROFILE_MENU_DELETE_PROFIILE) {
-        // Show confirm window
-        [TEWGenericFunctionManager showPromptViewWithTitle:@"You're deleting profile" CancelButtonTitle:@"Cancel" OtherButtonTitle:@"Ok" Tag:0 Delegate:nil];
+        
         
         UIAlertController *alertController;
         
@@ -186,18 +185,65 @@
             // Cancel action
         }]];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Profile x" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-            // Profile n action
-        }]];
+        TEWProfileManager * profileManager = [TEWProfileManager sharedInstance];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Profile 1" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            // Profile n action
-        }]];
-        
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Profile 2" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            // Profile n action
-        }]];
-        
+        for(int i=0; i<profileManager.profileArray.count; i++) {
+            
+            TEWProfileDataModel * profileInfo = profileManager.profileArray[i];
+            TEWProfileDataModel * activeProfile = profileManager.activeProfile;
+            
+            if ([profileInfo.uuid isEqualToString:activeProfile.uuid] == YES) {
+                continue;
+            }
+            
+            [alertController addAction:[UIAlertAction actionWithTitle:profileInfo.name style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+                // Show confirm window
+                UIAlertController *alertController = [UIAlertController
+                                                    alertControllerWithTitle:@"Confirm"
+                                                    message:@"You're deleting profile"
+                                                    preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *removeAction = [UIAlertAction
+                                              actionWithTitle:NSLocalizedString(@"Remove", @"Remove action")
+                                              style:UIAlertActionStyleDestructive
+                                              handler:^(UIAlertAction *action)
+                                              {
+                                                  NSLog(@"Remove action");
+                                                  
+                                                  // Delete profile
+                                                  [profileManager removeProfile:profileInfo.uuid];
+                                                  [profileManager loadProfiles];
+                                                  
+                                                  // Delete focus words
+                                                  TEWFocusManager * focusManager = [TEWFocusManager sharedInstance];
+                                                  
+                                                  for (int i=0; i<5; i++) {
+                                                      NSString* focusId = [profileInfo.uuid stringByAppendingFormat:@"-%d", i];
+                                                      [focusManager removeFocusWord:focusId];
+                                                  }
+                                                  
+                                                  [focusManager loadFocusWords];
+                                                  
+                                                  [self setAvatar];
+                                                  [self setName];
+                                              }];
+                
+                UIAlertAction *cancelAction = [UIAlertAction
+                                               actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                               style:UIAlertActionStyleCancel
+                                               handler:^(UIAlertAction *action)
+                                               {
+                                                   NSLog(@"Cancel action");
+                                               }];
+                
+                [alertController addAction:removeAction];
+                [alertController addAction:cancelAction];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+                
+            }]];
+        }
         
         [alertController setModalPresentationStyle:UIModalPresentationPopover];
         [self presentViewController:alertController animated:YES completion:nil];
