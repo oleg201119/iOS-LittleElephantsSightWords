@@ -41,6 +41,9 @@
 @property (weak, nonatomic) IBOutlet UIView *topBarView;
 
 @property (weak, nonatomic) IBOutlet UIView *bottomBarView;
+
+@property (strong, nonatomic) AVPlayer * avplayer;
+
 @end
 
 @implementation TEWLearnVC
@@ -138,6 +141,21 @@
                 wordView.wordLabel.text = wordArray[i];
                 wordView.wordLabel.textColor = color;
                 
+                int styleId = [TEWProfileManager sharedInstance].activeProfile.style;
+                
+                if (styleId == STYLE_UNJOINED) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"CCWPrecursive1" size:50];
+                }
+                else if (styleId == STYLE_JOINED) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"XCCWJoined1a" size:50];
+                }
+                else if (styleId == STYLE_DISLEXIE) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"Dyslexiea-Regular" size:50];
+                }
+                else if (styleId == STYLE_STANDARD) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:50];
+                }
+                
                 [self.scrollView addSubview:wordView];
             }
             
@@ -200,6 +218,21 @@
                 
                 wordView.wordLabel.text = wordArray[i];
                 wordView.wordLabel.textColor = color;
+                
+                int styleId = [TEWProfileManager sharedInstance].activeProfile.style;
+                
+                if (styleId == STYLE_UNJOINED) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"CCWPrecursive1" size:50];
+                }
+                else if (styleId == STYLE_JOINED) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"XCCWJoined1a" size:50];
+                }
+                else if (styleId == STYLE_DISLEXIE) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"Dyslexiea-Regular" size:50];
+                }
+                else if (styleId == STYLE_STANDARD) {
+                    wordView.wordLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:50];
+                }
                 
                 [self.scrollView addSubview:wordView];
             }
@@ -433,12 +466,23 @@
 - (IBAction)onTouchSoundButton:(id)sender {
     
     // Play sound
+    
     NSString * path = [NSString stringWithFormat:@"%@/Marlene_Marker %02d.mp3", [[NSBundle mainBundle] resourcePath], self.nWordIndex];
     NSURL * soundUrl = [NSURL fileURLWithPath:path];
-
+    
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     [self.player setVolume:1.0];
     [self.player play];
+    
+    
+    
+    /*
+    NSString * path = @"https://soundcloud.com/tink_g/dont-tell-nobody-ft-jeremih-prod-da-internz";
+    NSURL * soundUrl = [NSURL URLWithString:path];
+
+    self.avplayer = [AVPlayer playerWithURL:soundUrl];
+    [self.avplayer play];
+    */
 }
 
 - (IBAction)onTouchFocusButton:(id)sender {

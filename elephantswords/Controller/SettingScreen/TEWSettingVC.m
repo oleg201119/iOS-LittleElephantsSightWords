@@ -14,6 +14,7 @@
 #import "TEWSettingWizardVC.h"
 #import "TEWProfileManager.h"
 
+#import <MessageUI/MessageUI.h>
 #import <Social/Social.h>
 
 #define SETTING_MENU_PROFILE                    0
@@ -26,7 +27,7 @@
 #define SETTING_MENU_REPORT                     7
 #define SETTING_MENU_ABOUT                      8
 
-@interface TEWSettingVC () <UITableViewDataSource, UITableViewDelegate>
+@interface TEWSettingVC () <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -149,7 +150,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (index == SETTING_MENU_REPORT) {
-
+        [self sendEmailWithSubject: @"Bug Report" WithContent: @"" WithAddress: @"developer@littleelephantapps.com"];
     }
     else if (index == SETTING_MENU_ABOUT) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -235,11 +236,18 @@
 
 - (IBAction)onTouchTwitter:(id)sender {
     // Launch Twitter
+    
+    NSString *shareText = @"Little Elephants High Frequency Words";
+    NSArray *itemsToShare = @[shareText];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:itemsToShare applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,UIActivityTypePostToFacebook,UIActivityTypeMail,UIActivityTypeMessage,UIActivityTypeAssignToContact,UIActivityTypePostToTencentWeibo];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (IBAction)onTouchFacebook:(id)sender {
     // Launch Facebook
     
+    /*
     SLComposeViewController *fbController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
@@ -273,10 +281,41 @@
     else {
         NSLog(@"Error");
     }
+    */
+    
+    NSString *shareText = @"Little Elephants High Frequency Words";
+    NSArray *itemsToShare = @[shareText];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:itemsToShare applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,UIActivityTypePostToFacebook,UIActivityTypeMail,UIActivityTypeMessage,UIActivityTypeAssignToContact,UIActivityTypePostToTencentWeibo];
+    [self presentViewController:activityVC animated:YES completion:nil];
+    
 }
 
 - (IBAction)onTouchEmail:(id)sender {
     // Launch Email
+    
+    [self sendEmailWithSubject: @"Little Elephants High Frequency Words" WithContent: @"" WithAddress: @""];
+}
+
+- (void)sendEmailWithSubject: (NSString *)subject WithContent: (NSString *)content WithAddress: (NSString *)address {
+    
+    // Email Subject
+    NSString *emailTitle = subject;
+    
+    // Email Content
+    NSString *messageBody = content;
+    
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:address];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
     
 }
 

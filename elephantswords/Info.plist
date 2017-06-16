@@ -34,5 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CCW Precursive 1.ttf</string>
+		<string>Dyslexie a Regular LEDU_1283_UK.ttf</string>
+		<string>XCCW Joined 1a.ttf</string>
+	</array>
 </dict>
 </plist>

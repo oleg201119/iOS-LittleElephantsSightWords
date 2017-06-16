@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		93EE9A1A78A813CB27076D6B /* libPods-elephantswords.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */; };
+		F81B9C431EEA509A00C1DF6C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81B9C421EEA509A00C1DF6C /* StoreKit.framework */; };
+		F81DE5A51EF062B400D68293 /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */; };
+		F81DE5A61EF062B400D68293 /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */; };
+		F81DE5A71EF062B400D68293 /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */; };
+		F81DE5A81EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
+		F81DE5A91EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
+		F81DE5AA1EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
+		F81DE5AB1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */; };
+		F81DE5AC1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */; };
+		F81DE5AD1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */; };
 		F838E8B81EAAFD7200451488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8B71EAAFD7200451488 /* main.m */; };
 		F838E8BB1EAAFD7200451488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8BA1EAAFD7200451488 /* AppDelegate.m */; };
 		F838E8BE1EAAFD7200451488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8BD1EAAFD7200451488 /* ViewController.m */; };
@@ -98,6 +108,10 @@
 		75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-elephantswords.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9768DD154E5D9B2A8EA1617A /* Pods-elephantswords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elephantswords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elephantswords/Pods-elephantswords.debug.xcconfig"; sourceTree = "<group>"; };
 		AE1FA120A9DA5B98AADDFC01 /* Pods_elephantswordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elephantswordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81B9C421EEA509A00C1DF6C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CCW Precursive 1.ttf"; sourceTree = "<group>"; };
+		F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dyslexie a Regular LEDU_1283_UK.ttf"; sourceTree = "<group>"; };
+		F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "XCCW Joined 1a.ttf"; sourceTree = "<group>"; };
 		F838E8B31EAAFD7200451488 /* elephantswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elephantswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F838E8B71EAAFD7200451488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F838E8B91EAAFD7200451488 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81B9C431EEA509A00C1DF6C /* StoreKit.framework in Frameworks */,
 				F8AC66321EDE6B6A00962C5B /* AVFoundation.framework in Frameworks */,
 				93EE9A1A78A813CB27076D6B /* libPods-elephantswords.a in Frameworks */,
 			);
@@ -236,6 +251,7 @@
 		0B58707A06DAF1F34EBC2D8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F81B9C421EEA509A00C1DF6C /* StoreKit.framework */,
 				F8AC66311EDE6B6A00962C5B /* AVFoundation.framework */,
 				6E4476ED0543CB690195C418 /* Pods_elephantswordsTests.framework */,
 				AE1FA120A9DA5B98AADDFC01 /* Pods_elephantswordsUITests.framework */,
@@ -251,6 +267,16 @@
 				4A3F7174C18957F6B9918A05 /* Pods-elephantswords.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F81DE5A11EF0629400D68293 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */,
+				F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */,
+				F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		F838E8AA1EAAFD7200451488 = {
@@ -278,6 +304,7 @@
 		F838E8B51EAAFD7200451488 /* elephantswords */ = {
 			isa = PBXGroup;
 			children = (
+				F81DE5A11EF0629400D68293 /* Font */,
 				F838E9051EAC0EC800451488 /* View */,
 				F838E9041EAC0EC000451488 /* Controller */,
 				F838E8ED1EAB011D00451488 /* Model */,
@@ -660,8 +687,13 @@
 				TargetAttributes = {
 					F838E8B21EAAFD7200451488 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 74W2BTNY9Q;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = XNZEMPX9C5;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					F838E8CE1EAAFD7200451488 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -712,6 +744,7 @@
 				F8AC664D1EDE8CBC00962C5B /* Marlene_Marker 06.mp3 in Resources */,
 				F8AC66501EDE8CBC00962C5B /* Marlene_Marker 09.mp3 in Resources */,
 				F89ED32D1EE1D0EF00BA41E6 /* ScoreView.xib in Resources */,
+				F81DE5AB1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */,
 				F8AC664B1EDE8CBC00962C5B /* Marlene_Marker 04.mp3 in Resources */,
 				F8AC66521EDE8CBC00962C5B /* Marlene_Marker 11.mp3 in Resources */,
 				F8AC665B1EDE8CBC00962C5B /* Marlene_Marker 20.mp3 in Resources */,
@@ -722,9 +755,11 @@
 				F8AC66481EDE8CBC00962C5B /* Marlene_Marker 01.mp3 in Resources */,
 				F8AC665A1EDE8CBC00962C5B /* Marlene_Marker 19.mp3 in Resources */,
 				F8AC66551EDE8CBC00962C5B /* Marlene_Marker 14.mp3 in Resources */,
+				F81DE5A51EF062B400D68293 /* CCW Precursive 1.ttf in Resources */,
 				F8AC66531EDE8CBC00962C5B /* Marlene_Marker 12.mp3 in Resources */,
 				F89ED3351EE249CD00BA41E6 /* WordView.xib in Resources */,
 				F838E8C11EAAFD7200451488 /* Main.storyboard in Resources */,
+				F81DE5A81EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 				F8AC66561EDE8CBC00962C5B /* Marlene_Marker 15.mp3 in Resources */,
 				F857FCB11EDC5B9F00BB1EC1 /* words.json in Resources */,
 			);
@@ -734,6 +769,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81DE5AC1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */,
+				F81DE5A61EF062B400D68293 /* CCW Precursive 1.ttf in Resources */,
+				F81DE5A91EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +779,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81DE5AD1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */,
+				F81DE5A71EF062B400D68293 /* CCW Precursive 1.ttf in Resources */,
+				F81DE5AA1EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,12 +1023,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: AoGe He (G5X48325TH)";
-				DEVELOPMENT_TEAM = 74W2BTNY9Q;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XNZEMPX9C5;
 				INFOPLIST_FILE = elephantswords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "822d18af-15ca-4b89-a075-48fa3e556854";
+				PROVISIONING_PROFILE_SPECIFIER = "LittleElephantWordApp-dev-provision";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -997,13 +1041,15 @@
 			baseConfigurationReference = 4A3F7174C18957F6B9918A05 /* Pods-elephantswords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = 74W2BTNY9Q;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = XNZEMPX9C5;
 				INFOPLIST_FILE = elephantswords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "645dbd0b-d25d-4d6b-835f-c17ad2d94932";
+				PROVISIONING_PROFILE_SPECIFIER = "LittleElephantWordApp-appstore-provision";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
