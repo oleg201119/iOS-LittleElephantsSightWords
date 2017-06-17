@@ -9,7 +9,7 @@
 #ifndef Global_h
 #define Global_h
 
-#include "UIColor+HexString.h"
+#include "UIColor+Hex.h"
 
 #define DEBUG_LOGIN_DEFAULTUSER                                 YES
 
@@ -29,14 +29,14 @@
 #define TEW_ROUND_4                                             4
 
 // UICOLOR
-#define TEWUICOLOR_THEMECOLOR_GREEN                             [UIColor colorWithHexString:@"#73BE28"]
-#define TEWUICOLOR_THEMECOLOR_YELLOW                            [UIColor colorWithHexString:@"#EEFA98"]
-#define TEWUICOLOR_THEMECOLOR_TITLE                             [UIColor colorWithHexString:@"#4220B9"]
+#define TEWUICOLOR_THEMECOLOR_GREEN                             [UIColor colorWithHex:0x73BE28]
+#define TEWUICOLOR_THEMECOLOR_YELLOW                            [UIColor colorWithHex:0xEEFA98]
+#define TEWUICOLOR_THEMECOLOR_TITLE                             [UIColor colorWithHex:0x4220B9]
 
-#define TEWUICOLOR_WORDCOLOR_BLACK                              [UIColor colorWithHexString:@"#000000"]
-#define TEWUICOLOR_WORDCOLOR_BLUE                               [UIColor colorWithHexString:@"#0080FF"]
-#define TEWUICOLOR_WORDCOLOR_GREEN                              [UIColor colorWithHexString:@"#73BE28"]
-#define TEWUICOLOR_WORDCOLOR_RED                                [UIColor colorWithHexString:@"#FF0000"]
+#define TEWUICOLOR_WORDCOLOR_BLACK                              [UIColor colorWithHex:0x000000]
+#define TEWUICOLOR_WORDCOLOR_BLUE                               [UIColor colorWithHex:0x0080FF]
+#define TEWUICOLOR_WORDCOLOR_GREEN                              [UIColor colorWithHex:0x73BE28]
+#define TEWUICOLOR_WORDCOLOR_RED                                [UIColor colorWithHex:0xFF0000]
 
 
 #define TEWUICOLOR_THEMECOLOR_MAIN                              [UIColor colorWithRed:(153 / 255.0) green:(198 / 255.0) blue:(20 / 255.0) alpha:1]

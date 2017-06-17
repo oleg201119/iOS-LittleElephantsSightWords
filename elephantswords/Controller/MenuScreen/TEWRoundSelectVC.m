@@ -12,7 +12,6 @@
 #import "TEWRoundManager.h"
 #import "TEWRotationManager.h"
 
-#import "UIColor+HexString.h"
 #import "Global.h"
 
 @interface TEWRoundSelectVC ()

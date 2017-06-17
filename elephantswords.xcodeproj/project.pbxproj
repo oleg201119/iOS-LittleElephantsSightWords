@@ -42,6 +42,7 @@
 		F89ED3351EE249CD00BA41E6 /* WordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89ED3341EE249CD00BA41E6 /* WordView.xib */; };
 		F89ED3381EE24B9700BA41E6 /* TEWWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = F89ED3371EE24B9700BA41E6 /* TEWWordView.m */; };
 		F8A031A71EE0692300A8064B /* TEWRoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A031A61EE0692300A8064B /* TEWRoundManager.m */; };
+		F8A18ED11EF5F5890084E029 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A18ED01EF5F5890084E029 /* UIColor+Hex.m */; };
 		F8ABB26E1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */; };
 		F8AC66321EDE6B6A00962C5B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AC66311EDE6B6A00962C5B /* AVFoundation.framework */; };
 		F8AC66481EDE8CBC00962C5B /* Marlene_Marker 01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC66341EDE8CBC00962C5B /* Marlene_Marker 01.mp3 */; };
@@ -78,7 +79,6 @@
 		F8BBBB761EB68EF500B90BAE /* TEWLearnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB751EB68EF500B90BAE /* TEWLearnVC.m */; };
 		F8BBBB791EB6938200B90BAE /* TEWScoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */; };
 		F8BDDBA91EE5293700DFE1FB /* TEWFocusWordDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BDDBA81EE5293700DFE1FB /* TEWFocusWordDataModel.m */; };
-		F8C9687C1ECA076300885801 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9687B1ECA076300885801 /* UIColor+HexString.m */; };
 		F8C97BC81EB43BEA00372CBA /* TEWRoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BC71EB43BEA00372CBA /* TEWRoundVC.m */; };
 		F8C97BCB1EB43C6100372CBA /* TEWRoundSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BCA1EB43C6100372CBA /* TEWRoundSelectVC.m */; };
 		F8C97BCF1EB457BF00372CBA /* TEWSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C97BCE1EB457BF00372CBA /* TEWSettingVC.m */; };
@@ -157,6 +157,8 @@
 		F89ED3371EE24B9700BA41E6 /* TEWWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWWordView.m; path = View/Play/TEWWordView.m; sourceTree = "<group>"; };
 		F8A031A51EE0692300A8064B /* TEWRoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundManager.h; path = Model/Round/TEWRoundManager.h; sourceTree = "<group>"; };
 		F8A031A61EE0692300A8064B /* TEWRoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWRoundManager.m; path = Model/Round/TEWRoundManager.m; sourceTree = "<group>"; };
+		F8A18ECF1EF5F4F60084E029 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Model/Utils/UIColor+Hex.h"; sourceTree = "<group>"; };
+		F8A18ED01EF5F5890084E029 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Model/Utils/UIColor+Hex.m"; sourceTree = "<group>"; };
 		F8ABB26C1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+Multiplier.h"; path = "Model/Utils/NSLayoutConstraint+Multiplier.h"; sourceTree = "<group>"; };
 		F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+Multiplier.m"; path = "Model/Utils/NSLayoutConstraint+Multiplier.m"; sourceTree = "<group>"; };
 		F8AC66311EDE6B6A00962C5B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -208,8 +210,6 @@
 		F8BBBB781EB6938200B90BAE /* TEWScoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWScoreVC.m; path = Controller/Play/TEWScoreVC.m; sourceTree = "<group>"; };
 		F8BDDBA71EE5293700DFE1FB /* TEWFocusWordDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWFocusWordDataModel.h; path = Model/Focus/DataModel/TEWFocusWordDataModel.h; sourceTree = "<group>"; };
 		F8BDDBA81EE5293700DFE1FB /* TEWFocusWordDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWFocusWordDataModel.m; path = Model/Focus/DataModel/TEWFocusWordDataModel.m; sourceTree = "<group>"; };
-		F8C9687A1ECA076300885801 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../../../../../../Downloads/4751825-808c27b1731da4cdff13d27130e78b3fb30e45df/UIColor+HexString.h"; sourceTree = "<group>"; };
-		F8C9687B1ECA076300885801 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../../../../../../Downloads/4751825-808c27b1731da4cdff13d27130e78b3fb30e45df/UIColor+HexString.m"; sourceTree = "<group>"; };
 		F8C97BC61EB43BEA00372CBA /* TEWRoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundVC.h; path = Controller/MenuScreen/TEWRoundVC.h; sourceTree = "<group>"; };
 		F8C97BC71EB43BEA00372CBA /* TEWRoundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWRoundVC.m; path = Controller/MenuScreen/TEWRoundVC.m; sourceTree = "<group>"; };
 		F8C97BC91EB43C4500372CBA /* TEWRoundSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWRoundSelectVC.h; path = Controller/MenuScreen/TEWRoundSelectVC.h; sourceTree = "<group>"; };
@@ -372,8 +372,6 @@
 		F838E8EE1EAB012800451488 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F8C9687A1ECA076300885801 /* UIColor+HexString.h */,
-				F8C9687B1ECA076300885801 /* UIColor+HexString.m */,
 				F838E8EF1EAB015D00451488 /* Global.h */,
 				F838E8F01EAB01BB00451488 /* TEWGenericFunctionManager.h */,
 				F838E8F11EAB01BB00451488 /* TEWGenericFunctionManager.m */,
@@ -387,6 +385,8 @@
 				F838E8FD1EAB026C00451488 /* TEWUrlManager.m */,
 				F8ABB26C1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.h */,
 				F8ABB26D1ED2EA9500F08202 /* NSLayoutConstraint+Multiplier.m */,
+				F8A18ECF1EF5F4F60084E029 /* UIColor+Hex.h */,
+				F8A18ED01EF5F5890084E029 /* UIColor+Hex.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -851,12 +851,12 @@
 				F8AC66631EDEB66A00962C5B /* TEWProfileManager.m in Sources */,
 				F8BBBB6D1EB67ECA00B90BAE /* TEWProfileMenuTVC.m in Sources */,
 				F89ED32B1EE1BFC100BA41E6 /* TEWRotationManager.m in Sources */,
+				F8A18ED11EF5F5890084E029 /* UIColor+Hex.m in Sources */,
 				F8A031A71EE0692300A8064B /* TEWRoundManager.m in Sources */,
 				F838E9031EAC0E5100451488 /* TEWUserInfoDataModel.m in Sources */,
 				F8AFBC4A1EAFDFCC00A449D8 /* TEWSettingWizardVC.m in Sources */,
 				F8BBBB791EB6938200B90BAE /* TEWScoreVC.m in Sources */,
 				F838E8FE1EAB026C00451488 /* TEWUrlManager.m in Sources */,
-				F8C9687C1ECA076300885801 /* UIColor+HexString.m in Sources */,
 				F8C97BC81EB43BEA00372CBA /* TEWRoundVC.m in Sources */,
 				F8BDDBA91EE5293700DFE1FB /* TEWFocusWordDataModel.m in Sources */,
 				F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */,
@@ -1022,16 +1022,16 @@
 			baseConfigurationReference = 9768DD154E5D9B2A8EA1617A /* Pods-elephantswords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: AoGe He (G5X48325TH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Little Elephant Apps Limited (XNZEMPX9C5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Little Elephant Apps Limited (XNZEMPX9C5)";
 				DEVELOPMENT_TEAM = XNZEMPX9C5;
 				INFOPLIST_FILE = elephantswords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.elephantswords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "822d18af-15ca-4b89-a075-48fa3e556854";
-				PROVISIONING_PROFILE_SPECIFIER = "LittleElephantWordApp-dev-provision";
+				PROVISIONING_PROFILE = "645dbd0b-d25d-4d6b-835f-c17ad2d94932";
+				PROVISIONING_PROFILE_SPECIFIER = "LittleElephantWordApp-appstore-provision";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1041,7 +1041,8 @@
 			baseConfigurationReference = 4A3F7174C18957F6B9918A05 /* Pods-elephantswords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Little Elephant Apps Limited (XNZEMPX9C5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Little Elephant Apps Limited (XNZEMPX9C5)";
 				DEVELOPMENT_TEAM = XNZEMPX9C5;
 				INFOPLIST_FILE = elephantswords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

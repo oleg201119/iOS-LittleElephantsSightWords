@@ -15,7 +15,6 @@
 #import "Global.h"
 #import "AppDelegate.h"
 
-#import "UIColor+HexString.h"
 #import <UIView+Shake.h>
 
 #define FOTTER_FOR_NEXT                     0
