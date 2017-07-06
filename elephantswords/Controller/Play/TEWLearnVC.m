@@ -466,23 +466,29 @@
 - (IBAction)onTouchSoundButton:(id)sender {
     
     // Play sound
+    NSString * word = @"";
     
-    NSString * path = [NSString stringWithFormat:@"%@/Marlene_Marker %02d.mp3", [[NSBundle mainBundle] resourcePath], self.nWordIndex];
+    if (self.fFocusScreen) {
+        
+        // Focus screen
+        TEWFocusManager * focusManager = [TEWFocusManager sharedInstance];
+        NSArray * wordArray = [focusManager getActiveFocusWordArray];
+        
+        word = wordArray[self.nWordIndex-1];
+    }
+    else {
+        // Learn screen
+        NSArray * wordArray = [[TEWWordManager sharedInstance] getWordsWithRoundNo:[TEWRoundManager sharedInstance].roundNo];
+        word = wordArray[self.nWordIndex-1];
+    }
+    
+    NSString * path = [NSString stringWithFormat:@"%@/%@.mp3", [[NSBundle mainBundle] resourcePath], word];
     NSURL * soundUrl = [NSURL fileURLWithPath:path];
     
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     [self.player setVolume:1.0];
     [self.player play];
-    
-    
-    
-    /*
-    NSString * path = @"https://soundcloud.com/tink_g/dont-tell-nobody-ft-jeremih-prod-da-internz";
-    NSURL * soundUrl = [NSURL URLWithString:path];
 
-    self.avplayer = [AVPlayer playerWithURL:soundUrl];
-    [self.avplayer play];
-    */
 }
 
 - (IBAction)onTouchFocusButton:(id)sender {

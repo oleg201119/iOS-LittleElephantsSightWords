@@ -11,6 +11,8 @@
 #import "TEWSettingVC.h"
 #import "TEWRoundManager.h"
 #import "TEWRotationManager.h"
+#import "TEWPurchaseManager.h"
+#import "TEWPurchaseVC.h"
 
 #import "Global.h"
 
@@ -22,29 +24,54 @@
 @property (weak, nonatomic) IBOutlet UIView *round3View;
 @property (weak, nonatomic) IBOutlet UIView *round4View;
 
+@property (weak, nonatomic) IBOutlet UIImageView *round1LockImage;
+@property (weak, nonatomic) IBOutlet UIImageView *round2LockImage;
+@property (weak, nonatomic) IBOutlet UIImageView *round3LockImage;
+@property (weak, nonatomic) IBOutlet UIImageView *round4LockImage;
+
 @end
 
 @implementation TEWRoundSelectVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
+    // Do any additional setup after loading the view. 
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
+    
+    // Lock image
+    self.round1LockImage.hidden = NO;
+    self.round2LockImage.hidden = NO;
+    self.round3LockImage.hidden = NO;
+    self.round4LockImage.hidden = NO;
+    
+    if ([TEWPurchaseManager sharedInstance].all400Purchased == YES) {
+        self.round1LockImage.hidden = YES;
+        self.round2LockImage.hidden = YES;
+        self.round3LockImage.hidden = YES;
+        self.round4LockImage.hidden = YES;
+    }
+    
+    if ([TEWPurchaseManager sharedInstance].to100Purchased == YES) {
+        self.round1LockImage.hidden = YES;
+    }
+    
+    if ([TEWPurchaseManager sharedInstance].to200Purchased == YES) {
+        self.round2LockImage.hidden = YES;
+    }
+    
+    if ([TEWPurchaseManager sharedInstance].to300Purchased == YES) {
+        self.round3LockImage.hidden = YES;
+    }
+    
+    if ([TEWPurchaseManager sharedInstance].to400Purchased == YES) {
+        self.round4LockImage.hidden = YES;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -83,7 +110,7 @@
 
 - (void)initScrollContent {
     
-    self.round0View.layer.cornerRadius = self.round1View.frame.size.width / 2;
+    self.round0View.layer.cornerRadius = self.round0View.frame.size.width / 2;
     self.round0View.layer.masksToBounds = YES;
     self.round0View.clipsToBounds = YES;
     self.round0View.layer.borderWidth = 2;
@@ -119,34 +146,68 @@
 - (IBAction)onTouchRoundButton:(UIControl *)sender {
     
     UIView * view = nil;
+    BOOL gotoRoundScreen = YES;
     
     if (sender.tag == 0) {
         [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_0;
         view = self.round0View;
     }
     else if (sender.tag == 1) {
-        [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_1;
-        view = self.round1View;
+        
+        if ([TEWPurchaseManager sharedInstance].all400Purchased == NO && [TEWPurchaseManager sharedInstance].to100Purchased == NO) {
+            
+            gotoRoundScreen = NO;
+        }
+        else {
+            [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_1;
+            view = self.round1View;
+        }
     }
     else if (sender.tag == 2) {
-        [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_2;
-        view = self.round2View;
+        
+        if ([TEWPurchaseManager sharedInstance].all400Purchased == NO && [TEWPurchaseManager sharedInstance].to200Purchased == NO) {
+            
+            gotoRoundScreen = NO;
+        }
+        else {
+            [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_2;
+            view = self.round2View;
+        }
     }
     else if (sender.tag == 3) {
-        [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_3;
-        view = self.round3View;
+        
+        if ([TEWPurchaseManager sharedInstance].all400Purchased == NO && [TEWPurchaseManager sharedInstance].to300Purchased == NO) {
+            
+            gotoRoundScreen = NO;
+        }
+        else {
+            [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_3;
+            view = self.round3View;
+        }
     }
     else if (sender.tag == 4) {
-        [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_4;
-        view = self.round4View;
+        
+        if ([TEWPurchaseManager sharedInstance].all400Purchased == NO && [TEWPurchaseManager sharedInstance].to400Purchased == NO) {
+            
+            gotoRoundScreen = NO;
+        }
+        else {
+            [TEWRoundManager sharedInstance].roundNo = TEW_ROUND_4;
+            view = self.round4View;
+        }
     }
     
     view.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
-    // Go to the round screen
-    [TEWRotationManager sharedInstance].animate = YES;
-    
-    [self performSegueWithIdentifier:@"SEGUE_FROM_ROUNDSELECT_TO_ROUND" sender:nil];
+    if (gotoRoundScreen == YES) {
+        // Go to the round screen
+        [TEWRotationManager sharedInstance].animate = YES;        
+        [self performSegueWithIdentifier:@"SEGUE_FROM_ROUNDSELECT_TO_ROUND" sender:nil];
+    }
+    else {
+        [TEWRotationManager sharedInstance].animate = YES;
+        [self performSegueWithIdentifier:@"SEGUE_FROM_ROUNDSELECT_TO_PURCHASE" sender:nil];
+    }
 }
 
 

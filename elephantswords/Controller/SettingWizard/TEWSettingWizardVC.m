@@ -50,11 +50,19 @@
 @property (weak, nonatomic) IBOutlet DLRadioButton *regionAUButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *regionCAButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *animalImageViewOnWizard2;
+@property (weak, nonatomic) IBOutlet UIView *animalContainerOnWizard2;
+@property (weak, nonatomic) IBOutlet UILabel *characterNameOnWizard2;
+
 // Wizard 3
 @property (weak, nonatomic) IBOutlet DLRadioButton *styleStdButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *styleUnJoinButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *styleJoinButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *styleDislexButton;
+
+@property (weak, nonatomic) IBOutlet UIImageView *animalImageViewOnWizard3;
+@property (weak, nonatomic) IBOutlet UIView *animalContainerOnWizard3;
+@property (weak, nonatomic) IBOutlet UILabel *characterNameOnWizard3;
 
 // Wizard 4
 @property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
@@ -64,6 +72,10 @@
 @property (weak, nonatomic) IBOutlet DLRadioButton *colorGreenButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *colorRedButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *colorAltButton;
+
+@property (weak, nonatomic) IBOutlet UIImageView *animalImageViewOnWizard4;
+@property (weak, nonatomic) IBOutlet UIView *animalContainerOnWizard4;
+@property (weak, nonatomic) IBOutlet UILabel *characterNameOnWizard4;
 
 // Container
 @property (weak, nonatomic) IBOutlet UIView *wizardContainer1;
@@ -114,14 +126,13 @@
 
 - (void)initScrollContent {
     
+    // Wizard 1
     self.animalImageView1.layer.cornerRadius = self.animalImageView1.frame.size.width / 2;
     self.animalImageView1.layer.masksToBounds = YES;
     self.animalImageView1.clipsToBounds = YES;
     self.animalImageView1.layer.borderWidth = 2;
-//    self.animalImageView1.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     self.animalContainer1.backgroundColor = [UIColor clearColor];
-//    self.animalContainer1.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.animalContainer1.layer.shadowOffset = CGSizeMake(0,0);
     self.animalContainer1.layer.shadowOpacity = 1.0;
     self.animalContainer1.layer.shadowRadius = 3;
@@ -130,10 +141,8 @@
     self.animalImageView2.layer.masksToBounds = YES;
     self.animalImageView2.clipsToBounds = YES;
     self.animalImageView2.layer.borderWidth = 2;
-//    self.animalImageView2.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     self.animalContainer2.backgroundColor = [UIColor clearColor];
-//    self.animalContainer2.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.animalContainer2.layer.shadowOffset = CGSizeMake(0,0);
     self.animalContainer2.layer.shadowOpacity = 1.0;
     self.animalContainer2.layer.shadowRadius = 3;
@@ -142,13 +151,53 @@
     self.animalImageView3.layer.masksToBounds = YES;
     self.animalImageView3.clipsToBounds = YES;
     self.animalImageView3.layer.borderWidth = 2;
-//    self.animalImageView3.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     
     self.animalContainer3.backgroundColor = [UIColor clearColor];
-//    self.animalContainer3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
     self.animalContainer3.layer.shadowOffset = CGSizeMake(0,0);
     self.animalContainer3.layer.shadowOpacity = 1.0;
     self.animalContainer3.layer.shadowRadius = 3;
+    
+    // Wizard 2
+    self.animalImageViewOnWizard2.layer.cornerRadius = self.animalImageViewOnWizard2.frame.size.width / 2;
+    self.animalImageViewOnWizard2.layer.masksToBounds = YES;
+    self.animalImageViewOnWizard2.clipsToBounds = YES;
+    self.animalImageViewOnWizard2.layer.borderWidth = 2;
+    
+    self.animalContainerOnWizard2.backgroundColor = [UIColor clearColor];
+    self.animalContainerOnWizard2.layer.shadowOffset = CGSizeMake(0,0);
+    self.animalContainerOnWizard2.layer.shadowOpacity = 1.0;
+    self.animalContainerOnWizard2.layer.shadowRadius = 3;
+    
+    self.animalImageViewOnWizard2.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+    self.animalContainerOnWizard2.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+    
+    // Wizard 3
+    self.animalImageViewOnWizard3.layer.cornerRadius = self.animalImageViewOnWizard3.frame.size.width / 2;
+    self.animalImageViewOnWizard3.layer.masksToBounds = YES;
+    self.animalImageViewOnWizard3.clipsToBounds = YES;
+    self.animalImageViewOnWizard3.layer.borderWidth = 2;
+    
+    self.animalContainerOnWizard3.backgroundColor = [UIColor clearColor];
+    self.animalContainerOnWizard3.layer.shadowOffset = CGSizeMake(0,0);
+    self.animalContainerOnWizard3.layer.shadowOpacity = 1.0;
+    self.animalContainerOnWizard3.layer.shadowRadius = 3;
+    
+    self.animalImageViewOnWizard3.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+    self.animalContainerOnWizard3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+    
+    // Wizard 4
+    self.animalImageViewOnWizard4.layer.cornerRadius = self.animalImageViewOnWizard4.frame.size.width / 2;
+    self.animalImageViewOnWizard4.layer.masksToBounds = YES;
+    self.animalImageViewOnWizard4.clipsToBounds = YES;
+    self.animalImageViewOnWizard4.layer.borderWidth = 2;
+    
+    self.animalContainerOnWizard4.backgroundColor = [UIColor clearColor];
+    self.animalContainerOnWizard4.layer.shadowOffset = CGSizeMake(0,0);
+    self.animalContainerOnWizard4.layer.shadowOpacity = 1.0;
+    self.animalContainerOnWizard4.layer.shadowRadius = 3;
+    
+    self.animalImageViewOnWizard4.layer.borderColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
+    self.animalContainerOnWizard4.layer.shadowColor = TEWUICOLOR_THEMECOLOR_YELLOW.CGColor;
 }
 
 - (void)initScreen {
@@ -199,6 +248,12 @@
     
     // Set sound
     [self.soundSwitch setOn:settingManager.modelSettingInfo.sound animated:NO];
+    
+    // Set animal on Wizard2
+    [self setAvatarOnWizard2];
+    
+    // Set animal on Wizard3
+    [self setAvatarOnWizard3];
     
     // Go to page
     [self scrollToPage:self.nCurrentPage withAnimation:false];
@@ -266,6 +321,61 @@
         self.animalImageView3.layer.borderColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
         self.animalContainer3.layer.shadowColor = TEWUICOLOR_THEMECOLOR_GREEN.CGColor;
     }
+    
+    [self setAvatarOnWizard2];
+    [self setAvatarOnWizard3];
+    [self setAvatarOnWizard4];
+}
+
+- (void) setAvatarOnWizard2 {
+    int avatarId = [TEWProfileManager sharedInstance].activeProfile.avatar;
+    NSString * name = [TEWProfileManager sharedInstance].activeProfile.name;
+    
+    if (avatarId == ANIMAL_1) {
+        [self.animalImageViewOnWizard2 setImage:[UIImage imageNamed:@"zebra-110"]];
+    }
+    else if (avatarId == ANIMAL_2) {
+        [self.animalImageViewOnWizard2 setImage:[UIImage imageNamed:@"giraffe-110"]];
+    }
+    else if (avatarId == ANIMAL_3) {
+        [self.animalImageViewOnWizard2 setImage:[UIImage imageNamed:@"elephant-110"]];
+    }
+    
+    self.characterNameOnWizard2.text = name;
+}
+
+- (void) setAvatarOnWizard3 {
+    int avatarId = [TEWProfileManager sharedInstance].activeProfile.avatar;
+    NSString * name = [TEWProfileManager sharedInstance].activeProfile.name;
+    
+    if (avatarId == ANIMAL_1) {
+        [self.animalImageViewOnWizard3 setImage:[UIImage imageNamed:@"zebra-110"]];
+    }
+    else if (avatarId == ANIMAL_2) {
+        [self.animalImageViewOnWizard3 setImage:[UIImage imageNamed:@"giraffe-110"]];
+    }
+    else if (avatarId == ANIMAL_3) {
+        [self.animalImageViewOnWizard3 setImage:[UIImage imageNamed:@"elephant-110"]];
+    }
+    
+    self.characterNameOnWizard3.text = name;
+}
+
+- (void) setAvatarOnWizard4 {
+    int avatarId = [TEWProfileManager sharedInstance].activeProfile.avatar;
+    NSString * name = [TEWProfileManager sharedInstance].activeProfile.name;
+    
+    if (avatarId == ANIMAL_1) {
+        [self.animalImageViewOnWizard4 setImage:[UIImage imageNamed:@"zebra-110"]];
+    }
+    else if (avatarId == ANIMAL_2) {
+        [self.animalImageViewOnWizard4 setImage:[UIImage imageNamed:@"giraffe-110"]];
+    }
+    else if (avatarId == ANIMAL_3) {
+        [self.animalImageViewOnWizard4 setImage:[UIImage imageNamed:@"elephant-110"]];
+    }
+    
+    self.characterNameOnWizard4.text = name;
 }
 
 - (void) changeSelectedRegion: (int) regionId {
