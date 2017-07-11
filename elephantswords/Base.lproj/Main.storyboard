@@ -11,6 +11,17 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CCW Cursive Writing 1.ttf">
+            <string>CCWCursiveWriting1</string>
+        </array>
+        <array key="CCW Precursive 1.ttf">
+            <string>CCWPrecursive1</string>
+        </array>
+        <array key="Dyslexie a Regular LEDU_1283_UK.ttf">
+            <string>Dyslexiea-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Setting WizardVC-->
         <scene sceneID="tne-QT-ifu">
@@ -33,8 +44,8 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOD-1O-8g0" userLabel="Scroll View - Wizard Scroll View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-jA-6gC" userLabel="View - Scroll Container">
-                                                <rect key="frame" x="-1125" y="0.0" width="1500" height="587"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-jA-6gC" userLabel="View - Scroll Container">
+                                                <rect key="frame" x="0.0" y="0.0" width="1500" height="587"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vps-3O-in1" userLabel="View - Wizard1">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
@@ -49,12 +60,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-CS-OVH" userLabel="View - Wizard Container">
                                                                 <rect key="frame" x="30" y="50" width="315" height="517"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Persona:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hz-Vi-kY3" userLabel="Label - Select avatar">
-                                                                        <rect key="frame" x="103" y="199" width="109" height="20"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Character:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hz-Vi-kY3" userLabel="Label - Select avatar">
+                                                                        <rect key="frame" x="60" y="199" width="196" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="ktf-Ze-e1I"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -199,8 +210,8 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start learning!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebU-Tu-qsA" userLabel="Label - Title TextField">
-                                                                        <rect key="frame" x="77" y="87" width="161" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                                        <rect key="frame" x="47.5" y="81" width="221.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352941176467" green="0.12549019607843137" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -250,13 +261,13 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjf-Vs-Clp" userLabel="Label - Character Name">
-                                                                        <rect key="frame" x="95" y="133.5" width="125" height="20"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                        <rect key="frame" x="65.5" y="133.5" width="184.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9q-YY-lY7" userLabel="Label - Line">
-                                                                        <rect key="frame" x="0.5" y="173.5" width="315" height="1"/>
+                                                                        <rect key="frame" x="0.5" y="181.5" width="315" height="1"/>
                                                                         <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="gKi-gj-8DE"/>
@@ -266,15 +277,15 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Region:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9H-UD-oEW" userLabel="Label - Title">
-                                                                        <rect key="frame" x="91" y="203.5" width="133" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                                        <rect key="frame" x="73.5" y="211.5" width="168" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2X-U4-rWl" userLabel="RadioButton - United Kingdom" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="78" y="245.5" width="160" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="United Kingdom">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2X-U4-rWl" userLabel="RadioButton - North America" customClass="DLRadioButton">
+                                                                        <rect key="frame" x="78" y="259.5" width="160" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
+                                                                        <state key="normal" title="North America">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -289,13 +300,12 @@
                                                                             <action selector="onSelectRegionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcp-p5-Q3w"/>
                                                                             <outletCollection property="otherButtons" destination="mhg-w4-Fni" id="03q-2H-b7z"/>
                                                                             <outletCollection property="otherButtons" destination="Ize-Sn-0gE" id="uCK-v0-dSI"/>
-                                                                            <outletCollection property="otherButtons" destination="NjN-fb-cdt" id="5HJ-mG-G9l"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhg-w4-Fni" userLabel="RadioButton - United States" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="78" y="285.5" width="160" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="United States">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhg-w4-Fni" userLabel="RadioButton - United Kingdom" customClass="DLRadioButton">
+                                                                        <rect key="frame" x="78" y="294.5" width="160" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
+                                                                        <state key="normal" title="United Kingdom">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -310,14 +320,14 @@
                                                                             <action selector="onSelectRegionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMv-B0-90t"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ize-Sn-0gE" userLabel="RadioButton - Ausralia/NZ" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="78" y="325.5" width="160" height="30"/>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ize-Sn-0gE" userLabel="RadioButton - Ausralia / NZ" customClass="DLRadioButton">
+                                                                        <rect key="frame" x="78" y="329.5" width="160" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="NvE-s3-m0h"/>
                                                                             <constraint firstAttribute="width" constant="160" id="acP-z4-tWM"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="Ausralia/NZ">
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
+                                                                        <state key="normal" title="Ausralia / NZ">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -332,42 +342,21 @@
                                                                             <action selector="onSelectRegionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUg-Dj-bWn"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjN-fb-cdt" userLabel="RadioButton - Canada" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="78" y="365.5" width="160" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="Canada">
-                                                                            <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        </state>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                                                                <color key="value" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                                                <color key="value" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <action selector="onSelectRegionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8zK-a9-Fmw"/>
-                                                                        </connections>
-                                                                    </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection can be changed later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh5-h6-nGW" userLabel="Label - Description">
                                                                         <rect key="frame" x="30" y="442" width="255" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="CmO-58-30R"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="11"/>
                                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="Ize-Sn-0gE" firstAttribute="top" secondItem="mhg-w4-Fni" secondAttribute="bottom" constant="10" id="6C4-J7-WYX"/>
-                                                                    <constraint firstItem="mhg-w4-Fni" firstAttribute="top" secondItem="t2X-U4-rWl" secondAttribute="bottom" constant="10" id="9HH-3b-prr"/>
-                                                                    <constraint firstItem="NjN-fb-cdt" firstAttribute="height" secondItem="Ize-Sn-0gE" secondAttribute="height" id="BsT-3W-A8K"/>
-                                                                    <constraint firstItem="NjN-fb-cdt" firstAttribute="top" secondItem="Ize-Sn-0gE" secondAttribute="bottom" constant="10" id="DSa-bg-Dm5"/>
+                                                                    <constraint firstItem="Ize-Sn-0gE" firstAttribute="top" secondItem="mhg-w4-Fni" secondAttribute="bottom" constant="5" id="6C4-J7-WYX"/>
+                                                                    <constraint firstItem="mhg-w4-Fni" firstAttribute="top" secondItem="t2X-U4-rWl" secondAttribute="bottom" constant="5" id="9HH-3b-prr"/>
                                                                     <constraint firstItem="y9q-YY-lY7" firstAttribute="top" secondItem="Sjf-Vs-Clp" secondAttribute="bottom" constant="20" id="Fds-IV-1tE"/>
-                                                                    <constraint firstItem="NjN-fb-cdt" firstAttribute="leading" secondItem="Ize-Sn-0gE" secondAttribute="leading" id="Hk5-Y1-1nq"/>
                                                                     <constraint firstItem="y9q-YY-lY7" firstAttribute="centerX" secondItem="PCf-dz-GJm" secondAttribute="centerX" id="Kgn-7b-04b"/>
                                                                     <constraint firstItem="t2X-U4-rWl" firstAttribute="leading" secondItem="mhg-w4-Fni" secondAttribute="leading" id="L4T-nS-2aA"/>
                                                                     <constraint firstItem="L9H-UD-oEW" firstAttribute="top" secondItem="Sjf-Vs-Clp" secondAttribute="bottom" constant="50" id="LvH-db-6gL"/>
@@ -385,7 +374,6 @@
                                                                     <constraint firstItem="qOJ-vm-R5g" firstAttribute="top" secondItem="PCf-dz-GJm" secondAttribute="top" constant="20" id="jt2-ju-7jT"/>
                                                                     <constraint firstItem="qh5-h6-nGW" firstAttribute="leading" secondItem="PCf-dz-GJm" secondAttribute="leading" constant="30" id="r5Z-Jr-1tO"/>
                                                                     <constraint firstItem="y9q-YY-lY7" firstAttribute="width" secondItem="PCf-dz-GJm" secondAttribute="width" id="ryL-oX-bY8"/>
-                                                                    <constraint firstItem="NjN-fb-cdt" firstAttribute="width" secondItem="Ize-Sn-0gE" secondAttribute="width" id="ryj-71-hk5"/>
                                                                     <constraint firstItem="t2X-U4-rWl" firstAttribute="height" secondItem="mhg-w4-Fni" secondAttribute="height" id="sH5-Nv-w0h"/>
                                                                     <constraint firstItem="Sjf-Vs-Clp" firstAttribute="top" secondItem="qOJ-vm-R5g" secondAttribute="bottom" constant="5" id="uCP-Ne-90G"/>
                                                                     <constraint firstAttribute="bottom" secondItem="qh5-h6-nGW" secondAttribute="bottom" constant="40" id="wSM-wc-KI3"/>
@@ -418,13 +406,13 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF6-ZE-ZgK" userLabel="Label - Character Name">
-                                                                        <rect key="frame" x="95.5" y="133.5" width="125" height="20"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                        <rect key="frame" x="66" y="133.5" width="184.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU7-bZ-oGl" userLabel="Label - Line">
-                                                                        <rect key="frame" x="-0.5" y="173.5" width="315" height="1"/>
+                                                                        <rect key="frame" x="-0.5" y="181.5" width="315" height="1"/>
                                                                         <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="h8P-kL-iSL"/>
@@ -434,15 +422,15 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Typeface:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUh-gJ-qy7" userLabel="Label - Title">
-                                                                        <rect key="frame" x="83" y="203.5" width="149" height="22"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                                        <rect key="frame" x="61.5" y="211.5" width="192.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNh-Ux-2IC" userLabel="RadioButton - Standard print" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="68" y="245.5" width="180" height="30"/>
+                                                                        <rect key="frame" x="63" y="259.5" width="190" height="30"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="Standard print">
+                                                                        <state key="normal" title="Regular">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -461,9 +449,9 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-va-rDq" userLabel="RadioButton - Unjoined (Pre-cursive)" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="68" y="285.5" width="180" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="Unjoined (Pre-cursive)">
+                                                                        <rect key="frame" x="63" y="294.5" width="190" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="14"/>
+                                                                        <state key="normal" title="Unjoined (Precursive)">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -479,12 +467,12 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-Aw-WGK" userLabel="RadioButton - Joined (Cursive)" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="68" y="325.5" width="180" height="30"/>
+                                                                        <rect key="frame" x="63" y="329.5" width="190" height="30"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="180" id="5N0-XG-Jpe"/>
+                                                                            <constraint firstAttribute="width" constant="190" id="5N0-XG-Jpe"/>
                                                                             <constraint firstAttribute="height" constant="30" id="dVm-Cb-JJL"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWCursiveWriting1" family="CCW Cursive Writing 1" pointSize="14"/>
                                                                         <state key="normal" title="Joined (Cursive)">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
@@ -501,9 +489,9 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-yj-I95" userLabel="RadioButton - Dislexie Font" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="68" y="365.5" width="180" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <state key="normal" title="Dislexie Font">
+                                                                        <rect key="frame" x="63" y="364.5" width="190" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="Dyslexiea-Regular" family="Dyslexie a" pointSize="13"/>
+                                                                        <state key="normal" title="Dyslexia Friendly">
                                                                             <color key="titleColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -518,9 +506,12 @@
                                                                             <action selector="onSelectStyleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ywn-6O-s6Y"/>
                                                                         </connections>
                                                                     </button>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dyslexie" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-ni-cjK" userLabel="Image - dyslexie">
+                                                                        <rect key="frame" x="98" y="399.5" width="120" height="46"/>
+                                                                    </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection can be changed later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-nB-PUb" userLabel="Label - Description">
                                                                         <rect key="frame" x="30.5" y="442" width="255" height="35"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="11"/>
                                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -529,6 +520,7 @@
                                                                 <constraints>
                                                                     <constraint firstItem="tpr-Aw-WGK" firstAttribute="leading" secondItem="jLL-va-rDq" secondAttribute="leading" id="4vD-O7-Ig6"/>
                                                                     <constraint firstItem="tpr-Aw-WGK" firstAttribute="height" secondItem="jLL-va-rDq" secondAttribute="height" id="6U6-1y-XEw"/>
+                                                                    <constraint firstItem="9gf-ni-cjK" firstAttribute="top" secondItem="Zcs-yj-I95" secondAttribute="bottom" constant="5" id="7mU-Lc-6HB"/>
                                                                     <constraint firstItem="pU7-bZ-oGl" firstAttribute="top" secondItem="WF6-ZE-ZgK" secondAttribute="bottom" constant="20" id="E87-fu-TAh"/>
                                                                     <constraint firstItem="tpr-Aw-WGK" firstAttribute="width" secondItem="jLL-va-rDq" secondAttribute="width" id="E9x-37-CKg"/>
                                                                     <constraint firstItem="tpr-Aw-WGK" firstAttribute="centerX" secondItem="VY3-za-IE6" secondAttribute="centerX" id="ES4-pZ-TXM"/>
@@ -538,13 +530,14 @@
                                                                     <constraint firstItem="kUh-gJ-qy7" firstAttribute="centerX" secondItem="VY3-za-IE6" secondAttribute="centerX" id="THb-ca-zl5"/>
                                                                     <constraint firstItem="IMw-tz-GZI" firstAttribute="centerX" secondItem="VY3-za-IE6" secondAttribute="centerX" id="XoM-0W-CNT"/>
                                                                     <constraint firstItem="Zcs-yj-I95" firstAttribute="leading" secondItem="tpr-Aw-WGK" secondAttribute="leading" id="bYx-3r-BKd"/>
-                                                                    <constraint firstItem="Zcs-yj-I95" firstAttribute="top" secondItem="tpr-Aw-WGK" secondAttribute="bottom" constant="10" id="g4Q-OO-GLI"/>
+                                                                    <constraint firstItem="Zcs-yj-I95" firstAttribute="top" secondItem="tpr-Aw-WGK" secondAttribute="bottom" constant="5" id="g4Q-OO-GLI"/>
                                                                     <constraint firstItem="Zcs-yj-I95" firstAttribute="height" secondItem="tpr-Aw-WGK" secondAttribute="height" id="i8S-Xw-yVh"/>
                                                                     <constraint firstItem="wNh-Ux-2IC" firstAttribute="top" secondItem="kUh-gJ-qy7" secondAttribute="bottom" constant="20" id="jRV-J9-pQG"/>
                                                                     <constraint firstItem="wNh-Ux-2IC" firstAttribute="width" secondItem="jLL-va-rDq" secondAttribute="width" id="kag-QA-Wom"/>
                                                                     <constraint firstItem="pU7-bZ-oGl" firstAttribute="centerX" secondItem="VY3-za-IE6" secondAttribute="centerX" id="m2l-q9-Upl"/>
-                                                                    <constraint firstItem="jLL-va-rDq" firstAttribute="top" secondItem="wNh-Ux-2IC" secondAttribute="bottom" constant="10" id="mFr-4I-hhQ"/>
-                                                                    <constraint firstItem="tpr-Aw-WGK" firstAttribute="top" secondItem="jLL-va-rDq" secondAttribute="bottom" constant="10" id="ocn-hg-u2d"/>
+                                                                    <constraint firstItem="jLL-va-rDq" firstAttribute="top" secondItem="wNh-Ux-2IC" secondAttribute="bottom" constant="5" id="mFr-4I-hhQ"/>
+                                                                    <constraint firstItem="tpr-Aw-WGK" firstAttribute="top" secondItem="jLL-va-rDq" secondAttribute="bottom" constant="5" id="ocn-hg-u2d"/>
+                                                                    <constraint firstItem="9gf-ni-cjK" firstAttribute="centerX" secondItem="VY3-za-IE6" secondAttribute="centerX" id="qNA-pW-oet"/>
                                                                     <constraint firstItem="Zcs-yj-I95" firstAttribute="width" secondItem="tpr-Aw-WGK" secondAttribute="width" id="rT4-qp-RZ1"/>
                                                                     <constraint firstItem="WF6-ZE-ZgK" firstAttribute="centerX" secondItem="VY3-za-IE6" secondAttribute="centerX" id="sIf-6f-jQc"/>
                                                                     <constraint firstItem="WF6-ZE-ZgK" firstAttribute="top" secondItem="IMw-tz-GZI" secondAttribute="bottom" constant="5" id="ua8-6c-9tW"/>
@@ -579,13 +572,13 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zo-mO-RnN" userLabel="Label - Character Name">
-                                                                        <rect key="frame" x="94.5" y="133.5" width="125" height="20"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                        <rect key="frame" x="65" y="133.5" width="184.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agc-6o-gqq" userLabel="Label - Line">
-                                                                        <rect key="frame" x="-0.5" y="173.5" width="315" height="1"/>
+                                                                        <rect key="frame" x="-0.5" y="181.5" width="315" height="1"/>
                                                                         <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="H7p-a0-enz"/>
@@ -595,14 +588,14 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Text:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkD-FA-GEI" userLabel="Label - Title">
-                                                                        <rect key="frame" x="103.5" y="203.5" width="108.5" height="21"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                                        <rect key="frame" x="87" y="211.5" width="141.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4J-E0-wwq" userLabel="RadioButton - Black" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="40" y="244.5" width="90" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="40" y="259.5" width="90" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <state key="normal" title="Black">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
@@ -623,8 +616,8 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOW-By-lVs" userLabel="RadioButton - Blue" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="40" y="279.5" width="90" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="40" y="294.5" width="90" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <state key="normal" title="Blue">
                                                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
@@ -641,11 +634,11 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3G-GH-KqN" userLabel="RadioButton - Green" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="40" y="314.5" width="90" height="30"/>
+                                                                        <rect key="frame" x="40" y="329.5" width="90" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="uXg-fK-jyr"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <state key="normal" title="Green">
                                                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
@@ -662,8 +655,8 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG1-T4-w0D" userLabel="RadioButton - Red" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="205" y="244.5" width="90" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="205" y="259.5" width="90" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <state key="normal" title="Red">
                                                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
@@ -680,11 +673,11 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SS4-2T-5jg" userLabel="RadioButton - Alternate" customClass="DLRadioButton">
-                                                                        <rect key="frame" x="205" y="279.5" width="90" height="30"/>
+                                                                        <rect key="frame" x="205" y="294.5" width="90" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="90" id="AGw-fz-tG6"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <state key="normal" title="Alternate">
                                                                             <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
@@ -701,7 +694,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plY-F6-Tu7" userLabel="Label - Line">
-                                                                        <rect key="frame" x="0.0" y="364.5" width="315" height="1"/>
+                                                                        <rect key="frame" x="0.0" y="379.5" width="315" height="1"/>
                                                                         <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="WZC-ZJ-8oy"/>
@@ -711,13 +704,13 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TjY-kg-MnP" userLabel="View - Sound control container">
-                                                                        <rect key="frame" x="40" y="385.5" width="235" height="50"/>
+                                                                        <rect key="frame" x="40" y="400.5" width="235" height="50"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39F-PJ-hAs" userLabel="Label - Sound">
-                                                                                <rect key="frame" x="0.0" y="7.5" width="130" height="35"/>
+                                                                                <rect key="frame" x="0.0" y="2" width="175.5" height="46.5"/>
                                                                                 <string key="text">Enable word sound
 playback</string>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                                 <color key="textColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -737,7 +730,7 @@ playback</string>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection can be changed later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-lZ-vtx" userLabel="Label - Description">
                                                                         <rect key="frame" x="30.5" y="442" width="255" height="35"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="11"/>
                                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -858,7 +851,7 @@ playback</string>
                                                     <constraint firstAttribute="width" constant="100" id="c7g-pe-KZ2"/>
                                                     <constraint firstAttribute="height" constant="40" id="cKE-4F-lUV"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <state key="normal" title="Next" backgroundImage="button-green">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -879,7 +872,7 @@ playback</string>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2W-Xx-lHb" userLabel="Button - Back">
                                                 <rect key="frame" x="30" y="10" width="100" height="40"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <state key="normal" title="Back" backgroundImage="button-white-border">
                                                     <color key="titleColor" red="0.45098039215686275" green="0.74509803921568629" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -889,7 +882,7 @@ playback</string>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2w-wl-K8n" userLabel="Button - Next">
                                                 <rect key="frame" x="245" y="10" width="100" height="40"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <state key="normal" title="Next" backgroundImage="button-green">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -913,7 +906,7 @@ playback</string>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rnx-qI-GsE" userLabel="Button - Cancel">
                                                 <rect key="frame" x="30" y="10" width="100" height="40"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <state key="normal" title="Cancel" backgroundImage="button-white-border">
                                                     <color key="titleColor" red="0.45098039215686275" green="0.74509803921568629" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -923,7 +916,7 @@ playback</string>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0U-Gf-5ci" userLabel="Button - Save">
                                                 <rect key="frame" x="245" y="10" width="100" height="40"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <state key="normal" title="Save" backgroundImage="button-green"/>
                                                 <connections>
                                                     <action selector="onTouchSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILh-v4-ZIg"/>
@@ -1009,9 +1002,8 @@ playback</string>
                         <outlet property="navBackButton" destination="Mc3-bl-KCJ" id="BOa-96-Xu7"/>
                         <outlet property="pageControl" destination="92n-k1-XJ1" id="VBN-JD-bjF"/>
                         <outlet property="regionAUButton" destination="Ize-Sn-0gE" id="fKQ-XJ-eXO"/>
-                        <outlet property="regionCAButton" destination="NjN-fb-cdt" id="8ex-nt-4HH"/>
-                        <outlet property="regionUKButton" destination="t2X-U4-rWl" id="SEE-hT-KoY"/>
-                        <outlet property="regionUSButton" destination="mhg-w4-Fni" id="oJa-rR-GCa"/>
+                        <outlet property="regionNAButton" destination="t2X-U4-rWl" id="g56-D1-mYk"/>
+                        <outlet property="regionUKButton" destination="mhg-w4-Fni" id="uMV-G7-lGT"/>
                         <outlet property="scrollView" destination="hOD-1O-8g0" id="IDn-h0-1bc"/>
                         <outlet property="soundSwitch" destination="hwP-Ii-7Wd" id="Vp9-WA-7t0"/>
                         <outlet property="styleDislexButton" destination="Zcs-yj-I95" id="U4z-8D-Yh5"/>
@@ -1058,16 +1050,16 @@ playback</string>
                                         <rect key="frame" x="134" y="220" width="107.5" height="107.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-K6-7kX" userLabel="Label - 1st 50 words">
-                                                <rect key="frame" x="23" y="16.5" width="62" height="35"/>
+                                                <rect key="frame" x="12.5" y="11" width="83.5" height="46.5"/>
                                                 <string key="text">1st
-50 words</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+25 words</string>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-Ih-3jW" userLabel="Label - FREE">
-                                                <rect key="frame" x="34.5" y="61.5" width="37.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <rect key="frame" x="30" y="67.5" width="46.5" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <color key="textColor" red="1" green="0.74901960784313726" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1102,15 +1094,15 @@ playback</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYd-4e-LxJ" userLabel="View - Container">
                                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="107.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4du-ec-nvT" userLabel="Label - 1st 100 words">
-                                                                <rect key="frame" x="8.5" y="14" width="90" height="40"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4du-ec-nvT" userLabel="Label - 1st 100 words">
+                                                                <rect key="frame" x="8.5" y="14" width="90" height="46.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="3La-EC-Im5"/>
                                                                     <constraint firstAttribute="width" constant="90" id="Jpb-9w-SW8"/>
                                                                 </constraints>
-                                                                <string key="text">1st
-100 words</string>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                <string key="text">1-100
+Word List</string>
+                                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1159,11 +1151,11 @@ playback</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyw-7v-jA0" userLabel="View - Container">
                                                         <rect key="frame" x="10" y="0.0" width="107.5" height="107.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYF-uJ-q7N" userLabel="Label - 2nd 100 words">
-                                                                <rect key="frame" x="8" y="14" width="90" height="40"/>
-                                                                <string key="text">2nd
-100 words</string>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYF-uJ-q7N" userLabel="Label - 2nd 100 words">
+                                                                <rect key="frame" x="8" y="14" width="90" height="46.5"/>
+                                                                <string key="text">101-200
+Word List</string>
+                                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1207,11 +1199,11 @@ playback</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUF-BB-WX7" userLabel="View - Container">
                                                         <rect key="frame" x="0.0" y="10" width="107.5" height="107.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-0c-V59" userLabel="Label - 3rd 100 words">
-                                                                <rect key="frame" x="8.5" y="14" width="90" height="40"/>
-                                                                <string key="text">3rd
-100 words</string>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-0c-V59" userLabel="Label - 3rd 100 words">
+                                                                <rect key="frame" x="8.5" y="14" width="90" height="46.5"/>
+                                                                <string key="text">201-300
+Word List</string>
+                                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1255,11 +1247,11 @@ playback</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbo-jT-ezb" userLabel="View - Container">
                                                         <rect key="frame" x="10" y="10" width="107.5" height="107.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Vj-wYi" userLabel="Label - 4th 100 words">
-                                                                <rect key="frame" x="8" y="14" width="90" height="40"/>
-                                                                <string key="text">4th
-100 words</string>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Vj-wYi" userLabel="Label - 4th 100 words">
+                                                                <rect key="frame" x="8" y="14" width="90" height="46.5"/>
+                                                                <string key="text">301-400
+Word List</string>
+                                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1447,7 +1439,7 @@ playback</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="yqh-3Z-1fe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                         <state key="normal" title="Learn" backgroundImage="button-green"/>
                                         <connections>
                                             <action selector="onTouchLearnButton:" destination="9Nq-y0-rR9" eventType="touchUpInside" id="FMS-Uh-Tmi"/>
@@ -1455,7 +1447,7 @@ playback</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpi-az-Vc4" userLabel="Button - FOCUS WORDS">
                                         <rect key="frame" x="57" y="373.5" width="260" height="50"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                         <state key="normal" title="Focus Words" backgroundImage="button-green"/>
                                         <connections>
                                             <action selector="onTouchFocusButton:" destination="9Nq-y0-rR9" eventType="touchUpInside" id="6cd-WE-CDC"/>
@@ -1463,7 +1455,7 @@ playback</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MS-nX-bOP" userLabel="Button - RESET">
                                         <rect key="frame" x="57" y="438.5" width="260" height="50"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                         <state key="normal" title="Reset" backgroundImage="button-green"/>
                                         <connections>
                                             <action selector="onTouchResetButton:" destination="9Nq-y0-rR9" eventType="touchUpInside" id="6Wz-gf-7pO"/>
@@ -1564,22 +1556,22 @@ playback</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40h-HJ-iyE" userLabel="View - Buttons Container">
-                                        <rect key="frame" x="0.0" y="111" width="375" height="445"/>
+                                        <rect key="frame" x="0.0" y="105" width="375" height="457"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-QN-ALR" userLabel="View - TopCenter Container">
                                                 <rect key="frame" x="133.5" y="0.0" width="107.5" height="107.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-km-aId" userLabel="Label - ALL 400 words">
-                                                        <rect key="frame" x="19" y="16.5" width="70.5" height="35"/>
-                                                        <string key="text">ALL
-400 words</string>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <rect key="frame" x="13.5" y="15.5" width="80.5" height="37.5"/>
+                                                        <string key="text">Buy All
+400 Words</string>
+                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="12"/>
                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-ex-v7a" userLabel="Label - $2.99">
-                                                        <rect key="frame" x="35" y="71.5" width="38" height="17.5"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <rect key="frame" x="28.5" y="73" width="51" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                         <color key="textColor" red="1" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1613,16 +1605,16 @@ playback</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="107.5" height="107.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdz-LJ-UDt" userLabel="Label - 1-100 Word List">
-                                                                        <rect key="frame" x="22" y="17" width="63.5" height="35"/>
-                                                                        <string key="text">1-100
+                                                                        <rect key="frame" x="17.5" y="15" width="73" height="37.5"/>
+                                                                        <string key="text">Buy 1-100
 Word List</string>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="12"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ9-Iq-VKQ" userLabel="Label - $0.99">
-                                                                        <rect key="frame" x="35" y="72" width="38" height="17.5"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="28" y="72.5" width="52" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <color key="textColor" red="1" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -1662,16 +1654,16 @@ Word List</string>
                                                                 <rect key="frame" x="10" y="0.0" width="107.5" height="107.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxl-rb-S36" userLabel="Label - 101-200 Word List">
-                                                                        <rect key="frame" x="21.5" y="16.5" width="63.5" height="35"/>
-                                                                        <string key="text">101-200
+                                                                        <rect key="frame" x="7.5" y="15.5" width="92.5" height="37.5"/>
+                                                                        <string key="text">Buy 101-200
 Word List</string>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="12"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ot-AC-XBd" userLabel="Label - $0.99">
-                                                                        <rect key="frame" x="34" y="71.5" width="38" height="17.5"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="27" y="73" width="52" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <color key="textColor" red="1" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -1709,22 +1701,21 @@ Word List</string>
                                                                 <rect key="frame" x="0.0" y="10" width="107.5" height="107.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW7-cd-SDS" userLabel="Label - 201-300 Word List">
-                                                                        <rect key="frame" x="22.5" y="16.5" width="63.5" height="35"/>
-                                                                        <string key="text">201-300
+                                                                        <rect key="frame" x="5.5" y="15.5" width="96.5" height="37.5"/>
+                                                                        <string key="text">Buy 201-300
 Word List</string>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="12"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpn-0I-RSF" userLabel="Label - $0.99">
-                                                                        <rect key="frame" x="35" y="71.5" width="38" height="17.5"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="28" y="73" width="52" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <color key="textColor" red="1" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zu-CH-wgb" userLabel="Button - Purchase">
                                                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="107.5"/>
-                                                                        <state key="normal" title="Button"/>
                                                                         <connections>
                                                                             <action selector="onTouchTo300Button:" destination="dEY-s7-M8M" eventType="touchUpInside" id="kwR-mA-emi"/>
                                                                         </connections>
@@ -1757,16 +1748,16 @@ Word List</string>
                                                                 <rect key="frame" x="10" y="10" width="107.5" height="107.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejv-aQ-RkF" userLabel="Label - 301-400 Word List">
-                                                                        <rect key="frame" x="21.5" y="16.5" width="63.5" height="35"/>
-                                                                        <string key="text">301-400
+                                                                        <rect key="frame" x="5" y="15.5" width="97" height="37.5"/>
+                                                                        <string key="text">Buy 301-400
 Word List</string>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="12"/>
                                                                         <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-pf-tun" userLabel="Label - $0.99">
-                                                                        <rect key="frame" x="34" y="71.5" width="38" height="17.5"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                        <rect key="frame" x="27" y="73" width="52" height="23.5"/>
+                                                                        <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                                         <color key="textColor" red="1" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -1823,14 +1814,14 @@ Word List</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already purchased ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URt-YN-De1" userLabel="Label - Already purchased ?">
-                                                <rect key="frame" x="119" y="392.5" width="138" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <rect key="frame" x="92" y="392.5" width="192" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTk-Co-2e9" userLabel="Button - Restore purchases here">
-                                                <rect key="frame" x="108" y="415" width="159" height="30"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <rect key="frame" x="80.5" y="421" width="214" height="36"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="15"/>
                                                 <state key="normal" title="Restore purchases here">
                                                     <color key="titleColor" red="1" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -1996,10 +1987,10 @@ Word List</string>
                                                     <constraint firstItem="XNo-lP-NxN" firstAttribute="width" secondItem="Faf-Cw-20h" secondAttribute="width" id="wR7-Cv-5wb"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;A room without books is like a body without a soul&quot; - Cicero" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-sL-OL2">
-                                                <rect key="frame" x="35" y="57" width="305" height="45"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;A room without books is like a body without a soul&quot; - Cicero" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-sL-OL2">
+                                                <rect key="frame" x="35" y="57" width="305" height="78"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="16"/>
                                                 <color key="textColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2012,10 +2003,10 @@ Word List</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1N-OQ-2Ff" userLabel="Label - Tell Friends About Little Elephant App!">
-                                                <rect key="frame" x="98" y="170" width="178" height="40"/>
+                                                <rect key="frame" x="57" y="170" width="260.5" height="53"/>
                                                 <string key="text">Tell Friends About Little
 Elephant App!</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="17"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2177,13 +2168,13 @@ Elephant App!</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7f-Y8-RJC" userLabel="View - White board">
                                         <rect key="frame" x="30" y="80" width="315" height="557"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About &quot;Little Elephant High Frequency Words&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-Xg-kw6" userLabel="Label - About &quot;Little Elephant High Frequency Words&quot;">
-                                                <rect key="frame" x="32" y="30" width="250" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About &quot;Little Elephant High Frequency Words&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-Xg-kw6" userLabel="Label - About &quot;Little Elephant High Frequency Words&quot;">
+                                                <rect key="frame" x="32" y="30" width="250" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="eYQ-SS-sKM"/>
-                                                    <constraint firstAttribute="height" constant="50" id="rNI-Sn-QXn"/>
+                                                    <constraint firstAttribute="height" constant="90" id="rNI-Sn-QXn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2261,12 +2252,12 @@ Elephant App!</string>
                                         <rect key="frame" x="30" y="80" width="315" height="557"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Little Elephant High Frequency Words has been updated!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feS-yF-UXY" userLabel="Label - Little Elephant High Frequency Words has been updated!">
-                                                <rect key="frame" x="32.5" y="30" width="250" height="80"/>
+                                                <rect key="frame" x="32.5" y="30" width="250" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="HM6-4n-gfY"/>
+                                                    <constraint firstAttribute="height" constant="90" id="HM6-4n-gfY"/>
                                                     <constraint firstAttribute="width" constant="250" id="zEA-gv-blx"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="CCWPrecursive1" family="CCW Precursive 1" pointSize="18"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.12549019610000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2307,7 +2298,7 @@ Elephant App!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZI-5Y-MaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="2181"/>
+            <point key="canvasLocation" x="1333.5999999999999" y="2180.95952023988"/>
         </scene>
         <!--Setting ProfileVC-->
         <scene sceneID="Sh4-28-klJ">
@@ -2472,7 +2463,7 @@ Elephant App!</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBC-sN-a41">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash-fw" translatesAutoresizingMaskIntoConstraints="NO" id="gZ4-ks-hdW" userLabel="Image View - Splash">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-fw" translatesAutoresizingMaskIntoConstraints="NO" id="gZ4-ks-hdW" userLabel="Image View - Splash">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                 </subviews>
@@ -2524,13 +2515,13 @@ Elephant App!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Splash-fw" width="320" height="568"/>
         <image name="app-name-cloud-fw" width="253" height="159"/>
         <image name="back-green" width="30" height="19"/>
         <image name="bg-portrait" width="320" height="568"/>
         <image name="bg-setting-top" width="320" height="175"/>
         <image name="button-green" width="107" height="40"/>
         <image name="button-white-border" width="109" height="42"/>
+        <image name="dyslexie" width="120" height="46"/>
         <image name="elephant-110" width="110" height="110"/>
         <image name="facebook-34" width="34" height="34"/>
         <image name="feedback" width="30" height="30"/>
@@ -2538,6 +2529,7 @@ Elephant App!</string>
         <image name="lock" width="22" height="27"/>
         <image name="mail-34" width="34" height="34"/>
         <image name="settings" width="30" height="30"/>
+        <image name="splash-fw" width="320" height="568"/>
         <image name="twitter-34" width="34" height="34"/>
         <image name="zebra-110" width="110" height="110"/>
     </resources>

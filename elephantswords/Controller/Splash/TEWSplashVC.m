@@ -29,23 +29,26 @@
     // Load profiles
     [[TEWProfileManager sharedInstance] loadProfiles];
     
-    if ([TEWProfileManager sharedInstance].activeProfile != nil) {
-        
-        // Go to round selection screen
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TEWSettingWizardVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_ROUNDSELECT"];
-     
-        [self.navigationController pushViewController:vc animated:NO];
-    }
-    else {
-        // This is first launch and will go to wizard screen
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TEWSettingWizardVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_SETTINGWIZARD"];
-        
-        [vc configureWizardMode:YES allowBack:NO pageIndex:SETTING_WIZARD_ACCOUNT];
-        
-        [self.navigationController pushViewController:vc animated:NO];
-    }
+    // 4 seconds delay
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if ([TEWProfileManager sharedInstance].activeProfile != nil) {
+            
+            // Go to round selection screen
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            TEWSettingWizardVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_ROUNDSELECT"];
+            
+            [self.navigationController pushViewController:vc animated:NO];
+        }
+        else {
+            // This is first launch and will go to wizard screen
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            TEWSettingWizardVC * vc = [storyboard instantiateViewControllerWithIdentifier:@"STORYBOARD_SETTINGWIZARD"];
+            
+            [vc configureWizardMode:YES allowBack:NO pageIndex:SETTING_WIZARD_ACCOUNT];
+            
+            [self.navigationController pushViewController:vc animated:NO];
+        }
+    });
 }
 
 - (void)didReceiveMemoryWarning {

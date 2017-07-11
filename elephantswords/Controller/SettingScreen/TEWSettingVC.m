@@ -94,7 +94,7 @@
     self.menuDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                            @"Profile", [NSNumber numberWithInt:SETTING_MENU_PROFILE],
                            @"Spelling Region", [NSNumber numberWithInt:SETTING_MENU_REGION],
-                           @"Writing Style", [NSNumber numberWithInt:SETTING_MENU_STYLE],
+                           @"Typeface", [NSNumber numberWithInt:SETTING_MENU_STYLE],
                            @"Text Colour", [NSNumber numberWithInt:SETTING_MENU_COLOR],
                            @"Sound Playback", [NSNumber numberWithInt:SETTING_MENU_SOUND],
                            @"Rate App", [NSNumber numberWithInt:SETTING_MENU_RATE],
@@ -294,7 +294,7 @@
 - (IBAction)onTouchEmail:(id)sender {
     // Launch Email
     
-    [self sendEmailWithSubject: @"Little Elephants High Frequency Words" WithContent: @"" WithAddress: @""];
+    [self sendEmailWithSubject: @"Little Elephant App Feedback" WithContent: @"" WithAddress: @"info@littleelephantapps.com"];
 }
 
 - (void)sendEmailWithSubject: (NSString *)subject WithContent: (NSString *)content WithAddress: (NSString *)address {

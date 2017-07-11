@@ -17,10 +17,10 @@
 
 // Wizard2 region code (tag)
 #define REGION_NONE                                              0
-#define REGION_UK                                                1
-#define REGION_US                                                2
+#define REGION_NA                                                1
+#define REGION_UK                                                2
 #define REGION_AU                                                3
-#define REGION_CA                                                4
+
 
 // Wizard3 typeface code (tag)
 #define STYLE_NONE                                               0

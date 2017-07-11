@@ -9,15 +9,6 @@
 /* Begin PBXBuildFile section */
 		93EE9A1A78A813CB27076D6B /* libPods-elephantswords.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C22283127161AFF2DD34F2 /* libPods-elephantswords.a */; };
 		F81B9C431EEA509A00C1DF6C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81B9C421EEA509A00C1DF6C /* StoreKit.framework */; };
-		F81DE5A51EF062B400D68293 /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */; };
-		F81DE5A61EF062B400D68293 /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */; };
-		F81DE5A71EF062B400D68293 /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */; };
-		F81DE5A81EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
-		F81DE5A91EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
-		F81DE5AA1EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
-		F81DE5AB1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */; };
-		F81DE5AC1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */; };
-		F81DE5AD1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */; };
 		F838E8B81EAAFD7200451488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8B71EAAFD7200451488 /* main.m */; };
 		F838E8BB1EAAFD7200451488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8BA1EAAFD7200451488 /* AppDelegate.m */; };
 		F838E8BE1EAAFD7200451488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8BD1EAAFD7200451488 /* ViewController.m */; };
@@ -33,6 +24,11 @@
 		F838E8FB1EAB024F00451488 /* TEWErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8FA1EAB024F00451488 /* TEWErrorManager.m */; };
 		F838E8FE1EAB026C00451488 /* TEWUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E8FD1EAB026C00451488 /* TEWUrlManager.m */; };
 		F838E9031EAC0E5100451488 /* TEWUserInfoDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */; };
+		F84B1D0A1F147473002C1AEF /* CCW Cursive Writing 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84B1D051F147473002C1AEF /* CCW Cursive Writing 1.ttf */; };
+		F84B1D0B1F147473002C1AEF /* CCW Precursive 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84B1D061F147473002C1AEF /* CCW Precursive 1.ttf */; };
+		F84B1D0C1F147473002C1AEF /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84B1D071F147473002C1AEF /* Dyslexie a Regular LEDU_1283_UK.ttf */; };
+		F84B1D0D1F147473002C1AEF /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F84B1D081F147473002C1AEF /* SF-UI-Text-Regular.otf */; };
+		F84B1D0E1F147473002C1AEF /* XCCW Joined 1a.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84B1D091F147473002C1AEF /* XCCW Joined 1a.ttf */; };
 		F854AF131EBA478500526BE3 /* TEWSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F854AF121EBA478500526BE3 /* TEWSplashVC.m */; };
 		F857FCAF1EDC26DE00BB1EC1 /* TEWWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F857FCAE1EDC26DE00BB1EC1 /* TEWWordManager.m */; };
 		F857FCB11EDC5B9F00BB1EC1 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = F857FCB01EDC5B9F00BB1EC1 /* words.json */; };
@@ -490,9 +486,6 @@
 		9768DD154E5D9B2A8EA1617A /* Pods-elephantswords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elephantswords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elephantswords/Pods-elephantswords.debug.xcconfig"; sourceTree = "<group>"; };
 		AE1FA120A9DA5B98AADDFC01 /* Pods_elephantswordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elephantswordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81B9C421EEA509A00C1DF6C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CCW Precursive 1.ttf"; sourceTree = "<group>"; };
-		F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dyslexie a Regular LEDU_1283_UK.ttf"; sourceTree = "<group>"; };
-		F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "XCCW Joined 1a.ttf"; sourceTree = "<group>"; };
 		F838E8B31EAAFD7200451488 /* elephantswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elephantswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F838E8B71EAAFD7200451488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F838E8B91EAAFD7200451488 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -523,6 +516,11 @@
 		F838E8FD1EAB026C00451488 /* TEWUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWUrlManager.m; path = Model/Utils/TEWUrlManager.m; sourceTree = "<group>"; };
 		F838E9011EAC0E5100451488 /* TEWUserInfoDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWUserInfoDataModel.h; path = Model/User/DataModel/TEWUserInfoDataModel.h; sourceTree = "<group>"; };
 		F838E9021EAC0E5100451488 /* TEWUserInfoDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWUserInfoDataModel.m; path = Model/User/DataModel/TEWUserInfoDataModel.m; sourceTree = "<group>"; };
+		F84B1D051F147473002C1AEF /* CCW Cursive Writing 1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CCW Cursive Writing 1.ttf"; path = "Font/CCW Cursive Writing 1.ttf"; sourceTree = "<group>"; };
+		F84B1D061F147473002C1AEF /* CCW Precursive 1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CCW Precursive 1.ttf"; path = "Font/CCW Precursive 1.ttf"; sourceTree = "<group>"; };
+		F84B1D071F147473002C1AEF /* Dyslexie a Regular LEDU_1283_UK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dyslexie a Regular LEDU_1283_UK.ttf"; path = "Font/Dyslexie a Regular LEDU_1283_UK.ttf"; sourceTree = "<group>"; };
+		F84B1D081F147473002C1AEF /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Regular.otf"; path = "Font/SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		F84B1D091F147473002C1AEF /* XCCW Joined 1a.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "XCCW Joined 1a.ttf"; path = "Font/XCCW Joined 1a.ttf"; sourceTree = "<group>"; };
 		F854AF111EBA478500526BE3 /* TEWSplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWSplashVC.h; path = Controller/Splash/TEWSplashVC.h; sourceTree = "<group>"; };
 		F854AF121EBA478500526BE3 /* TEWSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEWSplashVC.m; path = Controller/Splash/TEWSplashVC.m; sourceTree = "<group>"; };
 		F857FCAD1EDC26DE00BB1EC1 /* TEWWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEWWordManager.h; path = Model/Word/TEWWordManager.h; sourceTree = "<group>"; };
@@ -1036,9 +1034,11 @@
 		F81DE5A11EF0629400D68293 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				F81DE5A21EF062B400D68293 /* CCW Precursive 1.ttf */,
-				F81DE5A31EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf */,
-				F81DE5A41EF062B400D68293 /* XCCW Joined 1a.ttf */,
+				F84B1D051F147473002C1AEF /* CCW Cursive Writing 1.ttf */,
+				F84B1D061F147473002C1AEF /* CCW Precursive 1.ttf */,
+				F84B1D071F147473002C1AEF /* Dyslexie a Regular LEDU_1283_UK.ttf */,
+				F84B1D081F147473002C1AEF /* SF-UI-Text-Regular.otf */,
+				F84B1D091F147473002C1AEF /* XCCW Joined 1a.ttf */,
 			);
 			name = Font;
 			sourceTree = "<group>";
@@ -1957,6 +1957,7 @@
 				F8C2BE5C1EF7F47D007227A3 /* follow.mp3 in Resources */,
 				F8C2BE771EF7F47D007227A3 /* heard.mp3 in Resources */,
 				F8C2BEA31EF7F47D007227A3 /* like.mp3 in Resources */,
+				F84B1D0D1F147473002C1AEF /* SF-UI-Text-Regular.otf in Resources */,
 				F8C2BE251EF7F47D007227A3 /* carry.mp3 in Resources */,
 				F8C2BF141EF7F47E007227A3 /* sing.mp3 in Resources */,
 				F8C2BE501EF7F47D007227A3 /* farm.mp3 in Resources */,
@@ -1990,7 +1991,6 @@
 				F8C2BF151EF7F47E007227A3 /* sit.mp3 in Resources */,
 				F8C2BE4C1EF7F47D007227A3 /* face.mp3 in Resources */,
 				F8C2BEE61EF7F47E007227A3 /* part.mp3 in Resources */,
-				F81DE5AB1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */,
 				F8C2BE921EF7F47D007227A3 /* just.mp3 in Resources */,
 				F8C2BF4B1EF7F47E007227A3 /* travel.mp3 in Resources */,
 				F8C2BF511EF7F47E007227A3 /* under.mp3 in Resources */,
@@ -2019,6 +2019,7 @@
 				F8C2BF201EF7F47E007227A3 /* space.mp3 in Resources */,
 				F8C2BE581EF7F47D007227A3 /* fire.mp3 in Resources */,
 				F8C2BEE21EF7F47E007227A3 /* over.mp3 in Resources */,
+				F84B1D0E1F147473002C1AEF /* XCCW Joined 1a.ttf in Resources */,
 				F8C2BF6C1EF7F47E007227A3 /* white.mp3 in Resources */,
 				F8C2BE7C1EF7F47D007227A3 /* him.mp3 in Resources */,
 				F8C2BF481EF7F47E007227A3 /* top.mp3 in Resources */,
@@ -2056,10 +2057,12 @@
 				F8C2BEE11EF7F47E007227A3 /* out.mp3 in Resources */,
 				F8C2BF641EF7F47E007227A3 /* we.mp3 in Resources */,
 				F8C2BE531EF7F47D007227A3 /* feet.mp3 in Resources */,
+				F84B1D0A1F147473002C1AEF /* CCW Cursive Writing 1.ttf in Resources */,
 				F8C2BF191EF7F47E007227A3 /* some.mp3 in Resources */,
 				F8C2BE4E1EF7F47D007227A3 /* family.mp3 in Resources */,
 				F8C2BF061EF7F47E007227A3 /* second.mp3 in Resources */,
 				F8C2BE4B1EF7F47D007227A3 /* eyes.mp3 in Resources */,
+				F84B1D0C1F147473002C1AEF /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 				F8C2BEA71EF7F47D007227A3 /* little.mp3 in Resources */,
 				F8C2BF3C1EF7F47E007227A3 /* this.mp3 in Resources */,
 				F8C2BF311EF7F47E007227A3 /* than.mp3 in Resources */,
@@ -2110,7 +2113,6 @@
 				F8C2BF5C1EF7F47E007227A3 /* walk.mp3 in Resources */,
 				F8C2BEDB1EF7F47D007227A3 /* only.mp3 in Resources */,
 				F8C2BE6C1EF7F47D007227A3 /* group.mp3 in Resources */,
-				F81DE5A51EF062B400D68293 /* CCW Precursive 1.ttf in Resources */,
 				F8C2BF181EF7F47E007227A3 /* so.mp3 in Resources */,
 				F8C2BEEE1EF7F47E007227A3 /* plant.mp3 in Resources */,
 				F8C2BE221EF7F47D007227A3 /* came.mp3 in Resources */,
@@ -2209,7 +2211,6 @@
 				F8C2BE1A1EF7F47D007227A3 /* black.mp3 in Resources */,
 				F8C2BEB51EF7F47D007227A3 /* measure.mp3 in Resources */,
 				F8C2BF6E1EF7F47E007227A3 /* whole.mp3 in Resources */,
-				F81DE5A81EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 				F8C2BECA1EF7F47D007227A3 /* next.mp3 in Resources */,
 				F8C2BF2F1EF7F47E007227A3 /* talk.mp3 in Resources */,
 				F8C2BE8F1EF7F47D007227A3 /* is.mp3 in Resources */,
@@ -2295,6 +2296,7 @@
 				F8C2BEDA1EF7F47D007227A3 /* one.mp3 in Resources */,
 				F8C2BE191EF7F47D007227A3 /* birds.mp3 in Resources */,
 				F8C2BF781EF7F47E007227A3 /* would.mp3 in Resources */,
+				F84B1D0B1F147473002C1AEF /* CCW Precursive 1.ttf in Resources */,
 				F8C2BE1E1EF7F47D007227A3 /* boy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2303,9 +2305,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81DE5AC1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */,
-				F81DE5A61EF062B400D68293 /* CCW Precursive 1.ttf in Resources */,
-				F81DE5A91EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2313,9 +2312,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81DE5AD1EF062B400D68293 /* XCCW Joined 1a.ttf in Resources */,
-				F81DE5A71EF062B400D68293 /* CCW Precursive 1.ttf in Resources */,
-				F81DE5AA1EF062B400D68293 /* Dyslexie a Regular LEDU_1283_UK.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

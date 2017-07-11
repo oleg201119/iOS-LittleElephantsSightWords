@@ -45,10 +45,9 @@
 @property (weak, nonatomic) IBOutlet UIView *animalContainer3;
 
 // Wizard 2
+@property (weak, nonatomic) IBOutlet DLRadioButton *regionNAButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *regionUKButton;
-@property (weak, nonatomic) IBOutlet DLRadioButton *regionUSButton;
 @property (weak, nonatomic) IBOutlet DLRadioButton *regionAUButton;
-@property (weak, nonatomic) IBOutlet DLRadioButton *regionCAButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *animalImageViewOnWizard2;
 @property (weak, nonatomic) IBOutlet UIView *animalContainerOnWizard2;
@@ -380,21 +379,17 @@
 
 - (void) changeSelectedRegion: (int) regionId {
     self.regionUKButton.selected = NO;
-    self.regionUSButton.selected = NO;
+    self.regionNAButton.selected = NO;
     self.regionAUButton.selected = NO;
-    self.regionCAButton.selected = NO;
     
     if (regionId == REGION_UK) {
         self.regionUKButton.selected = YES;
     }
-    else if (regionId == REGION_US) {
-        self.regionUSButton.selected = YES;
+    else if (regionId == REGION_NA) {
+        self.regionNAButton.selected = YES;
     }
     else if (regionId == REGION_AU) {
         self.regionAUButton.selected = YES;
-    }
-    else if (regionId == REGION_CA) {
-        self.regionCAButton.selected = YES;
     }
 }
 
@@ -640,17 +635,14 @@
     TEWSettingsManager * settingManager = [TEWSettingsManager sharedInstance];
     
     if (sender.tag == 1) {
-        settingManager.modelSettingInfo.region = REGION_UK;
+        settingManager.modelSettingInfo.region = REGION_NA;
     }
     else if (sender.tag == 2) {
-        settingManager.modelSettingInfo.region = REGION_US;
+        settingManager.modelSettingInfo.region = REGION_UK;
     }
     else if (sender.tag == 3) {
         settingManager.modelSettingInfo.region = REGION_AU;
-    }
-    else if (sender.tag == 4) {
-        settingManager.modelSettingInfo.region = REGION_CA;
-    }
+    }    
 }
 
 #pragma mark - Wizard 3 Radio button action
